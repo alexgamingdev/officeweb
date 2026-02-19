@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writer – OfficeWeb</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0078d4; --blue-dark: #005a9e; --blue-light: #deecf9;
+      --border: #d1d1d1; --bg: #f3f2f1; --text: #201f1e;
+      --ribbon-bg: #fff; --ribbon-border: #e1e1e1;
+      --hover: #f0f0f0; --active: #deecf9;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+    /* Title bar */
+    .titlebar { background: var(--blue); color: #fff; height: 40px; display: flex; align-items: center; padding: 0 12px; gap: 8px; flex-shrink: 0; }
+    .titlebar-home { color: rgba(255,255,255,.85); text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 3px; }
+    .titlebar-home:hover { background: rgba(255,255,255,.15); }
+    .titlebar-name { font-size: 14px; font-weight: 600; margin-left: 4px; }
+    .titlebar-file { font-size: 13px; opacity: .75; margin-left: 8px; flex: 1; }
+    .titlebar-file input { background: transparent; border: none; color: #fff; font-size: 13px; outline: none; width: 220px; border-bottom: 1px solid transparent; }
+    .titlebar-file input:focus { border-bottom-color: rgba(255,255,255,.6); }
+
+    /* Menu bar */
+    .menubar { background: var(--blue); display: flex; padding: 0 8px; flex-shrink: 0; }
+    .menu-item { color: rgba(255,255,255,.9); font-size: 13px; padding: 6px 12px; cursor: pointer; border-radius: 3px 3px 0 0; position: relative; }
+    .menu-item:hover { background: rgba(255,255,255,.15); }
+    .menu-item.active { background: var(--ribbon-bg); color: var(--blue); }
+    .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid var(--border); border-radius: 0 4px 4px 4px; min-width: 200px; box-shadow: 0 4px 12px rgba(0,0,0,.15); z-index: 1000; }
+    .menu-item.active .dropdown { display: block; }
+    .dropdown-item { display: flex; align-items: center; gap: 10px; padding: 8px 16px; font-size: 13px; color: var(--text); cursor: pointer; }
+    .dropdown-item:hover { background: var(--hover); }
+    .dropdown-item kbd { margin-left: auto; font-size: 11px; color: #999; font-family: monospace; }
+    .dropdown-sep { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
+
+    /* Ribbon */
+    .ribbon { background: var(--ribbon-bg); border-bottom: 1px solid var(--ribbon-border); padding: 6px 12px; display: flex; align-items: center; flex-wrap: wrap; gap: 2px; flex-shrink: 0; }
+    .ribbon-group { display: flex; align-items: center; gap: 1px; padding: 0 6px; border-right: 1px solid var(--border); }
+    .ribbon-group:last-child { border-right: none; }
+    .rb { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border: none; background: transparent; cursor: pointer; border-radius: 3px; font-size: 14px; color: var(--text); flex-shrink: 0; }
+    .rb:hover { background: var(--hover); }
+    .rb.active { background: var(--active); color: var(--blue); }
+    .rb-label { font-size: 12px; font-weight: 600; }
+    .rb-wide { width: auto; padding: 0 8px; font-size: 13px; }
+    .rb-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+    select.rb-select { height: 28px; border: 1px solid var(--border); border-radius: 3px; font-size: 13px; background: #fff; cursor: pointer; padding: 0 4px; color: var(--text); }
+    .color-btn { position: relative; }
+    .color-btn input[type=color] { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; top: 0; left: 0; }
+
+    /* Formula/info bar */
+    .infobar { background: #fafafa; border-bottom: 1px solid var(--ribbon-border); height: 28px; display: flex; align-items: center; padding: 0 16px; font-size: 12px; color: #666; gap: 16px; flex-shrink: 0; }
+
+    /* Editor area */
+    .editor-wrap { flex: 1; overflow-y: auto; background: var(--bg); padding: 32px 24px; display: flex; justify-content: center; }
+    .page { background: #fff; width: 794px; min-height: 1123px; padding: 72px 80px; box-shadow: 0 2px 12px rgba(0,0,0,.15); outline: none; font-size: 16px; line-height: 1.7; color: #000; word-wrap: break-word; }
+    .page:focus { box-shadow: 0 2px 12px rgba(0,0,0,.15), 0 0 0 2px var(--blue-light); }
+    .page table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+    .page table td, .page table th { border: 1px solid #bbb; padding: 6px 10px; }
+    .page table th { background: var(--bg); font-weight: 600; }
+    .page img { max-width: 100%; height: auto; }
+    .page h1 { font-size: 28px; font-weight: 700; margin: 16px 0 8px; }
+    .page h2 { font-size: 22px; font-weight: 700; margin: 14px 0 6px; }
+    .page h3 { font-size: 18px; font-weight: 600; margin: 12px 0 4px; }
+    .page ul, .page ol { padding-left: 24px; }
+    .page blockquote { border-left: 4px solid var(--blue); padding: 8px 16px; color: #555; margin: 8px 0; font-style: italic; background: #f8f9fa; }
+
+    /* Status bar */
+    .statusbar { background: var(--blue); color: rgba(255,255,255,.85); height: 24px; display: flex; align-items: center; padding: 0 12px; gap: 24px; font-size: 12px; flex-shrink: 0; }
+    .statusbar span { display: flex; align-items: center; gap: 4px; }
+
+    /* Modals */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 500; display: none; align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #fff; border-radius: 6px; padding: 24px; min-width: 360px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,.25); }
+    .modal h3 { margin-bottom: 16px; font-size: 18px; }
+    .modal label { display: block; font-size: 13px; margin-bottom: 4px; color: #555; }
+    .modal input, .modal select, .modal textarea { width: 100%; border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px; font-size: 14px; margin-bottom: 12px; }
+    .modal-btns { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
+    .modal-btns button { padding: 8px 20px; border-radius: 4px; font-size: 13px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+    .modal-btns .btn-ok { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .modal-btns .btn-ok:hover { background: var(--blue-dark); }
+
+    @media (max-width: 900px) {
+      .page { width: 100%; padding: 32px 24px; min-height: auto; }
+      .editor-wrap { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Title bar -->
+<div class="titlebar">
+  <a href="index.html" class="titlebar-home">🏠 Startseite</a>
+  <div style="color:rgba(255,255,255,.4)">|</div>
+  <span class="titlebar-name">📝 Writer</span>
+  <div class="titlebar-file">
+    <input type="text" id="docTitle" value="Unbenanntes Dokument" placeholder="Dateiname..." />
+  </div>
+  <button class="rb rb-wide" onclick="saveDoc()" title="Speichern" style="color:#fff; background:rgba(255,255,255,.15);">💾 Speichern</button>
+  <button class="rb rb-wide" onclick="newDoc()" title="Neu" style="color:#fff; background:rgba(255,255,255,.1);">📄 Neu</button>
+</div>
+
+<!-- Menu bar -->
+<div class="menubar" id="menubar">
+  <div class="menu-item" onclick="toggleMenu(this)">Datei
+    <div class="dropdown">
+      <div class="dropdown-item" onclick="newDoc()">📄 Neues Dokument <kbd>Strg+N</kbd></div>
+      <div class="dropdown-item" onclick="openDoc()">📂 Öffnen... <kbd>Strg+O</kbd></div>
+      <div class="dropdown-item" onclick="saveDoc()">💾 Speichern <kbd>Strg+S</kbd></div>
+      <div class="dropdown-item" onclick="saveAsHTML()">📥 Als HTML exportieren</div>
+      <div class="dropdown-item" onclick="saveAsTxt()">📄 Als Text exportieren</div>
+      <hr class="dropdown-sep">
+      <div class="dropdown-item" onclick="window.print()">🖨️ Drucken <kbd>Strg+P</kbd></div>
+    </div>
+  </div>
+  <div class="menu-item" onclick="toggleMenu(this)">Bearbeiten
+    <div class="dropdown">
+      <div class="dropdown-item" onclick="document.execCommand('undo')">↩️ Rückgängig <kbd>Strg+Z</kbd></div>
+      <div class="dropdown-item" onclick="document.execCommand('redo')">↪️ Wiederholen <kbd>Strg+Y</kbd></div>
+      <hr class="dropdown-sep">
+      <div class="dropdown-item" onclick="document.execCommand('cut')">✂️ Ausschneiden <kbd>Strg+X</kbd></div>
+      <div class="dropdown-item" onclick="document.execCommand('copy')">📋 Kopieren <kbd>Strg+C</kbd></div>
+      <div class="dropdown-item" onclick="document.execCommand('paste')">📌 Einfügen <kbd>Strg+V</kbd></div>
+      <hr class="dropdown-sep">
+      <div class="dropdown-item" onclick="document.execCommand('selectAll')">🔲 Alles auswählen <kbd>Strg+A</kbd></div>
+      <div class="dropdown-item" onclick="openFindReplace()">🔍 Suchen & Ersetzen <kbd>Strg+H</kbd></div>
+    </div>
+  </div>
+  <div class="menu-item" onclick="toggleMenu(this)">Einfügen
+    <div class="dropdown">
+      <div class="dropdown-item" onclick="insertTable()">📊 Tabelle</div>
+      <div class="dropdown-item" onclick="insertImage()">🖼️ Bild</div>
+      <div class="dropdown-item" onclick="insertLink()">🔗 Link</div>
+      <div class="dropdown-item" onclick="insertHR()">➖ Trennlinie</div>
+      <div class="dropdown-item" onclick="insertPageBreak()">📃 Seitenumbruch</div>
+    </div>
+  </div>
+  <div class="menu-item" onclick="toggleMenu(this)">Format
+    <div class="dropdown">
+      <div class="dropdown-item" onclick="document.execCommand('bold')"><b>F</b> Fett <kbd>Strg+B</kbd></div>
+      <div class="dropdown-item" onclick="document.execCommand('italic')"><i>K</i> Kursiv <kbd>Strg+I</kbd></div>
+      <div class="dropdown-item" onclick="document.execCommand('underline')"><u>U</u> Unterstreichen <kbd>Strg+U</kbd></div>
+      <hr class="dropdown-sep">
+      <div class="dropdown-item" onclick="clearFormatting()">🧹 Formatierung löschen</div>
+    </div>
+  </div>
+</div>
+
+<!-- Ribbon -->
+<div class="ribbon">
+  <!-- Undo/Redo -->
+  <div class="ribbon-group">
+    <button class="rb" onclick="document.execCommand('undo')" title="Rückgängig">↩</button>
+    <button class="rb" onclick="document.execCommand('redo')" title="Wiederholen">↪</button>
+  </div>
+  <!-- Font -->
+  <div class="ribbon-group">
+    <select class="rb-select" id="fontFamily" onchange="execFont()" style="width:130px;" title="Schriftart">
+      <option>Arial</option>
+      <option>Georgia</option>
+      <option>Times New Roman</option>
+      <option>Courier New</option>
+      <option>Verdana</option>
+      <option>Trebuchet MS</option>
+      <option>Impact</option>
+      <option>Comic Sans MS</option>
+    </select>
+    <select class="rb-select" id="fontSize" onchange="execFontSize()" style="width:58px;" title="Schriftgröße">
+      <option value="1">8</option>
+      <option value="2">10</option>
+      <option value="3" selected>12</option>
+      <option value="4">14</option>
+      <option value="5">18</option>
+      <option value="6">24</option>
+      <option value="7">36</option>
+    </select>
+  </div>
+  <!-- Text formatting -->
+  <div class="ribbon-group">
+    <button class="rb rb-label" onclick="fmt('bold')" title="Fett (Strg+B)" id="btn-bold"><b>B</b></button>
+    <button class="rb rb-label" onclick="fmt('italic')" title="Kursiv (Strg+I)" id="btn-italic"><i>I</i></button>
+    <button class="rb rb-label" onclick="fmt('underline')" title="Unterstrichen (Strg+U)" id="btn-underline"><u>U</u></button>
+    <button class="rb rb-label" onclick="fmt('strikeThrough')" title="Durchgestrichen" id="btn-strikeThrough"><s>S</s></button>
+    <button class="rb" onclick="clearFormatting()" title="Formatierung löschen">🧹</button>
+  </div>
+  <!-- Colors -->
+  <div class="ribbon-group">
+    <button class="rb color-btn" title="Textfarbe">A<input type="color" id="textColor" value="#000000" onchange="applyTextColor()" /></button>
+    <button class="rb color-btn" title="Hervorhebungsfarbe" style="font-size:12px;">🖊<input type="color" id="hiliteColor" value="#ffff00" onchange="applyHilite()" /></button>
+  </div>
+  <!-- Alignment -->
+  <div class="ribbon-group">
+    <button class="rb" onclick="fmt('justifyLeft')" title="Linksbündig" id="btn-justifyLeft">⬅</button>
+    <button class="rb" onclick="fmt('justifyCenter')" title="Zentriert" id="btn-justifyCenter">↔</button>
+    <button class="rb" onclick="fmt('justifyRight')" title="Rechtsbündig" id="btn-justifyRight">➡</button>
+    <button class="rb" onclick="fmt('justifyFull')" title="Blocksatz" id="btn-justifyFull">☰</button>
+  </div>
+  <!-- Lists -->
+  <div class="ribbon-group">
+    <button class="rb" onclick="fmt('insertUnorderedList')" title="Aufzählung">•≡</button>
+    <button class="rb" onclick="fmt('insertOrderedList')" title="Nummerierte Liste">1≡</button>
+    <button class="rb" onclick="fmt('indent')" title="Einrücken">⇥</button>
+    <button class="rb" onclick="fmt('outdent')" title="Ausrücken">⇤</button>
+  </div>
+  <!-- Headings -->
+  <div class="ribbon-group">
+    <button class="rb rb-wide" onclick="insertHeading(1)" title="Überschrift 1">H1</button>
+    <button class="rb rb-wide" onclick="insertHeading(2)" title="Überschrift 2">H2</button>
+    <button class="rb rb-wide" onclick="insertHeading(3)" title="Überschrift 3">H3</button>
+    <button class="rb" onclick="insertBlockquote()" title="Zitat">❝</button>
+  </div>
+  <!-- Insert -->
+  <div class="ribbon-group">
+    <button class="rb" onclick="insertTable()" title="Tabelle einfügen">⊞</button>
+    <button class="rb" onclick="insertImage()" title="Bild einfügen">🖼</button>
+    <button class="rb" onclick="insertLink()" title="Link einfügen">🔗</button>
+    <button class="rb" onclick="insertHR()" title="Trennlinie">—</button>
+  </div>
+  <!-- View -->
+  <div class="ribbon-group">
+    <button class="rb" onclick="window.print()" title="Drucken">🖨</button>
+    <button class="rb" onclick="openFindReplace()" title="Suchen & Ersetzen">🔍</button>
+  </div>
+</div>
+
+<!-- Info bar -->
+<div class="infobar">
+  <span id="wordCount">Wörter: 0</span>
+  <span id="charCount">Zeichen: 0</span>
+  <span id="selInfo"></span>
+</div>
+
+<!-- Editor area -->
+<div class="editor-wrap">
+  <div class="page" id="editor" contenteditable="true" spellcheck="true">
+    <h1>Willkommen bei OfficeWeb Writer</h1>
+    <p>Beginne hier mit dem Tippen. Du kannst Text <b>fett</b>, <i>kursiv</i> oder <u>unterstrichen</u> formatieren.</p>
+    <p>Nutze die Symbolleiste oben, um Schriftarten, Größen, Farben und mehr anzupassen.</p>
+    <br>
+    <p>Viel Spaß beim Schreiben! 📝</p>
+  </div>
+</div>
+
+<!-- Status bar -->
+<div class="statusbar">
+  <span>📝 Writer</span>
+  <span id="statusMsg">Bereit</span>
+  <span style="margin-left:auto;" id="zoomInfo">Zoom: 100%</span>
+</div>
+
+<!-- Modals -->
+<div class="modal-overlay" id="tableModal">
+  <div class="modal">
+    <h3>Tabelle einfügen</h3>
+    <label>Zeilen</label>
+    <input type="number" id="tblRows" value="3" min="1" max="50" />
+    <label>Spalten</label>
+    <input type="number" id="tblCols" value="3" min="1" max="20" />
+    <div class="modal-btns">
+      <button onclick="closeModal('tableModal')">Abbrechen</button>
+      <button class="btn-ok" onclick="doInsertTable()">Einfügen</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="linkModal">
+  <div class="modal">
+    <h3>Link einfügen</h3>
+    <label>URL</label>
+    <input type="url" id="linkURL" value="https://" placeholder="https://..." />
+    <label>Anzeigetext</label>
+    <input type="text" id="linkText" placeholder="Linktext..." />
+    <div class="modal-btns">
+      <button onclick="closeModal('linkModal')">Abbrechen</button>
+      <button class="btn-ok" onclick="doInsertLink()">Einfügen</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="imgModal">
+  <div class="modal">
+    <h3>Bild einfügen</h3>
+    <label>Bild-URL oder lokale Datei hochladen</label>
+    <input type="url" id="imgURL" placeholder="https://..." />
+    <label>Oder Datei wählen:</label>
+    <input type="file" id="imgFile" accept="image/*" onchange="handleImgFile()" style="border:none; padding:0;" />
+    <label>Alt-Text</label>
+    <input type="text" id="imgAlt" placeholder="Bildbeschreibung..." />
+    <div class="modal-btns">
+      <button onclick="closeModal('imgModal')">Abbrechen</button>
+      <button class="btn-ok" onclick="doInsertImage()">Einfügen</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="findModal">
+  <div class="modal">
+    <h3>Suchen &amp; Ersetzen</h3>
+    <label>Suchen</label>
+    <input type="text" id="findText" placeholder="Suchbegriff..." />
+    <label>Ersetzen durch</label>
+    <input type="text" id="replaceText" placeholder="Ersetzen durch..." />
+    <div class="modal-btns">
+      <button onclick="closeModal('findModal')">Schließen</button>
+      <button onclick="doFind()">Weitersuchen</button>
+      <button class="btn-ok" onclick="doReplace()">Ersetzen</button>
+      <button onclick="doReplaceAll()">Alle ersetzen</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="openModal">
+  <div class="modal">
+    <h3>Dokument öffnen</h3>
+    <label>Gespeicherte Dokumente:</label>
+    <select id="docList" size="6" style="width:100%; height:150px; margin-bottom:12px;"></select>
+    <div class="modal-btns">
+      <button onclick="closeModal('openModal')">Abbrechen</button>
+      <button onclick="deleteSelectedDoc()" style="color:red;">Löschen</button>
+      <button class="btn-ok" onclick="loadSelectedDoc()">Öffnen</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const editor = document.getElementById('editor');
+let savedSel = null;
+
+// Formatting
+function fmt(cmd) { editor.focus(); document.execCommand(cmd, false, null); updateRibbon(); }
+function execFont() { editor.focus(); document.execCommand('fontName', false, document.getElementById('fontFamily').value); }
+function execFontSize() { editor.focus(); document.execCommand('fontSize', false, document.getElementById('fontSize').value); }
+function applyTextColor() { editor.focus(); document.execCommand('foreColor', false, document.getElementById('textColor').value); }
+function applyHilite() { editor.focus(); document.execCommand('hiliteColor', false, document.getElementById('hiliteColor').value); }
+function clearFormatting() { editor.focus(); document.execCommand('removeFormat'); }
+
+function insertHeading(n) {
+  editor.focus();
+  document.execCommand('formatBlock', false, 'h' + n);
+}
+function insertBlockquote() {
+  editor.focus();
+  document.execCommand('formatBlock', false, 'blockquote');
+}
+function insertHR() {
+  editor.focus();
+  document.execCommand('insertHTML', false, '<hr />');
+}
+function insertPageBreak() {
+  editor.focus();
+  document.execCommand('insertHTML', false, '<div style="page-break-after:always; border-bottom:2px dashed #ccc; margin:16px 0;"></div>');
+}
+
+// Ribbon state
+function updateRibbon() {
+  ['bold','italic','underline','strikeThrough','justifyLeft','justifyCenter','justifyRight','justifyFull'].forEach(cmd => {
+    const btn = document.getElementById('btn-' + cmd);
+    if (btn) btn.classList.toggle('active', document.queryCommandState(cmd));
+  });
+}
+editor.addEventListener('keyup', updateRibbon);
+editor.addEventListener('mouseup', updateRibbon);
+editor.addEventListener('selectionchange', updateWordCount);
+document.addEventListener('selectionchange', updateWordCount);
+
+function updateWordCount() {
+  const text = editor.innerText || '';
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  document.getElementById('wordCount').textContent = 'Wörter: ' + words;
+  document.getElementById('charCount').textContent = 'Zeichen: ' + text.length;
+}
+updateWordCount();
+
+// Menus
+function toggleMenu(el) {
+  const wasActive = el.classList.contains('active');
+  document.querySelectorAll('.menu-item.active').forEach(m => m.classList.remove('active'));
+  if (!wasActive) el.classList.add('active');
+}
+document.addEventListener('click', e => {
+  if (!e.target.closest('.menu-item')) document.querySelectorAll('.menu-item.active').forEach(m => m.classList.remove('active'));
+});
+
+// Modals
+function openModal(id) { document.getElementById(id).classList.add('open'); }
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+document.querySelectorAll('.modal-overlay').forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList.remove('open'); }));
+
+// Table
+function insertTable() { saveSelection(); openModal('tableModal'); }
+function doInsertTable() {
+  const rows = parseInt(document.getElementById('tblRows').value) || 3;
+  const cols = parseInt(document.getElementById('tblCols').value) || 3;
+  let html = '<table><thead><tr>';
+  for (let c = 0; c < cols; c++) html += `<th>Spalte ${c+1}</th>`;
+  html += '</tr></thead><tbody>';
+  for (let r = 0; r < rows; r++) {
+    html += '<tr>';
+    for (let c = 0; c < cols; c++) html += '<td>&nbsp;</td>';
+    html += '</tr>';
+  }
+  html += '</tbody></table><p></p>';
+  restoreSelection();
+  editor.focus();
+  document.execCommand('insertHTML', false, html);
+  closeModal('tableModal');
+}
+
+// Image
+function insertImage() { saveSelection(); document.getElementById('imgURL').value=''; document.getElementById('imgFile').value=''; document.getElementById('imgAlt').value=''; openModal('imgModal'); }
+function handleImgFile() {
+  const file = document.getElementById('imgFile').files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => { document.getElementById('imgURL').value = e.target.result; };
+  reader.readAsDataURL(file);
+}
+function doInsertImage() {
+  const url = document.getElementById('imgURL').value.trim();
+  const alt = document.getElementById('imgAlt').value.trim() || 'Bild';
+  if (!url) return;
+  restoreSelection();
+  editor.focus();
+  document.execCommand('insertHTML', false, `<img src="${url}" alt="${alt}" style="max-width:100%;"/>`);
+  closeModal('imgModal');
+}
+
+// Link
+function insertLink() { saveSelection(); document.getElementById('linkURL').value='https://'; document.getElementById('linkText').value = getSelText(); openModal('linkModal'); }
+function doInsertLink() {
+  const url = document.getElementById('linkURL').value.trim();
+  const text = document.getElementById('linkText').value.trim() || url;
+  if (!url) return;
+  restoreSelection();
+  editor.focus();
+  document.execCommand('insertHTML', false, `<a href="${url}" target="_blank">${text}</a>`);
+  closeModal('linkModal');
+}
+
+// Selection helpers
+function saveSelection() {
+  const sel = window.getSelection();
+  if (sel.rangeCount > 0) savedSel = sel.getRangeAt(0).cloneRange();
+}
+function restoreSelection() {
+  if (savedSel) {
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(savedSel);
+  }
+}
+function getSelText() {
+  return window.getSelection().toString();
+}
+
+// Find & Replace
+function openFindReplace() { openModal('findModal'); }
+function doFind() {
+  const text = document.getElementById('findText').value;
+  if (!text) return;
+  const found = window.find(text, false, false, true, false, false, false);
+  if (!found) alert('Nicht gefunden: ' + text);
+}
+function doReplace() {
+  const sel = window.getSelection();
+  if (sel.toString() === document.getElementById('findText').value) {
+    document.execCommand('insertText', false, document.getElementById('replaceText').value);
+  }
+  doFind();
+}
+function doReplaceAll() {
+  const find = document.getElementById('findText').value;
+  const rep = document.getElementById('replaceText').value;
+  if (!find) return;
+  const html = editor.innerHTML;
+  const regex = new RegExp(find.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+  editor.innerHTML = html.replace(regex, rep);
+  setStatus('Alle Ersetzungen durchgeführt');
+}
+
+// Save / Load
+function saveDoc() {
+  const title = document.getElementById('docTitle').value.trim() || 'Unbenanntes Dokument';
+  const data = { title, content: editor.innerHTML, saved: new Date().toISOString() };
+  const docs = getSavedDocs();
+  const idx = docs.findIndex(d => d.title === title);
+  if (idx >= 0) docs[idx] = data; else docs.push(data);
+  localStorage.setItem('writer_docs', JSON.stringify(docs));
+  setStatus('💾 Gespeichert: ' + title);
+}
+function getSavedDocs() {
+  try { return JSON.parse(localStorage.getItem('writer_docs') || '[]'); } catch { return []; }
+}
+function newDoc() {
+  if (editor.innerHTML && !confirm('Neues Dokument? Nicht gespeicherte Änderungen gehen verloren.')) return;
+  editor.innerHTML = '<p>Neues Dokument...</p>';
+  document.getElementById('docTitle').value = 'Unbenanntes Dokument';
+  updateWordCount();
+  setStatus('Neues Dokument erstellt');
+}
+function openDoc() {
+  const docs = getSavedDocs();
+  const list = document.getElementById('docList');
+  list.innerHTML = '';
+  docs.forEach((d, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = d.title + ' (' + new Date(d.saved).toLocaleString('de-DE') + ')';
+    list.appendChild(opt);
+  });
+  openModal('openModal');
+}
+function loadSelectedDoc() {
+  const list = document.getElementById('docList');
+  if (list.selectedIndex < 0) return;
+  const docs = getSavedDocs();
+  const doc = docs[parseInt(list.value)];
+  if (!doc) return;
+  editor.innerHTML = doc.content;
+  document.getElementById('docTitle').value = doc.title;
+  closeModal('openModal');
+  updateWordCount();
+  setStatus('Geöffnet: ' + doc.title);
+}
+function deleteSelectedDoc() {
+  const list = document.getElementById('docList');
+  if (list.selectedIndex < 0) return;
+  const docs = getSavedDocs();
+  docs.splice(parseInt(list.value), 1);
+  localStorage.setItem('writer_docs', JSON.stringify(docs));
+  openDoc();
+}
+
+// Export
+function saveAsHTML() {
+  const title = document.getElementById('docTitle').value.trim() || 'dokument';
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${title}</title></head><body>${editor.innerHTML}</body></html>`;
+  downloadFile(title + '.html', html, 'text/html');
+}
+function saveAsTxt() {
+  const title = document.getElementById('docTitle').value.trim() || 'dokument';
+  downloadFile(title + '.txt', editor.innerText, 'text/plain');
+}
+function downloadFile(filename, content, mime) {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([content], {type: mime}));
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function setStatus(msg) {
+  const el = document.getElementById('statusMsg');
+  el.textContent = msg;
+  setTimeout(() => el.textContent = 'Bereit', 3000);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey) {
+    if (e.key === 's') { e.preventDefault(); saveDoc(); }
+    if (e.key === 'n') { e.preventDefault(); newDoc(); }
+    if (e.key === 'o') { e.preventDefault(); openDoc(); }
+    if (e.key === 'h') { e.preventDefault(); openFindReplace(); }
+    if (e.key === 'p') { /* allow default print */ }
+  }
+});
+
+// Auto-save
+setInterval(() => {
+  const title = document.getElementById('docTitle').value.trim();
+  if (title && editor.innerHTML !== '<p>Neues Dokument...</p>') {
+    saveDoc();
+  }
+}, 30000);
+</script>
+</body>
+</html>

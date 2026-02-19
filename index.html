@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OfficeWeb – Kostenloses Office im Browser</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0078d4;
+      --blue-dark: #005a9e;
+      --blue-light: #deecf9;
+      --green: #217346;
+      --green-light: #e2f0e9;
+      --red: #c0392b;
+      --red-light: #fceaea;
+      --purple: #7719aa;
+      --purple-light: #f0e6f9;
+      --text: #201f1e;
+      --text-muted: #605e5c;
+      --border: #edebe9;
+      --bg: #f3f2f1;
+      --card-bg: #ffffff;
+      --shadow: 0 2px 8px rgba(0,0,0,.12);
+      --radius: 8px;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    /* Header */
+    .header { background: var(--blue); color: #fff; padding: 0 32px; height: 56px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 6px rgba(0,0,0,.2); position: sticky; top:0; z-index:100; }
+    .header-logo { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+    .header-logo span { opacity:.7; font-weight: 400; }
+    .header-nav { margin-left: auto; display: flex; gap: 4px; }
+    .header-nav a { color: rgba(255,255,255,.85); text-decoration: none; padding: 6px 14px; border-radius: 4px; font-size: 14px; transition: background .15s; }
+    .header-nav a:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #0078d4 0%, #005a9e 60%, #004578 100%); color: #fff; padding: 64px 32px; text-align: center; }
+    .hero h1 { font-size: 42px; font-weight: 700; margin-bottom: 16px; letter-spacing: -1px; }
+    .hero p { font-size: 18px; opacity: .85; max-width: 560px; margin: 0 auto 32px; line-height: 1.6; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 4px; font-size: 15px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: all .15s; }
+    .btn-primary { background: #fff; color: var(--blue); }
+    .btn-primary:hover { background: #f0f0f0; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.7); }
+    .btn-outline:hover { background: rgba(255,255,255,.15); }
+
+    /* Apps section */
+    .section { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+    .section-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    .section-sub { color: var(--text-muted); margin-bottom: 32px; font-size: 15px; }
+
+    .apps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .app-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; transition: transform .15s, box-shadow .15s; text-decoration: none; color: inherit; display: block; }
+    .app-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.16); }
+    .app-card-header { padding: 32px 24px 24px; display: flex; align-items: center; gap: 16px; }
+    .app-icon { width: 56px; height: 56px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; }
+    .app-icon-writer { background: var(--blue-light); }
+    .app-icon-calc { background: var(--green-light); }
+    .app-icon-impress { background: var(--red-light); }
+    .app-icon-notes { background: var(--purple-light); }
+    .app-name { font-size: 20px; font-weight: 700; }
+    .app-desc { color: var(--text-muted); font-size: 13px; margin-top: 2px; line-height: 1.4; }
+    .app-card-footer { padding: 0 24px 20px; display: flex; gap: 8px; }
+    .tag { background: var(--bg); color: var(--text-muted); font-size: 12px; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
+
+    /* Features */
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .feature-item { background: var(--card-bg); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .feature-icon { font-size: 28px; margin-bottom: 10px; }
+    .feature-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+    .feature-text { color: var(--text-muted); font-size: 13px; line-height: 1.5; }
+
+    /* Footer */
+    footer { background: #201f1e; color: rgba(255,255,255,.6); text-align: center; padding: 24px; font-size: 13px; margin-top: 32px; }
+    footer a { color: rgba(255,255,255,.8); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-logo">Office<span>Web</span></div>
+  <nav class="header-nav">
+    <a href="writer.html">Writer</a>
+    <a href="calc.html">Calc</a>
+    <a href="impress.html">Impress</a>
+    <a href="notes.html">Notes</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Dein kostenloses Office im Browser</h1>
+  <p>Professionelle Büro-Software – vollständig im Browser, keine Installation, keine Kosten. Dokumente, Tabellen und Präsentationen erstellen.</p>
+  <div class="hero-btns">
+    <a href="writer.html" class="btn btn-primary">✍️ Jetzt starten</a>
+    <a href="#apps" class="btn btn-outline">Apps entdecken</a>
+  </div>
+</section>
+
+<main>
+  <div class="section" id="apps">
+    <div class="section-title">Alle Apps</div>
+    <div class="section-sub">Wähle eine App und starte direkt im Browser</div>
+    <div class="apps-grid">
+
+      <a href="writer.html" class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon app-icon-writer">📝</div>
+          <div>
+            <div class="app-name" style="color:#0078d4">Writer</div>
+            <div class="app-desc">Textdokumente erstellen und bearbeiten – wie Microsoft Word</div>
+          </div>
+        </div>
+        <div class="app-card-footer">
+          <span class="tag">Textverarbeitung</span>
+          <span class="tag">WYSIWYG</span>
+        </div>
+      </a>
+
+      <a href="calc.html" class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon app-icon-calc">📊</div>
+          <div>
+            <div class="app-name" style="color:#217346">Calc</div>
+            <div class="app-desc">Tabellen und Berechnungen – wie Microsoft Excel</div>
+          </div>
+        </div>
+        <div class="app-card-footer">
+          <span class="tag">Tabellenkalkulation</span>
+          <span class="tag">Formeln</span>
+        </div>
+      </a>
+
+      <a href="impress.html" class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon app-icon-impress">🎨</div>
+          <div>
+            <div class="app-name" style="color:#c0392b">Impress</div>
+            <div class="app-desc">Präsentationen gestalten – wie Microsoft PowerPoint</div>
+          </div>
+        </div>
+        <div class="app-card-footer">
+          <span class="tag">Präsentation</span>
+          <span class="tag">Folien</span>
+        </div>
+      </a>
+
+      <a href="notes.html" class="app-card">
+        <div class="app-card-header">
+          <div class="app-icon app-icon-notes">📋</div>
+          <div>
+            <div class="app-name" style="color:#7719aa">Notes</div>
+            <div class="app-desc">Schnelle Notizen und Aufgabenlisten – wie Microsoft OneNote</div>
+          </div>
+        </div>
+        <div class="app-card-footer">
+          <span class="tag">Notizen</span>
+          <span class="tag">Aufgaben</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--card-bg); max-width:100%; padding:48px 0;">
+    <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
+      <div class="section-title">Warum OfficeWeb?</div>
+      <div class="section-sub">Professionelle Funktionen – kostenlos, im Browser, ohne Anmeldung</div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <div class="feature-title">100 % im Browser</div>
+          <div class="feature-text">Keine Installation nötig. Funktioniert in jedem modernen Browser.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💾</div>
+          <div class="feature-title">Lokaler Speicher</div>
+          <div class="feature-text">Dokumente werden lokal im Browser gespeichert – keine Cloud erforderlich.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-title">Datenschutz</div>
+          <div class="feature-text">Alle Daten bleiben auf deinem Gerät. Keine Weitergabe an Server.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">Professionelles Design</div>
+          <div class="feature-text">Modernes, sauberes Interface inspiriert von Microsoft Office.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📤</div>
+          <div class="feature-title">Export & Druck</div>
+          <div class="feature-text">Dokumente drucken oder als HTML/Text exportieren.</div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">Responsive</div>
+          <div class="feature-text">Funktioniert auf Desktop, Tablet und Smartphone.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>OfficeWeb &copy; 2026 – Kostenlose Office-Plattform für den Browser</p>
+</footer>
+
+</body>
+</html>
