@@ -1,0 +1,96 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #c0392b; --red-dark: #922b21; --red-light: #fceaea;
+      --border: #d1d1d1; --bg: #2d2d2d; --panel-bg: #3a3a3a; --text: #201f1e;
+      --slide-bg: #ffffff; --thumb-border: #555; --thumb-active: #c0392b;
+      --hover: #f0f0f0;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: #eee; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+    /* Title bar */
+    .titlebar { background: var(--red); color: #fff; height: 40px; display: flex; align-items: center; padding: 0 12px; gap: 8px; flex-shrink: 0; }
+    .titlebar-home { color: rgba(255,255,255,.85); text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 3px; }
+    .titlebar-home:hover { background: rgba(255,255,255,.15); }
+    .titlebar-name { font-size: 14px; font-weight: 600; margin-left: 4px; }
+    .titlebar-file input { background: transparent; border: none; color: #fff; font-size: 13px; outline: none; width: 220px; border-bottom: 1px solid transparent; margin-left: 8px; }
+    .titlebar-file input:focus { border-bottom-color: rgba(255,255,255,.6); }
+    .tb-btn { padding: 5px 14px; border-radius: 3px; font-size: 13px; cursor: pointer; border: none; font-weight: 600; background: rgba(255,255,255,.15); color: #fff; margin-left: 4px; }
+    .tb-btn:hover { background: rgba(255,255,255,.25); }
+    .tb-btn-present { background: rgba(255,255,255,.9); color: var(--red); }
+    .tb-btn-present:hover { background: #fff; }
+
+    /* Ribbon */
+    .ribbon { background: #fff; border-bottom: 1px solid var(--border); padding: 6px 12px; display: flex; align-items: center; flex-wrap: wrap; gap: 2px; flex-shrink: 0; color: var(--text); }
+    .ribbon-group { display: flex; align-items: center; gap: 2px; padding: 0 6px; border-right: 1px solid var(--border); }
+    .ribbon-group:last-child { border-right: none; }
+    .rb { display: flex; align-items: center; justify-content: center; min-width: 28px; height: 28px; padding: 0 6px; border: none; background: transparent; cursor: pointer; border-radius: 3px; font-size: 13px; color: var(--text); }
+    .rb:hover { background: var(--hover); }
+    .rb.active { background: var(--red-light); color: var(--red); }
+    select.rb-select { height: 28px; border: 1px solid var(--border); border-radius: 3px; font-size: 13px; background: #fff; cursor: pointer; padding: 0 4px; color: var(--text); }
+
+    /* Layout */
+    .main-layout { flex: 1; display: flex; overflow: hidden; }
+
+    /* Slide panel */
+    .slide-panel { width: 200px; background: var(--panel-bg); border-right: 1px solid #444; overflow-y: auto; padding: 8px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px; }
+    .slide-thumb { position: relative; border: 2px solid var(--thumb-border); border-radius: 4px; overflow: hidden; cursor: pointer; background: #fff; aspect-ratio: 16/9; transition: border-color .15s; }
+    .slide-thumb:hover { border-color: #aaa; }
+    .slide-thumb.active { border-color: var(--thumb-active); }
+    .slide-thumb canvas { width: 100%; height: 100%; display: block; }
+    .slide-thumb-num { position: absolute; bottom: 2px; right: 4px; font-size: 10px; color: #888; background: rgba(255,255,255,.7); padding: 1px 4px; border-radius: 2px; }
+    .slide-add { display: flex; align-items: center; justify-content: center; gap: 6px; padding: 8px; background: rgba(255,255,255,.08); border-radius: 4px; cursor: pointer; font-size: 13px; color: #aaa; border: 1px dashed #555; }
+    .slide-add:hover { background: rgba(255,255,255,.15); color: #fff; }
+
+    /* Edit area */
+    .edit-area { flex: 1; display: flex; align-items: center; justify-content: center; background: #404040; overflow: hidden; position: relative; }
+    .slide-canvas-wrap { position: relative; }
+    .slide-canvas { background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,.5); position: relative; overflow: hidden; }
+    .slide-canvas .element { position: absolute; cursor: move; user-select: none; }
+    .slide-canvas .element.selected { outline: 2px solid #0078d4; outline-offset: 1px; }
+    .slide-canvas .element.text-el { min-width: 80px; min-height: 30px; padding: 4px 8px; }
+    .slide-canvas .element.text-el[contenteditable=true] { outline: 2px solid #0078d4; cursor: text; }
+    .slide-canvas .element.image-el img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+    .slide-canvas .element.shape-el { }
+    .el-resize { position: absolute; bottom: -5px; right: -5px; width: 10px; height: 10px; background: #0078d4; border-radius: 2px; cursor: se-resize; }
+    .el-delete { position: absolute; top: -10px; right: -10px; width: 20px; height: 20px; background: #c0392b; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; cursor: pointer; display: none; }
+    .element.selected .el-delete { display: flex; }
+    .element.selected .el-resize { display: block; }
+    .el-resize { display: none; }
+
+    /* Properties panel */
+    .props-panel { width: 220px; background: var(--panel-bg); border-left: 1px solid #444; padding: 12px; overflow-y: auto; flex-shrink: 0; font-size: 13px; }
+    .props-panel h4 { color: #ccc; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #555; }
+    .prop-row { margin-bottom: 10px; }
+    .prop-row label { display: block; font-size: 12px; color: #aaa; margin-bottom: 3px; }
+    .prop-row input, .prop-row select { width: 100%; background: #4a4a4a; border: 1px solid #555; color: #eee; border-radius: 3px; padding: 5px 8px; font-size: 13px; }
+    .prop-row input[type=color] { height: 32px; padding: 2px; cursor: pointer; }
+    .prop-row input[type=range] { padding: 0; }
+    .prop-btn { width: 100%; padding: 7px; background: var(--red); color: #fff; border: none; border-radius: 3px; cursor: pointer; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+    .prop-btn:hover { background: var(--red-dark); }
+    .prop-btn-secondary { background: #555; }
+    .prop-btn-secondary:hover { background: #666; }
+
+    /* Status bar */
+    .statusbar { background: var(--red); color: rgba(255,255,255,.85); height: 24px; display: flex; align-items: center; padding: 0 12px; gap: 24px; font-size: 12px; flex-shrink: 0; }
+
+    /* Present mode */
+    .present-overlay { position: fixed; inset: 0; background: #000; z-index: 1000; display: none; align-items: center; justify-content: center; flex-direction: column; }
+    .present-overlay.open { display: flex; }
+    .present-slide { background: #fff; position: relative; }
+    .present-nav { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 1001; }
+    .present-nav button { background: rgba(255,255,255,.15); color: #fff; border: 1px solid rgba(255,255,255,.3); padding: 8px 20px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    .present-nav button:hover { background: rgba(255,255,255,.25); }
+    .present-counter { position: fixed; top: 12px; right: 16px; color: rgba(255,255,255,.5); font-size: 13px; z-index: 1001; }
+    .present-exit { position: fixed; top: 12px; left: 16px; color: rgba(255,255,255,.6); cursor: pointer; font-size: 13px; z-index: 1001; background: rgba(0,0,0,.5); padding: 4px 12px; border-radius: 4px; }
+    .present-exit:hover { color: #fff; }
+
+    /* Modal */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 500; display: none; align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #fff; border-radius: 6px; padding: 24px; min-width: 340px; color: var(--text); box-shadow: 0 8px 32px rgba(0,0,0,.35); }
+    .modal h3 { margin-bottom: 16px; }
+    .modal label { display: block; font-size: 13px; margin-bottom: 4px; color: #555; }
+    .modal input, .modal select { width: 100%; border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px; font-size: 14px; margin-bottom: 12px; }
+    .modal-btns { display: flex; gap: 8px; justify-content: flex-end; }
+    .modal-btns button { padding: 8px 20px; border-radius: 4px; font-size: 13px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+    .modal-btns .btn-ok { background: var(--red); color: #fff; border-color: var(--red); }

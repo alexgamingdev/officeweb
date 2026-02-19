@@ -37,6 +37,7 @@
 ## 🚀 Features
 
 - **🌐 100 % im Browser** – Keine Installation nötig. Funktioniert in jedem modernen Browser.
+- **🌍 Mehrsprachig** – Unterstützt alle 24 offiziellen EU-Sprachen über das integrierte Sprachauswahlmenü.
 - **💾 Lokaler Speicher** – Dokumente werden per `localStorage` im Browser gespeichert.
 - **🔒 Datenschutz** – Alle Daten bleiben auf deinem Gerät. Kein Server, keine Cloud.
 - **🎨 Professionelles Design** – Modernes, sauberes Interface inspiriert von Microsoft Office.
@@ -71,17 +72,55 @@ Danach im Browser öffnen: `http://localhost:8080`
 
 ```
 sus_2026/
-├── index.html        # Startseite / App-Übersicht
-├── writer.html       # Textverarbeitungs-App
-├── calc.html         # Tabellenkalkulations-App
-├── impress.html      # Präsentations-App
-├── notes.html        # Notizen-App
-├── logo.svg          # Projekt-Logo
-├── LICENSE           # MIT-Lizenz
-├── CONTRIBUTING.md   # Beitragen zum Projekt
-├── CODE_OF_CONDUCT.md # Verhaltenskodex
-├── SECURITY.md       # Sicherheitsrichtlinien
-└── CHANGELOG.md      # Versionshistorie
+├── index.html              # Startseite / App-Übersicht
+├── writer.html             # Textverarbeitungs-App
+├── calc.html               # Tabellenkalkulations-App
+├── impress.html            # Präsentations-App
+├── notes.html              # Notizen-App
+├── logo.svg                # Projekt-Logo
+├── css/
+│   ├── common.css          # Gemeinsame Stile (Titelleiste, Modals, Sprachauswahl)
+│   ├── index.css           # Stile der Startseite
+│   ├── writer.css          # Stile des Writers
+│   ├── calc.css            # Stile von Calc
+│   ├── impress.css         # Stile von Impress
+│   └── notes.css           # Stile von Notes
+├── js/
+│   ├── i18n.js             # Internationalisierungssystem (alle 24 EU-Sprachen)
+│   ├── writer.js           # JavaScript des Writers
+│   ├── calc.js             # JavaScript von Calc
+│   ├── impress.js          # JavaScript von Impress
+│   └── notes.js            # JavaScript von Notes
+├── locales/
+│   ├── de.json             # Deutsch (Standard)
+│   ├── en.json             # Englisch
+│   ├── fr.json             # Französisch
+│   ├── es.json             # Spanisch
+│   ├── it.json             # Italienisch
+│   ├── nl.json             # Niederländisch
+│   ├── pl.json             # Polnisch
+│   ├── pt.json             # Portugiesisch
+│   ├── sv.json             # Schwedisch
+│   ├── da.json             # Dänisch
+│   ├── fi.json             # Finnisch
+│   ├── cs.json             # Tschechisch
+│   ├── sk.json             # Slowakisch
+│   ├── hu.json             # Ungarisch
+│   ├── ro.json             # Rumänisch
+│   ├── bg.json             # Bulgarisch
+│   ├── hr.json             # Kroatisch
+│   ├── sl.json             # Slowenisch
+│   ├── el.json             # Griechisch
+│   ├── lt.json             # Litauisch
+│   ├── lv.json             # Lettisch
+│   ├── et.json             # Estnisch
+│   ├── ga.json             # Irisch
+│   └── mt.json             # Maltesisch
+├── LICENSE                 # MIT-Lizenz
+├── CONTRIBUTING.md         # Beitragen zum Projekt
+├── CODE_OF_CONDUCT.md      # Verhaltenskodex
+├── SECURITY.md             # Sicherheitsrichtlinien
+└── CHANGELOG.md            # Versionshistorie
 ```
 
 ---

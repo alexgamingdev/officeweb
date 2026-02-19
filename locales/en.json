@@ -1,0 +1,228 @@
+{
+  "nav": {
+    "home": "Home",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Open Source &amp; Free",
+    "title": "Your <em>free</em> Office<br>in the browser",
+    "subtitle": "Professional office software – entirely in the browser, no installation, no cost, no privacy issues.",
+    "start": "✍️ Get started",
+    "discover": "Explore apps"
+  },
+  "stats": {
+    "apps": "Apps",
+    "noInstall": "Installation",
+    "privacy": "Privacy",
+    "license": "License"
+  },
+  "apps": {
+    "title": "All Apps",
+    "subtitle": "Choose an app and start directly in the browser",
+    "writer": {
+      "desc": "Create and edit text documents – like Microsoft Word",
+      "tag1": "Word processing",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Spreadsheets and calculations – like Microsoft Excel",
+      "tag1": "Spreadsheet",
+      "tag2": "Formulas"
+    },
+    "impress": {
+      "desc": "Design presentations – like Microsoft PowerPoint",
+      "tag1": "Presentation",
+      "tag2": "Slides"
+    },
+    "notes": {
+      "desc": "Quick notes and to-do lists – like Microsoft OneNote",
+      "tag1": "Notes",
+      "tag2": "Tasks"
+    }
+  },
+  "features": {
+    "title": "Why OfficeWeb?",
+    "subtitle": "Professional features – free, in the browser, no sign-up required",
+    "browser": {
+      "title": "100% in the browser",
+      "text": "No installation needed. Works in any modern browser."
+    },
+    "storage": {
+      "title": "Local storage",
+      "text": "Documents are stored locally in your browser – no cloud required."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "text": "All data stays on your device. Nothing is sent to servers."
+    },
+    "design": {
+      "title": "Professional design",
+      "text": "Modern, clean interface inspired by Microsoft Office."
+    },
+    "export": {
+      "title": "Export &amp; Print",
+      "text": "Print documents or export as HTML/Text."
+    },
+    "responsive": {
+      "title": "Responsive",
+      "text": "Works on desktop, tablet and smartphone."
+    }
+  },
+  "oss": {
+    "title": "Open Source &amp; free for everyone",
+    "text": "OfficeWeb is an open-source project under the MIT license. Anyone can contribute, adapt the code and develop the project further.",
+    "btn": "View on GitHub"
+  },
+  "footer": {
+    "license": "MIT License",
+    "contributing": "Contributing",
+    "security": "Security"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "insert": "Insert",
+    "delete": "Delete",
+    "open": "Open",
+    "close": "Close",
+    "save": "💾 Save",
+    "new": "📄 New",
+    "ready": "Ready",
+    "home": "🏠 Home"
+  },
+  "writer": {
+    "appname": "📝 Writer",
+    "newDoc": "Untitled Document",
+    "menu": {
+      "file": "File",
+      "edit": "Edit",
+      "insert": "Insert",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 New document",
+      "open": "📂 Open...",
+      "save": "💾 Save",
+      "exportHtml": "📥 Export as HTML",
+      "exportTxt": "📄 Export as text",
+      "print": "🖨️ Print"
+    },
+    "edit": {
+      "undo": "↩️ Undo",
+      "redo": "↪️ Redo",
+      "cut": "✂️ Cut",
+      "copy": "📋 Copy",
+      "paste": "📌 Paste",
+      "selectAll": "🔲 Select all",
+      "findReplace": "🔍 Find &amp; Replace"
+    },
+    "insert": {
+      "table": "📊 Table",
+      "image": "🖼️ Image",
+      "link": "🔗 Link",
+      "hr": "➖ Horizontal line",
+      "pageBreak": "📃 Page break"
+    },
+    "format": {
+      "bold": "<b>B</b> Bold",
+      "italic": "<i>I</i> Italic",
+      "underline": "<u>U</u> Underline",
+      "clearFmt": "🧹 Clear formatting"
+    },
+    "modal": {
+      "table": { "title": "Insert table", "rows": "Rows", "cols": "Columns" },
+      "link": { "title": "Insert link", "url": "URL", "text": "Display text" },
+      "img": {
+        "title": "Insert image",
+        "urlLabel": "Image URL or upload local file",
+        "fileLabel": "Or choose file:",
+        "alt": "Alt text"
+      },
+      "find": { "title": "Find &amp; Replace", "find": "Find", "replace": "Replace with" },
+      "open": { "title": "Open document", "label": "Saved documents:" }
+    },
+    "btn": {
+      "findNext": "Find next",
+      "replace": "Replace",
+      "replaceAll": "Replace all"
+    },
+    "info": {
+      "words": "Words:",
+      "chars": "Characters:"
+    },
+    "status": {
+      "ready": "Ready",
+      "saved": "💾 Saved: ",
+      "newDoc": "New document created",
+      "opened": "Opened: ",
+      "replaced": "All replacements done"
+    },
+    "confirm": {
+      "newDoc": "New document? Unsaved changes will be lost.",
+      "notFound": "Not found: "
+    },
+    "welcome": {
+      "title": "Welcome to OfficeWeb Writer",
+      "p1": "Start typing here. You can format text as <b>bold</b>, <i>italic</i> or <u>underlined</u>.",
+      "p2": "Use the toolbar above to adjust fonts, sizes, colours and more.",
+      "p3": "Enjoy writing! 📝"
+    }
+  },
+  "calc": {
+    "appname": "📊 Calc",
+    "newWorkbook": "Untitled Spreadsheet",
+    "newSheet": "Sheet",
+    "modal": {
+      "open": { "title": "Open workbook", "label": "Saved workbooks:" }
+    },
+    "status": {
+      "ready": "Ready",
+      "saved": "💾 Saved: ",
+      "opened": "Opened: "
+    },
+    "confirm": {
+      "newWorkbook": "Create new workbook? Unsaved changes will be lost.",
+      "deleteSheet": "Delete sheet \"%s\"?"
+    }
+  },
+  "impress": {
+    "appname": "🎨 Impress",
+    "newPresentation": "Untitled Presentation",
+    "modal": {
+      "img": { "title": "Insert image", "urlLabel": "Image URL", "fileLabel": "Or file:" },
+      "open": { "title": "Open presentation", "label": "Saved presentations:" }
+    },
+    "status": {
+      "ready": "Ready",
+      "saved": "💾 Saved: ",
+      "opened": "Opened: "
+    }
+  },
+  "notes": {
+    "appname": "📋 Notes",
+    "noNote": "No note selected",
+    "newNote": "+ Create new note",
+    "sectionTitle": "Notes",
+    "search": "🔍 Search notes...",
+    "noTitle": "Untitled",
+    "words": "Words:",
+    "modified": "Modified: ",
+    "newSection": "New section",
+    "tagPrompt": "Tag name:",
+    "sections": {
+      "personal": "Personal",
+      "work": "Work",
+      "tasks": "Tasks"
+    },
+    "status": {
+      "ready": "Ready",
+      "noNote": "No note selected"
+    },
+    "confirm": {
+      "deleteNote": "Delete note?"
+    }
+  }
+}

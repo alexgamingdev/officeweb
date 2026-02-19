@@ -1,0 +1,81 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue: #0078d4; --blue-dark: #005a9e; --blue-light: #deecf9;
+      --border: #d1d1d1; --bg: #f3f2f1; --text: #201f1e;
+      --ribbon-bg: #fff; --ribbon-border: #e1e1e1;
+      --hover: #f0f0f0; --active: #deecf9;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+    /* Title bar */
+    .titlebar { background: var(--blue); color: #fff; height: 40px; display: flex; align-items: center; padding: 0 12px; gap: 8px; flex-shrink: 0; }
+    .titlebar-home { color: rgba(255,255,255,.85); text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 3px; }
+    .titlebar-home:hover { background: rgba(255,255,255,.15); }
+    .titlebar-name { font-size: 14px; font-weight: 600; margin-left: 4px; }
+    .titlebar-file { font-size: 13px; opacity: .75; margin-left: 8px; flex: 1; }
+    .titlebar-file input { background: transparent; border: none; color: #fff; font-size: 13px; outline: none; width: 220px; border-bottom: 1px solid transparent; }
+    .titlebar-file input:focus { border-bottom-color: rgba(255,255,255,.6); }
+
+    /* Menu bar */
+    .menubar { background: var(--blue); display: flex; padding: 0 8px; flex-shrink: 0; }
+    .menu-item { color: rgba(255,255,255,.9); font-size: 13px; padding: 6px 12px; cursor: pointer; border-radius: 3px 3px 0 0; position: relative; }
+    .menu-item:hover { background: rgba(255,255,255,.15); }
+    .menu-item.active { background: var(--ribbon-bg); color: var(--blue); }
+    .dropdown { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid var(--border); border-radius: 0 4px 4px 4px; min-width: 200px; box-shadow: 0 4px 12px rgba(0,0,0,.15); z-index: 1000; }
+    .menu-item.active .dropdown { display: block; }
+    .dropdown-item { display: flex; align-items: center; gap: 10px; padding: 8px 16px; font-size: 13px; color: var(--text); cursor: pointer; }
+    .dropdown-item:hover { background: var(--hover); }
+    .dropdown-item kbd { margin-left: auto; font-size: 11px; color: #999; font-family: monospace; }
+    .dropdown-sep { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
+
+    /* Ribbon */
+    .ribbon { background: var(--ribbon-bg); border-bottom: 1px solid var(--ribbon-border); padding: 6px 12px; display: flex; align-items: center; flex-wrap: wrap; gap: 2px; flex-shrink: 0; }
+    .ribbon-group { display: flex; align-items: center; gap: 1px; padding: 0 6px; border-right: 1px solid var(--border); }
+    .ribbon-group:last-child { border-right: none; }
+    .rb { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border: none; background: transparent; cursor: pointer; border-radius: 3px; font-size: 14px; color: var(--text); flex-shrink: 0; }
+    .rb:hover { background: var(--hover); }
+    .rb.active { background: var(--active); color: var(--blue); }
+    .rb-label { font-size: 12px; font-weight: 600; }
+    .rb-wide { width: auto; padding: 0 8px; font-size: 13px; }
+    .rb-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+    select.rb-select { height: 28px; border: 1px solid var(--border); border-radius: 3px; font-size: 13px; background: #fff; cursor: pointer; padding: 0 4px; color: var(--text); }
+    .color-btn { position: relative; }
+    .color-btn input[type=color] { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; top: 0; left: 0; }
+
+    /* Formula/info bar */
+    .infobar { background: #fafafa; border-bottom: 1px solid var(--ribbon-border); height: 28px; display: flex; align-items: center; padding: 0 16px; font-size: 12px; color: #666; gap: 16px; flex-shrink: 0; }
+
+    /* Editor area */
+    .editor-wrap { flex: 1; overflow-y: auto; background: var(--bg); padding: 32px 24px; display: flex; justify-content: center; }
+    .page { background: #fff; width: 794px; min-height: 1123px; padding: 72px 80px; box-shadow: 0 2px 12px rgba(0,0,0,.15); outline: none; font-size: 16px; line-height: 1.7; color: #000; word-wrap: break-word; }
+    .page:focus { box-shadow: 0 2px 12px rgba(0,0,0,.15), 0 0 0 2px var(--blue-light); }
+    .page table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+    .page table td, .page table th { border: 1px solid #bbb; padding: 6px 10px; }
+    .page table th { background: var(--bg); font-weight: 600; }
+    .page img { max-width: 100%; height: auto; }
+    .page h1 { font-size: 28px; font-weight: 700; margin: 16px 0 8px; }
+    .page h2 { font-size: 22px; font-weight: 700; margin: 14px 0 6px; }
+    .page h3 { font-size: 18px; font-weight: 600; margin: 12px 0 4px; }
+    .page ul, .page ol { padding-left: 24px; }
+    .page blockquote { border-left: 4px solid var(--blue); padding: 8px 16px; color: #555; margin: 8px 0; font-style: italic; background: #f8f9fa; }
+
+    /* Status bar */
+    .statusbar { background: var(--blue); color: rgba(255,255,255,.85); height: 24px; display: flex; align-items: center; padding: 0 12px; gap: 24px; font-size: 12px; flex-shrink: 0; }
+    .statusbar span { display: flex; align-items: center; gap: 4px; }
+
+    /* Modals */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); z-index: 500; display: none; align-items: center; justify-content: center; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #fff; border-radius: 6px; padding: 24px; min-width: 360px; max-width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,.25); }
+    .modal h3 { margin-bottom: 16px; font-size: 18px; }
+    .modal label { display: block; font-size: 13px; margin-bottom: 4px; color: #555; }
+    .modal input, .modal select, .modal textarea { width: 100%; border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px; font-size: 14px; margin-bottom: 12px; }
+    .modal-btns { display: flex; gap: 8px; justify-content: flex-end; margin-top: 8px; }
+    .modal-btns button { padding: 8px 20px; border-radius: 4px; font-size: 13px; cursor: pointer; border: 1px solid var(--border); background: #fff; }
+    .modal-btns .btn-ok { background: var(--blue); color: #fff; border-color: var(--blue); }
+    .modal-btns .btn-ok:hover { background: var(--blue-dark); }
+
+    @media (max-width: 900px) {
+      .page { width: 100%; padding: 32px 24px; min-height: auto; }
+      .editor-wrap { padding: 16px; }
+    }

@@ -1,0 +1,128 @@
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --purple: #7719aa; --purple-dark: #5c1483; --purple-light: #f0e6f9;
+      --border: #d1d1d1; --bg: #f3f2f1; --text: #201f1e;
+      --sidebar-bg: #fff; --hover: #f0f0f0;
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+    /* Title bar */
+    .titlebar { background: var(--purple); color: #fff; height: 40px; display: flex; align-items: center; padding: 0 12px; gap: 8px; flex-shrink: 0; }
+    .titlebar-home { color: rgba(255,255,255,.85); text-decoration: none; font-size: 13px; padding: 4px 10px; border-radius: 3px; }
+    .titlebar-home:hover { background: rgba(255,255,255,.15); }
+    .titlebar-name { font-size: 14px; font-weight: 600; }
+    .tb-btn { padding: 5px 14px; border-radius: 3px; font-size: 13px; cursor: pointer; border: none; font-weight: 600; background: rgba(255,255,255,.15); color: #fff; margin-left: 4px; }
+    .tb-btn:hover { background: rgba(255,255,255,.25); }
+    .search-input { margin-left: auto; background: rgba(255,255,255,.15); border: none; color: #fff; padding: 5px 12px; border-radius: 16px; font-size: 13px; outline: none; width: 200px; }
+    .search-input::placeholder { color: rgba(255,255,255,.6); }
+    .search-input:focus { background: rgba(255,255,255,.25); }
+
+    /* Main layout */
+    .main-layout { flex: 1; display: flex; overflow: hidden; }
+
+    /* Sections sidebar */
+    .sections-bar { width: 56px; background: #2d2d2d; display: flex; flex-direction: column; align-items: center; padding: 8px 0; gap: 4px; flex-shrink: 0; }
+    .section-btn { width: 40px; height: 40px; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 18px; color: rgba(255,255,255,.6); border: 2px solid transparent; transition: all .15s; }
+    .section-btn:hover { background: rgba(255,255,255,.1); color: #fff; }
+    .section-btn.active { background: var(--purple); color: #fff; border-color: rgba(255,255,255,.3); }
+    .section-add { margin-top: auto; width: 40px; height: 40px; border-radius: 6px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 22px; color: rgba(255,255,255,.5); }
+    .section-add:hover { color: #fff; }
+
+    /* Notes list */
+    .notes-list { width: 260px; background: var(--sidebar-bg); border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; flex-shrink: 0; }
+    .notes-list-header { padding: 12px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 8px; }
+    .notes-list-header h3 { font-size: 15px; font-weight: 700; flex: 1; }
+    .list-add-btn { width: 28px; height: 28px; border-radius: 4px; display: flex; align-items: center; justify-content: center; background: var(--purple); color: #fff; cursor: pointer; font-size: 18px; border: none; }
+    .list-add-btn:hover { background: var(--purple-dark); }
+    .notes-items { flex: 1; overflow-y: auto; }
+    .note-item { padding: 12px 14px; cursor: pointer; border-bottom: 1px solid #f0f0f0; transition: background .1s; position: relative; }
+    .note-item:hover { background: var(--hover); }
+    .note-item.active { background: var(--purple-light); border-left: 3px solid var(--purple); }
+    .note-item-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .note-item-preview { font-size: 12px; color: #888; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .note-item-date { font-size: 11px; color: #aaa; margin-top: 2px; }
+    .note-item-del { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); opacity: 0; font-size: 14px; color: #999; cursor: pointer; background: none; border: none; padding: 2px 6px; }
+    .note-item:hover .note-item-del { opacity: 1; }
+    .note-item-del:hover { color: red; }
+
+    /* Note editor */
+    .note-editor { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+    .note-editor-top { padding: 12px 24px 6px; border-bottom: 1px solid var(--border); background: #fff; flex-shrink: 0; }
+    .note-title-input { font-size: 22px; font-weight: 700; border: none; outline: none; width: 100%; color: var(--text); background: transparent; }
+    .note-toolbar { display: flex; align-items: center; gap: 2px; padding: 4px 0; flex-wrap: wrap; }
+    .nb { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border: none; background: transparent; cursor: pointer; border-radius: 3px; font-size: 14px; color: var(--text); }
+    .nb:hover { background: var(--hover); }
+    .nb.active { background: var(--purple-light); color: var(--purple); }
+    .nb-sep { width: 1px; height: 18px; background: var(--border); margin: 0 4px; }
+    select.nb-select { height: 26px; border: 1px solid var(--border); border-radius: 3px; font-size: 12px; background: #fff; cursor: pointer; padding: 0 4px; }
+    .note-body { flex: 1; overflow-y: auto; padding: 24px; outline: none; font-size: 15px; line-height: 1.8; color: var(--text); background: #fff; }
+    .note-body:empty::before { content: 'Notiz hier eingeben...'; color: #aaa; }
+    .note-body h1 { font-size: 24px; margin: 8px 0; }
+    .note-body h2 { font-size: 20px; margin: 6px 0; }
+    .note-body h3 { font-size: 16px; margin: 4px 0; }
+    .note-body ul, .note-body ol { padding-left: 24px; }
+    .note-body blockquote { border-left: 3px solid var(--purple); padding: 6px 14px; color: #555; background: #faf5ff; margin: 6px 0; }
+    .note-body input[type=checkbox] { margin-right: 6px; }
+    .note-meta { padding: 6px 24px; font-size: 12px; color: #aaa; background: #fafafa; border-top: 1px solid var(--border); flex-shrink: 0; display: flex; gap: 16px; }
+
+    /* Empty state */
+    .empty-state { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #aaa; gap: 12px; }
+    .empty-state .icon { font-size: 64px; }
+    .empty-state p { font-size: 16px; }
+    .empty-state button { padding: 10px 24px; background: var(--purple); color: #fff; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; font-weight: 600; }
+
+    /* Status bar */
+    .statusbar { background: var(--purple); color: rgba(255,255,255,.85); height: 24px; display: flex; align-items: center; padding: 0 12px; gap: 24px; font-size: 12px; flex-shrink: 0; }
+
+    /* Tags */
+    .note-tags { padding: 0 24px 8px; display: flex; flex-wrap: wrap; gap: 6px; background: #fff; }
+    .tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 10px; border-radius: 20px; font-size: 12px; background: var(--purple-light); color: var(--purple); cursor: pointer; }
+    .tag .tag-del { opacity: .6; cursor: pointer; }
+    .tag .tag-del:hover { opacity: 1; color: red; }
+    .tag-add { background: transparent; border: 1px dashed #ccc; color: #aaa; }
+    .tag-add:hover { border-color: var(--purple); color: var(--purple); }
+
+    /* Checklist highlight */
+    .note-body .task-line { display: flex; align-items: flex-start; gap: 8px; }
+  </style>
+  const html = `<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${escHtml(note.title)}</title><style>body{font-family:Segoe UI,sans-serif;max-width:700px;margin:40px auto;padding:0 20px;line-height:1.7;}h1{font-size:28px;}</style></head><body><h1>${escHtml(note.title)}</h1>${note.body}</body></html>`;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([html], {type:'text/html'}));
+  a.download = (note.title || 'notiz') + '.html';
+  a.click();
+}
+
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+function escHtml(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function stripTags(html) { const d = document.createElement('div'); d.innerHTML = html; return d.textContent || ''; }
+function formatDate(ts) {
+  const d = new Date(ts);
+  const now = new Date();
+  if (d.toDateString() === now.toDateString()) return d.toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'});
+  return d.toLocaleDateString('de-DE', {day:'2-digit',month:'2-digit',year:'numeric'});
+}
+
+function setStatus(msg) {
+  const el = document.getElementById('statusMsg');
+  el.textContent = msg;
+  setTimeout(() => el.textContent = 'Bereit', 3000);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (e.ctrlKey || e.metaKey) {
+    if (e.key === 'n') { e.preventDefault(); newNote(); }
+  }
+});
+
+// ─── Init ────────────────────────────────────────────────────────────────────
+sections = getSections();
+
+renderSections();
+document.getElementById('sectionTitle').textContent = sections[0]?.name || 'Notizen';
+renderNoteList();
+
+// Auto-save
+setInterval(() => { if (currentNoteId) saveCurrentNote(); }, 10000);
+</script>
+</body>
