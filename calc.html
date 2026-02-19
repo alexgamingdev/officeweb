@@ -430,7 +430,7 @@ function evaluateCell(r, c) {
 }
 
 function evalFormula(expr, selfR, selfC) {
-  // Replace cell references A1 → value
+  // Replace cell references A1 → numeric value
   const refRe = /([A-Z]{1,2})(\d+)/g;
   let withVals = expr.toUpperCase().replace(refRe, (m, col, row) => {
     const c = COL_LETTERS.indexOf(col);
@@ -440,24 +440,109 @@ function evalFormula(expr, selfR, selfC) {
     return (v === '' || v === null) ? '0' : v;
   });
 
-  // SUM(range)
+  // Aggregate functions with ranges
   withVals = withVals.replace(/SUM\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => rangeValues(a, b).reduce((s,x)=>s+x,0));
   withVals = withVals.replace(/AVERAGE\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => { const v=rangeValues(a,b); return v.length ? v.reduce((s,x)=>s+x,0)/v.length : 0; });
   withVals = withVals.replace(/AVG\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => { const v=rangeValues(a,b); return v.length ? v.reduce((s,x)=>s+x,0)/v.length : 0; });
   withVals = withVals.replace(/COUNT\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => rangeValues(a,b).length);
-  withVals = withVals.replace(/MAX\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => Math.max(...rangeValues(a,b)));
-  withVals = withVals.replace(/MIN\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => Math.min(...rangeValues(a,b)));
-  withVals = withVals.replace(/SQRT\(([^)]+)\)/gi, (_, v) => Math.sqrt(parseFloat(v)));
-  withVals = withVals.replace(/ABS\(([^)]+)\)/gi, (_, v) => Math.abs(parseFloat(v)));
-  withVals = withVals.replace(/ROUND\(([^,]+),([^)]+)\)/gi, (_, v, d) => parseFloat(parseFloat(v).toFixed(parseInt(d))));
-  withVals = withVals.replace(/IF\(([^,]+),([^,]+),([^)]+)\)/gi, (_, cond, t, f) => {
-    try { return eval(cond) ? eval(t) : eval(f); } catch { return '#FEHLER'; }
-  });
+  withVals = withVals.replace(/MAX\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => { const v=rangeValues(a,b); return v.length ? Math.max(...v) : 0; });
+  withVals = withVals.replace(/MIN\(([A-Z]\d+):([A-Z]\d+)\)/gi, (_, a, b) => { const v=rangeValues(a,b); return v.length ? Math.min(...v) : 0; });
 
-  // Safety: only allow math characters
-  if (/[^0-9+\-*/().,% \t]/.test(withVals)) throw new Error('Ungültige Formel');
-  // eslint-disable-next-line no-new-func
-  return Function('"use strict"; return (' + withVals + ')')();
+  // Single-value functions (only operate on already-substituted numeric strings)
+  withVals = withVals.replace(/SQRT\(([-\d.]+)\)/gi, (_, v) => Math.sqrt(parseFloat(v)));
+  withVals = withVals.replace(/ABS\(([-\d.]+)\)/gi,  (_, v) => Math.abs(parseFloat(v)));
+  withVals = withVals.replace(/ROUND\(([-\d.]+),([-\d]+)\)/gi, (_, v, d) => parseFloat(parseFloat(v).toFixed(parseInt(d))));
+
+  // IF(condition, true_val, false_val) — condition: <num> <op> <num>
+  withVals = withVals.replace(/IF\(([-\d.]+)\s*([=<>!]{1,2})\s*([-\d.]+),([-\d.]+),([-\d.]+)\)/gi,
+    (_, lhs, op, rhs, tv, fv) => {
+      const l = parseFloat(lhs), r2 = parseFloat(rhs);
+      let result = false;
+      if (op === '='  || op === '==') result = l === r2;
+      else if (op === '<>')         result = l !== r2;
+      else if (op === '<')          result = l <   r2;
+      else if (op === '>')          result = l >   r2;
+      else if (op === '<=')         result = l <=  r2;
+      else if (op === '>=')         result = l >=  r2;
+      return result ? tv : fv;
+    });
+
+  // Safety: allow only numbers, operators, parentheses, dots, commas, spaces
+  if (/[^0-9+\-*/()., \t]/.test(withVals)) throw new Error('Ungültige Formel');
+
+  // Safe arithmetic parser (no eval / Function constructor)
+  return safeEval(withVals.replace(/,/g, '.'));
+}
+
+// ─── Safe arithmetic expression parser ──────────────────────────────────────
+function safeEval(expr) {
+  const tokens = tokenize(expr);
+  let pos = 0;
+
+  function peek() { return tokens[pos]; }
+  function consume() { return tokens[pos++]; }
+
+  function parseExpr() { return parseAddSub(); }
+
+  function parseAddSub() {
+    let left = parseMulDiv();
+    while (peek() === '+' || peek() === '-') {
+      const op = consume();
+      const right = parseMulDiv();
+      left = op === '+' ? left + right : left - right;
+    }
+    return left;
+  }
+
+  function parseMulDiv() {
+    let left = parseUnary();
+    while (peek() === '*' || peek() === '/') {
+      const op = consume();
+      const right = parseUnary();
+      if (op === '/' && right === 0) throw new Error('#DIV/0');
+      left = op === '*' ? left * right : left / right;
+    }
+    return left;
+  }
+
+  function parseUnary() {
+    if (peek() === '-') { consume(); return -parsePrimary(); }
+    if (peek() === '+') { consume(); return parsePrimary(); }
+    return parsePrimary();
+  }
+
+  function parsePrimary() {
+    const tok = peek();
+    if (tok === '(') {
+      consume();
+      const val = parseExpr();
+      if (peek() !== ')') throw new Error('Fehlende )');
+      consume();
+      return val;
+    }
+    if (tok !== undefined && !isNaN(tok)) { consume(); return parseFloat(tok); }
+    throw new Error('Unbekanntes Token: ' + tok);
+  }
+
+  const result = parseExpr();
+  if (pos !== tokens.length) throw new Error('Ungültige Formel');
+  return result;
+}
+
+function tokenize(expr) {
+  const tokens = [];
+  let i = 0;
+  while (i < expr.length) {
+    if (/\s/.test(expr[i])) { i++; continue; }
+    if (/[+\-*/()]/.test(expr[i])) { tokens.push(expr[i++]); continue; }
+    if (/[\d.]/.test(expr[i])) {
+      let num = '';
+      while (i < expr.length && /[\d.]/.test(expr[i])) num += expr[i++];
+      tokens.push(num); continue;
+    }
+    throw new Error('Ungültiges Zeichen: ' + expr[i]);
+  }
+  return tokens;
 }
 
 function rangeValues(a, b) {

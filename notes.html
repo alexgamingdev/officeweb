@@ -423,14 +423,7 @@ document.addEventListener('keydown', e => {
 });
 
 // ─── Init ────────────────────────────────────────────────────────────────────
-sections = getSaved_sections();
-function getSaved_sections() {
-  try {
-    const s = JSON.parse(localStorage.getItem('notes_sections'));
-    if (s && s.length) return s;
-  } catch {}
-  return sections;
-}
+sections = getSections();
 
 renderSections();
 document.getElementById('sectionTitle').textContent = sections[0]?.name || 'Notizen';
