@@ -1,0 +1,228 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Open Source &amp; Kostenlos",
+    "title": "Dein <em>kostenloses</em> Office<br>im Browser",
+    "subtitle": "Professionelle Büro-Software – vollständig im Browser, keine Installation, keine Kosten, kein Datenschutzproblem.",
+    "start": "✍️ Jetzt starten",
+    "discover": "Apps entdecken"
+  },
+  "stats": {
+    "apps": "Apps",
+    "noInstall": "Installation",
+    "privacy": "Datenschutz",
+    "license": "Lizenz"
+  },
+  "apps": {
+    "title": "Alle Apps",
+    "subtitle": "Wähle eine App und starte direkt im Browser",
+    "writer": {
+      "desc": "Textdokumente erstellen und bearbeiten – wie Microsoft Word",
+      "tag1": "Textverarbeitung",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Tabellen und Berechnungen – wie Microsoft Excel",
+      "tag1": "Tabellenkalkulation",
+      "tag2": "Formeln"
+    },
+    "impress": {
+      "desc": "Präsentationen gestalten – wie Microsoft PowerPoint",
+      "tag1": "Präsentation",
+      "tag2": "Folien"
+    },
+    "notes": {
+      "desc": "Schnelle Notizen und Aufgabenlisten – wie Microsoft OneNote",
+      "tag1": "Notizen",
+      "tag2": "Aufgaben"
+    }
+  },
+  "features": {
+    "title": "Warum OfficeWeb?",
+    "subtitle": "Professionelle Funktionen – kostenlos, im Browser, ohne Anmeldung",
+    "browser": {
+      "title": "100 % im Browser",
+      "text": "Keine Installation nötig. Funktioniert in jedem modernen Browser."
+    },
+    "storage": {
+      "title": "Lokaler Speicher",
+      "text": "Dokumente werden lokal im Browser gespeichert – keine Cloud erforderlich."
+    },
+    "privacy": {
+      "title": "Datenschutz",
+      "text": "Alle Daten bleiben auf deinem Gerät. Keine Weitergabe an Server."
+    },
+    "design": {
+      "title": "Professionelles Design",
+      "text": "Modernes, sauberes Interface inspiriert von Microsoft Office."
+    },
+    "export": {
+      "title": "Export &amp; Druck",
+      "text": "Dokumente drucken oder als HTML/Text exportieren."
+    },
+    "responsive": {
+      "title": "Responsive",
+      "text": "Funktioniert auf Desktop, Tablet und Smartphone."
+    }
+  },
+  "oss": {
+    "title": "Open Source &amp; frei für alle",
+    "text": "OfficeWeb ist ein quelloffenes Projekt unter der MIT-Lizenz. Jeder kann beitragen, den Code anpassen und das Projekt weiterentwickeln.",
+    "btn": "Auf GitHub ansehen"
+  },
+  "footer": {
+    "license": "MIT Lizenz",
+    "contributing": "Mitwirken",
+    "security": "Sicherheit"
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "insert": "Einfügen",
+    "delete": "Löschen",
+    "open": "Öffnen",
+    "close": "Schließen",
+    "save": "💾 Speichern",
+    "new": "📄 Neu",
+    "ready": "Bereit",
+    "home": "🏠 Startseite"
+  },
+  "writer": {
+    "appname": "📝 Writer",
+    "newDoc": "Unbenanntes Dokument",
+    "menu": {
+      "file": "Datei",
+      "edit": "Bearbeiten",
+      "insert": "Einfügen",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 Neues Dokument",
+      "open": "📂 Öffnen...",
+      "save": "💾 Speichern",
+      "exportHtml": "📥 Als HTML exportieren",
+      "exportTxt": "📄 Als Text exportieren",
+      "print": "🖨️ Drucken"
+    },
+    "edit": {
+      "undo": "↩️ Rückgängig",
+      "redo": "↪️ Wiederholen",
+      "cut": "✂️ Ausschneiden",
+      "copy": "📋 Kopieren",
+      "paste": "📌 Einfügen",
+      "selectAll": "🔲 Alles auswählen",
+      "findReplace": "🔍 Suchen &amp; Ersetzen"
+    },
+    "insert": {
+      "table": "📊 Tabelle",
+      "image": "🖼️ Bild",
+      "link": "🔗 Link",
+      "hr": "➖ Trennlinie",
+      "pageBreak": "📃 Seitenumbruch"
+    },
+    "format": {
+      "bold": "<b>F</b> Fett",
+      "italic": "<i>K</i> Kursiv",
+      "underline": "<u>U</u> Unterstreichen",
+      "clearFmt": "🧹 Formatierung löschen"
+    },
+    "modal": {
+      "table": { "title": "Tabelle einfügen", "rows": "Zeilen", "cols": "Spalten" },
+      "link": { "title": "Link einfügen", "url": "URL", "text": "Anzeigetext" },
+      "img": {
+        "title": "Bild einfügen",
+        "urlLabel": "Bild-URL oder lokale Datei hochladen",
+        "fileLabel": "Oder Datei wählen:",
+        "alt": "Alt-Text"
+      },
+      "find": { "title": "Suchen &amp; Ersetzen", "find": "Suchen", "replace": "Ersetzen durch" },
+      "open": { "title": "Dokument öffnen", "label": "Gespeicherte Dokumente:" }
+    },
+    "btn": {
+      "findNext": "Weitersuchen",
+      "replace": "Ersetzen",
+      "replaceAll": "Alle ersetzen"
+    },
+    "info": {
+      "words": "Wörter:",
+      "chars": "Zeichen:"
+    },
+    "status": {
+      "ready": "Bereit",
+      "saved": "💾 Gespeichert: ",
+      "newDoc": "Neues Dokument erstellt",
+      "opened": "Geöffnet: ",
+      "replaced": "Alle Ersetzungen durchgeführt"
+    },
+    "confirm": {
+      "newDoc": "Neues Dokument? Nicht gespeicherte Änderungen gehen verloren.",
+      "notFound": "Nicht gefunden: "
+    },
+    "welcome": {
+      "title": "Willkommen bei OfficeWeb Writer",
+      "p1": "Beginne hier mit dem Tippen. Du kannst Text <b>fett</b>, <i>kursiv</i> oder <u>unterstrichen</u> formatieren.",
+      "p2": "Nutze die Symbolleiste oben, um Schriftarten, Größen, Farben und mehr anzupassen.",
+      "p3": "Viel Spaß beim Schreiben! 📝"
+    }
+  },
+  "calc": {
+    "appname": "📊 Calc",
+    "newWorkbook": "Unbenannte Tabelle",
+    "newSheet": "Tabelle",
+    "modal": {
+      "open": { "title": "Arbeitsmappe öffnen", "label": "Gespeicherte Arbeitsmappen:" }
+    },
+    "status": {
+      "ready": "Bereit",
+      "saved": "💾 Gespeichert: ",
+      "opened": "Geöffnet: "
+    },
+    "confirm": {
+      "newWorkbook": "Neue Arbeitsmappe erstellen? Nicht gespeicherte Änderungen gehen verloren.",
+      "deleteSheet": "Tabellenblatt \"%s\" löschen?"
+    }
+  },
+  "impress": {
+    "appname": "🎨 Impress",
+    "newPresentation": "Unbenannte Präsentation",
+    "modal": {
+      "img": { "title": "Bild einfügen", "urlLabel": "Bild-URL", "fileLabel": "Oder Datei:" },
+      "open": { "title": "Präsentation öffnen", "label": "Gespeicherte Präsentationen:" }
+    },
+    "status": {
+      "ready": "Bereit",
+      "saved": "💾 Gespeichert: ",
+      "opened": "Geöffnet: "
+    }
+  },
+  "notes": {
+    "appname": "📋 Notes",
+    "noNote": "Keine Notiz ausgewählt",
+    "newNote": "+ Neue Notiz erstellen",
+    "sectionTitle": "Notizen",
+    "search": "🔍 Notizen suchen...",
+    "noTitle": "Ohne Titel",
+    "words": "Wörter:",
+    "modified": "Geändert: ",
+    "newSection": "Neuer Abschnitt",
+    "tagPrompt": "Tag-Name:",
+    "sections": {
+      "personal": "Persönlich",
+      "work": "Arbeit",
+      "tasks": "Aufgaben"
+    },
+    "status": {
+      "ready": "Bereit",
+      "noNote": "Keine Notiz ausgewählt"
+    },
+    "confirm": {
+      "deleteNote": "Notiz löschen?"
+    }
+  }
+}
