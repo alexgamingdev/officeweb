@@ -13,7 +13,7 @@ Wir nehmen Sicherheitsprobleme ernst. Wenn du eine Sicherheitslücke in OfficeWe
 ### So meldest du eine Sicherheitslücke
 
 1. **Öffne ein privates Security Advisory** auf GitHub:  
-   `https://github.com/alexgamingdev/sus_2026/security/advisories/new`
+   `https://github.com/alexgamingdev/officeweb/security/advisories/new`
 
 2. Beschreibe in deinem Report:
    - Art der Sicherheitslücke

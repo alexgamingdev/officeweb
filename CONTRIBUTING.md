@@ -13,7 +13,7 @@ Bitte lies unseren [Code of Conduct](CODE_OF_CONDUCT.md). Wir erwarten von allen
 
 ## 🐛 Fehler melden
 
-1. Prüfe zuerst die [offenen Issues](https://github.com/alexgamingdev/sus_2026/issues), ob der Fehler bereits gemeldet wurde.
+1. Prüfe zuerst die [offenen Issues](https://github.com/alexgamingdev/officeweb/issues), ob der Fehler bereits gemeldet wurde.
 2. Falls nicht, öffne ein neues Issue und verwende das **Bug Report** Template.
 3. Beschreibe das Problem so detailliert wie möglich:
    - Browser und Version
@@ -26,7 +26,7 @@ Bitte lies unseren [Code of Conduct](CODE_OF_CONDUCT.md). Wir erwarten von allen
 
 ## 💡 Features vorschlagen
 
-1. Prüfe zuerst die [offenen Issues](https://github.com/alexgamingdev/sus_2026/issues) auf ähnliche Vorschläge.
+1. Prüfe zuerst die [offenen Issues](https://github.com/alexgamingdev/officeweb/issues) auf ähnliche Vorschläge.
 2. Öffne ein neues Issue mit dem Label `enhancement`.
 3. Beschreibe die gewünschte Funktionalität und den Anwendungsfall.
 
@@ -45,8 +45,8 @@ Bitte lies unseren [Code of Conduct](CODE_OF_CONDUCT.md). Wir erwarten von allen
 1. **Fork** das Repository auf GitHub
 2. **Klone** deinen Fork lokal:
    ```bash
-   git clone https://github.com/DEIN_USERNAME/sus_2026.git
-   cd sus_2026
+   git clone https://github.com/DEIN_USERNAME/officeweb.git
+   cd officeweb
    ```
 3. Erstelle einen **Feature-Branch**:
    ```bash
@@ -96,4 +96,4 @@ Verbesserungen sind immer willkommen – auch Grammatikfehler oder bessere Erkl�
 
 ## ❓ Fragen?
 
-Öffne ein [GitHub Discussion](https://github.com/alexgamingdev/sus_2026/discussions) oder ein Issue mit dem Label `question`.
+Öffne ein [GitHub Discussion](https://github.com/alexgamingdev/officeweb/discussions) oder ein Issue mit dem Label `question`.
