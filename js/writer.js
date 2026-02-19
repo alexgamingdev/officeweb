@@ -41,8 +41,9 @@ document.addEventListener('selectionchange', updateWordCount);
 function updateWordCount() {
   const text = editor.innerText || '';
   const words = text.trim() ? text.trim().split(/\s+/).length : 0;
-  document.getElementById('wordCount').textContent = 'Wörter: ' + words;
-  document.getElementById('charCount').textContent = 'Zeichen: ' + text.length;
+  const t = window.i18n ? window.i18n.t : (k, f) => f || k;
+  document.getElementById('wordCount').textContent = t('writer.info.words', 'Wörter:') + ' ' + words;
+  document.getElementById('charCount').textContent = t('writer.info.chars', 'Zeichen:') + ' ' + text.length;
 }
 updateWordCount();
 
@@ -67,7 +68,7 @@ function doInsertTable() {
   const rows = parseInt(document.getElementById('tblRows').value) || 3;
   const cols = parseInt(document.getElementById('tblCols').value) || 3;
   let html = '<table><thead><tr>';
-  for (let c = 0; c < cols; c++) html += `<th>Spalte ${c+1}</th>`;
+  for (let c = 0; c < cols; c++) html += `<th>Col ${c+1}</th>`;
   html += '</tr></thead><tbody>';
   for (let r = 0; r < rows; r++) {
     html += '<tr>';
@@ -92,7 +93,7 @@ function handleImgFile() {
 }
 function doInsertImage() {
   const url = document.getElementById('imgURL').value.trim();
-  const alt = document.getElementById('imgAlt').value.trim() || 'Bild';
+  const alt = document.getElementById('imgAlt').value.trim() || '';
   if (!url) return;
   restoreSelection();
   editor.focus();
@@ -133,8 +134,9 @@ function openFindReplace() { openModal('findModal'); }
 function doFind() {
   const text = document.getElementById('findText').value;
   if (!text) return;
+  const t = window.i18n ? window.i18n.t : (k, f) => f || k;
   const found = window.find(text, false, false, true, false, false, false);
-  if (!found) alert('Nicht gefunden: ' + text);
+  if (!found) alert(t('writer.confirm.notFound', 'Nicht gefunden: ') + text);
 }
 function doReplace() {
   const sel = window.getSelection();
@@ -150,28 +152,31 @@ function doReplaceAll() {
   const html = editor.innerHTML;
   const regex = new RegExp(find.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
   editor.innerHTML = html.replace(regex, rep);
-  setStatus('Alle Ersetzungen durchgeführt');
+  const t = window.i18n ? window.i18n.t : (k, f) => f || k;
+  setStatus(t('writer.status.replaced', 'Alle Ersetzungen durchgeführt'));
 }
 
 // Save / Load
 function saveDoc() {
-  const title = document.getElementById('docTitle').value.trim() || 'Unbenanntes Dokument';
+  const t = window.i18n ? window.i18n.t : (k, f) => f || k;
+  const title = document.getElementById('docTitle').value.trim() || t('writer.newDoc', 'Unbenanntes Dokument');
   const data = { title, content: editor.innerHTML, saved: new Date().toISOString() };
   const docs = getSavedDocs();
   const idx = docs.findIndex(d => d.title === title);
   if (idx >= 0) docs[idx] = data; else docs.push(data);
   localStorage.setItem('writer_docs', JSON.stringify(docs));
-  setStatus('💾 Gespeichert: ' + title);
+  setStatus(t('writer.status.saved', '💾 Gespeichert: ') + title);
 }
 function getSavedDocs() {
   try { return JSON.parse(localStorage.getItem('writer_docs') || '[]'); } catch { return []; }
 }
 function newDoc() {
-  if (editor.innerHTML && !confirm('Neues Dokument? Nicht gespeicherte Änderungen gehen verloren.')) return;
-  editor.innerHTML = '<p>Neues Dokument...</p>';
-  document.getElementById('docTitle').value = 'Unbenanntes Dokument';
+  const t = window.i18n ? window.i18n.t : (k, f) => f || k;
+  if (editor.innerHTML && !confirm(t('writer.confirm.newDoc', 'Neues Dokument? Nicht gespeicherte Änderungen gehen verloren.'))) return;
+  editor.innerHTML = '<p></p>';
+  document.getElementById('docTitle').value = t('writer.newDoc', 'Unbenanntes Dokument');
   updateWordCount();
-  setStatus('Neues Dokument erstellt');
+  setStatus(t('writer.status.newDoc', 'Neues Dokument erstellt'));
 }
 function openDoc() {
   const docs = getSavedDocs();
@@ -186,6 +191,7 @@ function openDoc() {
   openModal('openModal');
 }
 function loadSelectedDoc() {
+  const t = window.i18n ? window.i18n.t : (k, f) => f || k;
   const list = document.getElementById('docList');
   if (list.selectedIndex < 0) return;
   const docs = getSavedDocs();
@@ -195,7 +201,7 @@ function loadSelectedDoc() {
   document.getElementById('docTitle').value = doc.title;
   closeModal('openModal');
   updateWordCount();
-  setStatus('Geöffnet: ' + doc.title);
+  setStatus(t('writer.status.opened', 'Geöffnet: ') + doc.title);
 }
 function deleteSelectedDoc() {
   const list = document.getElementById('docList');
@@ -225,9 +231,10 @@ function downloadFile(filename, content, mime) {
 }
 
 function setStatus(msg) {
+  const t = window.i18n ? window.i18n.t : (k, f) => f || k;
   const el = document.getElementById('statusMsg');
   el.textContent = msg;
-  setTimeout(() => el.textContent = 'Bereit', 3000);
+  setTimeout(() => { el.textContent = t('writer.status.ready', 'Bereit'); }, 3000);
 }
 
 // Keyboard shortcuts

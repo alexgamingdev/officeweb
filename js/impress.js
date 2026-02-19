@@ -1,4 +1,6 @@
 // ─── State ──────────────────────────────────────────────────────────────────
+function _t(key, fallback) { return window.i18n ? window.i18n.t(key, fallback) : (fallback || key); }
+
 const SLIDE_W = 800, SLIDE_H = 450;
 let slides = [];
 let currentSlideIdx = 0;
@@ -400,7 +402,7 @@ function duplicateSlide() {
 }
 
 function deleteCurrentSlide() {
-  if (slides.length <= 1) { setStatus('Mindestens eine Folie erforderlich'); return; }
+  if (slides.length <= 1) { setStatus(_t('impress.minOneSlide', 'Mindestens eine Folie erforderlich')); return; }
   if (!confirm('Folie löschen?')) return;
   slides.splice(currentSlideIdx, 1);
   switchSlide(Math.min(currentSlideIdx, slides.length - 1));
@@ -426,7 +428,7 @@ function switchSlide(idx) {
 }
 
 function updateSlideCounter() {
-  document.getElementById('slideCounter').textContent = `Folie ${currentSlideIdx+1} / ${slides.length}`;
+  document.getElementById('slideCounter').textContent = _t('impress.slideCounter', 'Folie') + ' ' + (currentSlideIdx+1) + ' / ' + slides.length;
 }
 
 // ─── Thumbnails ──────────────────────────────────────────────────────────────
@@ -594,7 +596,7 @@ function savePresentation() {
   const entry = { title, slides: JSON.parse(JSON.stringify(slides)), saved: new Date().toISOString() };
   if (idx >= 0) saved[idx] = entry; else saved.push(entry);
   localStorage.setItem('impress_pres', JSON.stringify(saved));
-  setStatus('💾 Gespeichert: ' + title);
+  setStatus(_t('impress.status.saved', '💾 Gespeichert: ') + title);
 }
 
 function getSaved() {
@@ -634,7 +636,7 @@ function loadSelectedPres() {
   renderSlide();
   renderAllThumbnails();
   closeModal('openModal');
-  setStatus('Geöffnet: ' + pres.title);
+  setStatus(_t('impress.status.opened', 'Geöffnet: ') + pres.title);
 }
 
 function deleteSelectedPres() {
@@ -654,7 +656,7 @@ document.querySelectorAll('.modal-overlay').forEach(m => m.addEventListener('cli
 function setStatus(msg) {
   const el = document.getElementById('statusMsg');
   el.textContent = msg;
-  setTimeout(() => el.textContent = 'Bereit', 3000);
+  setTimeout(() => { el.textContent = _t('impress.status.ready', 'Bereit'); }, 3000);
 }
 
 // Keyboard shortcuts

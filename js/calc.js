@@ -1,4 +1,6 @@
 // ─── Config ────────────────────────────────────────────────────────────────
+function _t(key, fallback) { return window.i18n ? window.i18n.t(key, fallback) : (fallback || key); }
+
 const ROWS = 50, COLS = 26;
 const COL_LETTERS = Array.from({length: COLS}, (_, i) => String.fromCharCode(65 + i));
 
@@ -604,7 +606,7 @@ function saveWorkbook() {
   const entry = { title, sheets: JSON.parse(JSON.stringify(sheets)), saved: new Date().toISOString() };
   if (idx >= 0) wbs[idx] = entry; else wbs.push(entry);
   localStorage.setItem('calc_wbs', JSON.stringify(wbs));
-  setStatus('💾 Gespeichert: ' + title);
+  setStatus(_t('calc.status.saved', '💾 Gespeichert: ') + title);
 }
 
 function getSaved() {
@@ -647,7 +649,7 @@ function loadSelectedWb() {
   renderAll();
   selectCell(0, 0);
   closeModal('openModal');
-  setStatus('Geöffnet: ' + wb.title);
+  setStatus(_t('calc.status.opened', 'Geöffnet: ') + wb.title);
 }
 
 function deleteSelectedWb() {
@@ -686,7 +688,7 @@ document.querySelectorAll('.modal-overlay').forEach(m => m.addEventListener('cli
 function setStatus(msg) {
   const el = document.getElementById('statusMsg');
   el.textContent = msg;
-  setTimeout(() => el.textContent = 'Bereit', 3000);
+  setTimeout(() => { el.textContent = _t('calc.status.ready', 'Bereit'); }, 3000);
 }
 
 // Keyboard shortcuts
