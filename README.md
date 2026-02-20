@@ -2,7 +2,7 @@
   <img src="logo.svg" alt="OfficeWeb Logo" width="120" height="120" />
 
   <h1>OfficeWeb</h1>
-  <p><strong>Professionelle Büro-Software – vollständig im Browser</strong></p>
+  <p><strong>Kostenlose, quelloffene Office-Suite mit Writer, Calc, Impress &amp; Notes – vollständig im Browser, ohne Installation, ohne Cloud.</strong></p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
   [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)](https://github.com/alexgamingdev/officeweb)
