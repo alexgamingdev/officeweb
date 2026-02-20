@@ -5,12 +5,12 @@
   <p><strong>Professionelle Büro-Software – vollständig im Browser</strong></p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-  [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)](https://github.com/alexgamingdev/sus_2026)
+  [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)](https://github.com/alexgamingdev/officeweb)
   [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
   [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
   [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-  [**🚀 Demo starten**](https://alexgamingdev.github.io/sus_2026/) · [Fehler melden](https://github.com/alexgamingdev/sus_2026/issues) · [Feature anfragen](https://github.com/alexgamingdev/sus_2026/issues)
+  [**🚀 Demo starten**](https://alexgamingdev.github.io/officeweb/) · [Fehler melden](https://github.com/alexgamingdev/officeweb/issues) · [Feature anfragen](https://github.com/alexgamingdev/officeweb/issues)
 </div>
 
 ---
@@ -54,8 +54,8 @@ Da OfficeWeb vollständig aus statischen HTML-Dateien besteht, ist kein Build-Sc
 
 ```bash
 # Repository klonen
-git clone https://github.com/alexgamingdev/sus_2026.git
-cd sus_2026
+git clone https://github.com/alexgamingdev/officeweb.git
+cd officeweb
 
 # index.html im Browser öffnen
 # Einfach die Datei doppelklicken, oder einen lokalen Server starten:
@@ -71,7 +71,7 @@ Danach im Browser öffnen: `http://localhost:8080`
 ## 🗂️ Projektstruktur
 
 ```
-sus_2026/
+officeweb/
 ├── index.html              # Startseite / App-Übersicht
 ├── writer.html             # Textverarbeitungs-App
 ├── calc.html               # Tabellenkalkulations-App
