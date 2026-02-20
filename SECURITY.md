@@ -1,38 +1,38 @@
-# Sicherheitsrichtlinie
+# Security Policy
 
-## Unterstützte Versionen
+## Supported Versions
 
 | Version | Support |
 |---------|---------|
-| Latest  | ✅ Aktiv |
+| Latest  | ✅ Active |
 
-## Sicherheitslücke melden
+## Reporting a Vulnerability
 
-Wir nehmen Sicherheitsprobleme ernst. Wenn du eine Sicherheitslücke in OfficeWeb gefunden hast, melde sie bitte **nicht** öffentlich als GitHub Issue.
+We take security issues seriously. If you have found a security vulnerability in OfficeWeb, please do **not** report it publicly as a GitHub Issue.
 
-### So meldest du eine Sicherheitslücke
+### How to Report a Vulnerability
 
-1. **Öffne ein privates Security Advisory** auf GitHub:  
+1. **Open a private Security Advisory** on GitHub:  
    `https://github.com/alexgamingdev/officeweb/security/advisories/new`
 
-2. Beschreibe in deinem Report:
-   - Art der Sicherheitslücke
-   - Betroffene Datei(en) und Zeilen
-   - Schritte zur Reproduktion
-   - Mögliche Auswirkungen
-   - Optional: Vorgeschlagener Fix
+2. In your report, describe:
+   - Type of vulnerability
+   - Affected file(s) and lines
+   - Steps to reproduce
+   - Possible impact
+   - Optional: suggested fix
 
-### Was danach passiert
+### What Happens Next
 
-- Du erhältst innerhalb von **48 Stunden** eine Bestätigung.
-- Wir untersuchen das Problem und erstellen einen Fix.
-- Du wirst über den Fortschritt informiert.
-- Nach dem Fix wirst du in den Release Notes genannt (sofern gewünscht).
+- You will receive a confirmation within **48 hours**.
+- We will investigate the issue and create a fix.
+- You will be kept informed of progress.
+- After the fix, you will be credited in the release notes (if desired).
 
-## Sicherheitshinweise für Nutzer
+## Security Notes for Users
 
-OfficeWeb speichert alle Daten ausschließlich lokal im Browser (`localStorage`). Es werden **keine Daten an externe Server** gesendet. Dennoch empfehlen wir:
+OfficeWeb stores all data exclusively locally in the browser (`localStorage`). **No data is sent to external servers.** Nevertheless, we recommend:
 
-- Verwende OfficeWeb nur über HTTPS oder lokal.
-- Öffne keine HTML-Exporte aus unbekannten Quellen direkt im Browser.
-- Halte deinen Browser aktuell.
+- Use OfficeWeb only over HTTPS or locally.
+- Do not open HTML exports from unknown sources directly in your browser.
+- Keep your browser up to date.

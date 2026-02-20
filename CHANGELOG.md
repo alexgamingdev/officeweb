@@ -1,34 +1,34 @@
 # Changelog
 
-Alle nennenswerten Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
+All notable changes to this project are documented in this file.
 
-Das Format basiert auf [Keep a Changelog](https://keepachangelog.com/de/1.0.0/).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ---
 
 ## [Unreleased]
 
-### Hinzugefügt
-- Logo (`logo.svg`) für OfficeWeb
-- Umfassende `README.md` mit Badges, Features, Schnellstart und Projektstruktur
+### Added
+- Logo (`logo.svg`) for OfficeWeb
+- Comprehensive `README.md` with badges, features, quick start, and project structure
 - `LICENSE` (MIT)
-- `CONTRIBUTING.md` – Leitfaden für Beiträge
-- `CODE_OF_CONDUCT.md` – Verhaltenskodex für die Community
-- `SECURITY.md` – Sicherheitsrichtlinien
-- Verbessertes Design der Startseite (`index.html`): Logo im Header, animierter Hero-Bereich, verbesserte Typografie
+- `CONTRIBUTING.md` – guide for contributions
+- `CODE_OF_CONDUCT.md` – community code of conduct
+- `SECURITY.md` – security policy
+- Improved home page design (`index.html`): logo in header, animated hero section, improved typography
 
 ---
 
 ## [1.0.0] – 2026-02-01
 
-### Hinzugefügt
-- **Writer** (`writer.html`): WYSIWYG-Textverarbeitung mit Ribbon, Schriftformatierung, Tabellen, Bilder, Links, Suchen & Ersetzen, Auto-Speichern, HTML/Text-Export
-- **Calc** (`calc.html`): Tabellenkalkulation mit Formeln, Zellformatierung, Spalten/Zeilen-Resize
-- **Impress** (`impress.html`): Präsentations-App mit Folien, Canvas-Rendering, Themen, Präsentationsmodus
-- **Notes** (`notes.html`): Notizen-App mit Notizbüchern, Aufgabenlisten, lokaler Speicherung
-- **Startseite** (`index.html`): App-Übersicht mit Navigation, Hero-Bereich, Features-Sektion
-- Vollständige deutsche Benutzeroberfläche
-- Responsive Design für Desktop, Tablet und Smartphone
-- Lokaler Speicher via `localStorage` – keine Cloud erforderlich
-- Keyboard-Shortcuts für alle gängigen Aktionen
-- Druck-Funktion in Writer und Impress
+### Added
+- **Writer** (`writer.html`): WYSIWYG word processor with ribbon, font formatting, tables, images, links, find & replace, auto-save, HTML/text export
+- **Calc** (`calc.html`): Spreadsheet with formulas, cell formatting, column/row resize
+- **Impress** (`impress.html`): Presentation app with slides, canvas rendering, themes, presentation mode
+- **Notes** (`notes.html`): Notes app with notebooks, task lists, local storage
+- **Home page** (`index.html`): App overview with navigation, hero section, features section
+- Full German user interface
+- Responsive design for desktop, tablet and smartphone
+- Local storage via `localStorage` – no cloud required
+- Keyboard shortcuts for all common actions
+- Print function in Writer and Impress

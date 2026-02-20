@@ -1,39 +1,39 @@
 # Contributor Covenant Code of Conduct
 
-## Unser Versprechen
+## Our Pledge
 
-Im Interesse einer offenen und einladenden Gemeinschaft verpflichten wir uns als Beitragende und Maintainer, die Teilnahme an unserem Projekt und unserer Gemeinschaft zu einer belästigungsfreien Erfahrung für alle zu machen, unabhängig von Alter, Körpergröße, Behinderung, ethnischer Zugehörigkeit, Geschlechtsmerkmalen, Geschlechtsidentität und -ausdruck, Erfahrungsniveau, Bildung, sozioökonomischem Status, Nationalität, persönlichem Aussehen, Rasse, Religion oder sexueller Identität und Orientierung.
+In the interest of fostering an open and welcoming community, we as contributors and maintainers pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-## Unsere Standards
+## Our Standards
 
-Beispiele für Verhaltensweisen, die zu einem positiven Umfeld beitragen:
+Examples of behavior that contributes to a positive environment:
 
-* Verwendung einer einladenden und integrativen Sprache
-* Respektvoller Umgang mit unterschiedlichen Standpunkten und Erfahrungen
-* Konstruktive Kritik annehmen und geben
-* Fokus auf das Beste für die Gemeinschaft
-* Empathie gegenüber anderen Gemeinschaftsmitgliedern zeigen
+* Using welcoming and inclusive language
+* Being respectful of differing viewpoints and experiences
+* Gracefully accepting and giving constructive criticism
+* Focusing on what is best for the community
+* Showing empathy towards other community members
 
-Beispiele für inakzeptables Verhalten:
+Examples of unacceptable behavior:
 
-* Verwendung sexualisierter Sprache oder Bilder und unerwünschte sexuelle Aufmerksamkeit
-* Trolling, beleidigende/abwertende Kommentare und persönliche oder politische Angriffe
-* Öffentliche oder private Belästigung
-* Veröffentlichung privater Informationen anderer ohne ausdrückliche Genehmigung
-* Anderes Verhalten, das in einem professionellen Umfeld vernünftigerweise als unangemessen angesehen werden könnte
+* The use of sexualized language or imagery and unwelcome sexual attention or advances
+* Trolling, insulting/derogatory comments, and personal or political attacks
+* Public or private harassment
+* Publishing others' private information without explicit permission
+* Other conduct which could reasonably be considered inappropriate in a professional setting
 
-## Unsere Verantwortung
+## Our Responsibilities
 
-Projektmaintainer sind verantwortlich für die Klärung der Standards für akzeptables Verhalten und es wird erwartet, dass sie angemessene und faire Korrekturmaßnahmen ergreifen, wenn inakzeptables Verhalten auftritt.
+Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
 
-## Geltungsbereich
+## Scope
 
-Dieser Verhaltenskodex gilt sowohl in Projektbereichen als auch in öffentlichen Räumen, wenn eine Person das Projekt oder seine Gemeinschaft repräsentiert.
+This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community.
 
-## Durchsetzung
+## Enforcement
 
-Belästigendes, missbräuchliches oder anderweitig inakzeptables Verhalten kann dem Projektteam unter [alexgamingdev auf GitHub](https://github.com/alexgamingdev) gemeldet werden. Alle Beschwerden werden geprüft und untersucht.
+Instances of harassing, abusive, or otherwise unacceptable behavior may be reported to the project team at [alexgamingdev on GitHub](https://github.com/alexgamingdev). All complaints will be reviewed and investigated.
 
-## Namensnennung
+## Attribution
 
-Dieser Verhaltenskodex basiert auf dem [Contributor Covenant](https://www.contributor-covenant.org), Version 2.1, verfügbar unter https://www.contributor-covenant.org/version/2/1/code_of_conduct.html
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, available at https://www.contributor-covenant.org/version/2/1/code_of_conduct.html

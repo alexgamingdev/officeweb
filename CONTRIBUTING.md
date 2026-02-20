@@ -1,99 +1,99 @@
-# Mitwirken an OfficeWeb
+# Contributing to OfficeWeb
 
-Vielen Dank für dein Interesse, zu OfficeWeb beizutragen! 🎉  
-Jeder Beitrag – ob Bugfix, neues Feature, Dokumentation oder Übersetzung – ist willkommen.
-
----
-
-## 📋 Verhaltenskodex
-
-Bitte lies unseren [Code of Conduct](CODE_OF_CONDUCT.md). Wir erwarten von allen Beteiligten respektvolles und konstruktives Verhalten.
+Thank you for your interest in contributing to OfficeWeb! 🎉  
+Every contribution – whether it's a bug fix, new feature, documentation or translation – is welcome.
 
 ---
 
-## 🐛 Fehler melden
+## 📋 Code of Conduct
 
-1. Prüfe zuerst die [offenen Issues](https://github.com/alexgamingdev/officeweb/issues), ob der Fehler bereits gemeldet wurde.
-2. Falls nicht, öffne ein neues Issue und verwende das **Bug Report** Template.
-3. Beschreibe das Problem so detailliert wie möglich:
-   - Browser und Version
-   - Betriebssystem
-   - Schritte zur Reproduktion
-   - Erwartetes vs. tatsächliches Verhalten
-   - Screenshots (falls hilfreich)
+Please read our [Code of Conduct](CODE_OF_CONDUCT.md). We expect respectful and constructive behavior from all participants.
 
 ---
 
-## 💡 Features vorschlagen
+## 🐛 Reporting Bugs
 
-1. Prüfe zuerst die [offenen Issues](https://github.com/alexgamingdev/officeweb/issues) auf ähnliche Vorschläge.
-2. Öffne ein neues Issue mit dem Label `enhancement`.
-3. Beschreibe die gewünschte Funktionalität und den Anwendungsfall.
+1. First check the [open issues](https://github.com/alexgamingdev/officeweb/issues) to see if the bug has already been reported.
+2. If not, open a new issue and use the **Bug Report** template.
+3. Describe the problem in as much detail as possible:
+   - Browser and version
+   - Operating system
+   - Steps to reproduce
+   - Expected vs. actual behavior
+   - Screenshots (if helpful)
 
 ---
 
-## 🛠️ Code beitragen
+## 💡 Suggesting Features
 
-### Voraussetzungen
+1. First check the [open issues](https://github.com/alexgamingdev/officeweb/issues) for similar suggestions.
+2. Open a new issue with the label `enhancement`.
+3. Describe the desired functionality and the use case.
 
-- Moderner Webbrowser (Chrome, Firefox, Edge, Safari)
+---
+
+## 🛠️ Contributing Code
+
+### Prerequisites
+
+- Modern web browser (Chrome, Firefox, Edge, Safari)
 - Git
-- Optional: lokaler HTTP-Server (`npx serve .` oder `python3 -m http.server`)
+- Optional: local HTTP server (`npx serve .` or `python3 -m http.server`)
 
-### Entwicklungs-Workflow
+### Development Workflow
 
-1. **Fork** das Repository auf GitHub
-2. **Klone** deinen Fork lokal:
+1. **Fork** the repository on GitHub
+2. **Clone** your fork locally:
    ```bash
-   git clone https://github.com/DEIN_USERNAME/officeweb.git
+   git clone https://github.com/YOUR_USERNAME/officeweb.git
    cd officeweb
    ```
-3. Erstelle einen **Feature-Branch**:
+3. Create a **feature branch**:
    ```bash
-   git checkout -b feature/mein-tolles-feature
+   git checkout -b feature/my-great-feature
    ```
-4. Mache deine **Änderungen** in den HTML-Dateien
-5. Teste die Änderungen im Browser
-6. **Committe** mit einer aussagekräftigen Nachricht:
+4. Make your **changes** in the HTML files
+5. Test the changes in the browser
+6. **Commit** with a meaningful message:
    ```bash
-   git commit -m "feat: füge Darkmode für Writer hinzu"
+   git commit -m "feat: add dark mode for Writer"
    ```
-7. **Pushe** deinen Branch:
+7. **Push** your branch:
    ```bash
-   git push origin feature/mein-tolles-feature
+   git push origin feature/my-great-feature
    ```
-8. Öffne einen **Pull Request** auf GitHub
+8. Open a **Pull Request** on GitHub
 
-### Commit-Nachrichtenformat
+### Commit Message Format
 
-Wir verwenden [Conventional Commits](https://www.conventionalcommits.org/):
+We use [Conventional Commits](https://www.conventionalcommits.org/):
 
-| Präfix | Bedeutung |
-|--------|-----------|
-| `feat:` | Neues Feature |
-| `fix:` | Bugfix |
-| `docs:` | Dokumentationsänderungen |
-| `style:` | Code-Stil (keine Logikänderung) |
-| `refactor:` | Code-Refactoring |
-| `chore:` | Sonstiges (Builds, Abhängigkeiten) |
+| Prefix | Meaning |
+|--------|---------|
+| `feat:` | New feature |
+| `fix:` | Bug fix |
+| `docs:` | Documentation changes |
+| `style:` | Code style (no logic change) |
+| `refactor:` | Code refactoring |
+| `chore:` | Miscellaneous (builds, dependencies) |
 
-### Code-Richtlinien
+### Code Guidelines
 
-- **Kein externes Framework** – OfficeWeb verwendet reines HTML, CSS und JavaScript (Vanilla JS).
-- **Keine externen Abhängigkeiten** – Alle Funktionen müssen ohne npm-Pakete oder CDN-Imports auskommen.
-- **Responsive Design** – Alle Änderungen müssen auf Desktop und Mobilgeräten funktionieren.
-- **Datenschutz** – Es dürfen keine Daten an externe Server gesendet werden.
-- **Barrierefreiheit** – Achte auf sinnvolle ARIA-Attribute und Tastaturnavigation.
+- **No external frameworks** – OfficeWeb uses plain HTML, CSS and JavaScript (Vanilla JS).
+- **No external dependencies** – All features must work without npm packages or CDN imports.
+- **Responsive design** – All changes must work on desktop and mobile devices.
+- **Privacy** – No data may be sent to external servers.
+- **Accessibility** – Pay attention to meaningful ARIA attributes and keyboard navigation.
 
 ---
 
-## 📝 Dokumentation verbessern
+## 📝 Improving Documentation
 
-Die Dokumentation liegt in der `README.md` und den Markdown-Dateien im Repository-Root.  
-Verbesserungen sind immer willkommen – auch Grammatikfehler oder bessere Erklärungen.
+Documentation lives in `README.md` and the Markdown files in the repository root.  
+Improvements are always welcome – including grammar fixes or better explanations.
 
 ---
 
-## ❓ Fragen?
+## ❓ Questions?
 
-Öffne ein [GitHub Discussion](https://github.com/alexgamingdev/officeweb/discussions) oder ein Issue mit dem Label `question`.
+Open a [GitHub Discussion](https://github.com/alexgamingdev/officeweb/discussions) or an issue with the label `question`.
