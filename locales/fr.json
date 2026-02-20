@@ -1,5 +1,12 @@
 {
-  "nav": { "home": "Accueil", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
+  "nav": {
+    "home": "Accueil",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
   "hero": {
     "badge": "⭐ Open Source &amp; Gratuit",
     "title": "Votre Office <em>gratuit</em><br>dans le navigateur",
@@ -7,49 +14,240 @@
     "start": "✍️ Commencer",
     "discover": "Découvrir les apps"
   },
-  "stats": { "apps": "Apps", "noInstall": "Installation", "privacy": "Confidentialité", "license": "Licence" },
+  "stats": {
+    "apps": "Apps",
+    "noInstall": "Installation",
+    "privacy": "Confidentialité",
+    "license": "Licence"
+  },
   "apps": {
     "title": "Toutes les apps",
     "subtitle": "Choisissez une app et démarrez directement dans le navigateur",
-    "writer": { "desc": "Créer et modifier des documents texte – comme Microsoft Word", "tag1": "Traitement de texte", "tag2": "WYSIWYG" },
-    "calc": { "desc": "Tableaux et calculs – comme Microsoft Excel", "tag1": "Tableur", "tag2": "Formules" },
-    "impress": { "desc": "Créer des présentations – comme Microsoft PowerPoint", "tag1": "Présentation", "tag2": "Diapositives" },
-    "notes": { "desc": "Notes rapides et listes de tâches – comme Microsoft OneNote", "tag1": "Notes", "tag2": "Tâches" }
+    "writer": {
+      "desc": "Créer et modifier des documents texte – comme Microsoft Word",
+      "tag1": "Traitement de texte",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Tableaux et calculs – comme Microsoft Excel",
+      "tag1": "Tableur",
+      "tag2": "Formules"
+    },
+    "impress": {
+      "desc": "Créer des présentations – comme Microsoft PowerPoint",
+      "tag1": "Présentation",
+      "tag2": "Diapositives"
+    },
+    "notes": {
+      "desc": "Notes rapides et listes de tâches – comme Microsoft OneNote",
+      "tag1": "Notes",
+      "tag2": "Tâches"
+    }
   },
   "features": {
     "title": "Pourquoi OfficeWeb ?",
     "subtitle": "Fonctionnalités professionnelles – gratuites, dans le navigateur, sans inscription",
-    "browser": { "title": "100 % dans le navigateur", "text": "Aucune installation nécessaire. Fonctionne dans tout navigateur moderne." },
-    "storage": { "title": "Stockage local", "text": "Les documents sont stockés localement dans votre navigateur – aucun cloud requis." },
-    "privacy": { "title": "Confidentialité", "text": "Toutes les données restent sur votre appareil. Rien n'est envoyé aux serveurs." },
-    "design": { "title": "Design professionnel", "text": "Interface moderne et épurée inspirée de Microsoft Office." },
-    "export": { "title": "Export &amp; Impression", "text": "Imprimez vos documents ou exportez-les en HTML/texte." },
-    "responsive": { "title": "Responsive", "text": "Fonctionne sur ordinateur, tablette et smartphone." }
-  },
-  "oss": { "title": "Open Source &amp; libre pour tous", "text": "OfficeWeb est un projet open source sous licence MIT. Tout le monde peut contribuer, adapter le code et développer le projet.", "btn": "Voir sur GitHub" },
-  "footer": { "license": "Licence MIT", "contributing": "Contribuer", "security": "Sécurité" },
-  "common": { "cancel": "Annuler", "insert": "Insérer", "delete": "Supprimer", "open": "Ouvrir", "close": "Fermer", "save": "💾 Enregistrer", "new": "📄 Nouveau", "ready": "Prêt", "home": "🏠 Accueil" },
-  "writer": {
-    "appname": "📝 Writer", "newDoc": "Document sans titre",
-    "menu": { "file": "Fichier", "edit": "Édition", "insert": "Insertion", "format": "Format" },
-    "file": { "new": "📄 Nouveau document", "open": "📂 Ouvrir...", "save": "💾 Enregistrer", "exportHtml": "📥 Exporter en HTML", "exportTxt": "📄 Exporter en texte", "print": "🖨️ Imprimer" },
-    "edit": { "undo": "↩️ Annuler", "redo": "↪️ Rétablir", "cut": "✂️ Couper", "copy": "📋 Copier", "paste": "📌 Coller", "selectAll": "🔲 Tout sélectionner", "findReplace": "🔍 Rechercher &amp; Remplacer" },
-    "insert": { "table": "📊 Tableau", "image": "🖼️ Image", "link": "🔗 Lien", "hr": "➖ Ligne horizontale", "pageBreak": "📃 Saut de page" },
-    "format": { "bold": "<b>G</b> Gras", "italic": "<i>I</i> Italique", "underline": "<u>S</u> Souligné", "clearFmt": "🧹 Effacer la mise en forme" },
-    "modal": {
-      "table": { "title": "Insérer un tableau", "rows": "Lignes", "cols": "Colonnes" },
-      "link": { "title": "Insérer un lien", "url": "URL", "text": "Texte affiché" },
-      "img": { "title": "Insérer une image", "urlLabel": "URL de l'image ou fichier local", "fileLabel": "Ou choisir un fichier :", "alt": "Texte alternatif" },
-      "find": { "title": "Rechercher &amp; Remplacer", "find": "Rechercher", "replace": "Remplacer par" },
-      "open": { "title": "Ouvrir un document", "label": "Documents enregistrés :" }
+    "browser": {
+      "title": "100 % dans le navigateur",
+      "text": "Aucune installation nécessaire. Fonctionne dans tout navigateur moderne."
     },
-    "btn": { "findNext": "Suivant", "replace": "Remplacer", "replaceAll": "Tout remplacer" },
-    "info": { "words": "Mots :", "chars": "Caractères :" },
-    "status": { "ready": "Prêt", "saved": "💾 Enregistré : ", "newDoc": "Nouveau document créé", "opened": "Ouvert : ", "replaced": "Tous les remplacements effectués" },
-    "confirm": { "newDoc": "Nouveau document ? Les modifications non enregistrées seront perdues.", "notFound": "Introuvable : " },
-    "welcome": { "title": "Bienvenue dans OfficeWeb Writer", "p1": "Commencez à taper ici. Vous pouvez formater le texte en <b>gras</b>, <i>italique</i> ou <u>souligné</u>.", "p2": "Utilisez la barre d'outils ci-dessus pour ajuster les polices, tailles, couleurs et plus.", "p3": "Bonne rédaction ! 📝" }
+    "storage": {
+      "title": "Stockage local",
+      "text": "Les documents sont stockés localement dans votre navigateur – aucun cloud requis."
+    },
+    "privacy": {
+      "title": "Confidentialité",
+      "text": "Toutes les données restent sur votre appareil. Rien n'est envoyé aux serveurs."
+    },
+    "design": {
+      "title": "Design professionnel",
+      "text": "Interface moderne et épurée inspirée de Microsoft Office."
+    },
+    "export": {
+      "title": "Export &amp; Impression",
+      "text": "Imprimez vos documents ou exportez-les en HTML/texte."
+    },
+    "responsive": {
+      "title": "Responsive",
+      "text": "Fonctionne sur ordinateur, tablette et smartphone."
+    }
   },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Classeur sans titre", "newSheet": "Feuille", "modal": { "open": { "title": "Ouvrir un classeur", "label": "Classeurs enregistrés :" } }, "status": { "ready": "Prêt", "saved": "💾 Enregistré : ", "opened": "Ouvert : " }, "confirm": { "newWorkbook": "Créer un nouveau classeur ? Les modifications non enregistrées seront perdues.", "deleteSheet": "Supprimer la feuille \"%s\" ?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Présentation sans titre", "modal": { "img": { "title": "Insérer une image", "urlLabel": "URL de l'image", "fileLabel": "Ou fichier :" }, "open": { "title": "Ouvrir une présentation", "label": "Présentations enregistrées :" } }, "status": { "ready": "Prêt", "saved": "💾 Enregistré : ", "opened": "Ouvert : " } },
-  "notes": { "appname": "📋 Notes", "noNote": "Aucune note sélectionnée", "newNote": "+ Créer une nouvelle note", "sectionTitle": "Notes", "search": "🔍 Rechercher des notes...", "noTitle": "Sans titre", "words": "Mots :", "modified": "Modifié : ", "newSection": "Nouvelle section", "tagPrompt": "Nom du tag :", "sections": { "personal": "Personnel", "work": "Travail", "tasks": "Tâches" }, "status": { "ready": "Prêt", "noNote": "Aucune note sélectionnée" }, "confirm": { "deleteNote": "Supprimer la note ?" } }
+  "oss": {
+    "title": "Open Source &amp; libre pour tous",
+    "text": "OfficeWeb est un projet open source sous licence MIT. Tout le monde peut contribuer, adapter le code et développer le projet.",
+    "btn": "Voir sur GitHub"
+  },
+  "footer": {
+    "license": "Licence MIT",
+    "contributing": "Contribuer",
+    "security": "Sécurité"
+  },
+  "common": {
+    "cancel": "Annuler",
+    "insert": "Insérer",
+    "delete": "Supprimer",
+    "open": "Ouvrir",
+    "close": "Fermer",
+    "save": "Enregistrer",
+    "new": "Nouveau",
+    "ready": "Prêt",
+    "home": "Accueil"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Document sans titre",
+    "menu": {
+      "file": "Fichier",
+      "edit": "Édition",
+      "insert": "Insertion",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 Nouveau document",
+      "open": "📂 Ouvrir...",
+      "save": "💾 Enregistrer",
+      "exportHtml": "📥 Exporter en HTML",
+      "exportTxt": "📄 Exporter en texte",
+      "print": "🖨️ Imprimer"
+    },
+    "edit": {
+      "undo": "↩️ Annuler",
+      "redo": "↪️ Rétablir",
+      "cut": "✂️ Couper",
+      "copy": "📋 Copier",
+      "paste": "📌 Coller",
+      "selectAll": "🔲 Tout sélectionner",
+      "findReplace": "🔍 Rechercher &amp; Remplacer"
+    },
+    "insert": {
+      "table": "📊 Tableau",
+      "image": "🖼️ Image",
+      "link": "🔗 Lien",
+      "hr": "➖ Ligne horizontale",
+      "pageBreak": "📃 Saut de page"
+    },
+    "format": {
+      "bold": "<b>G</b> Gras",
+      "italic": "<i>I</i> Italique",
+      "underline": "<u>S</u> Souligné",
+      "clearFmt": "🧹 Effacer la mise en forme"
+    },
+    "modal": {
+      "table": {
+        "title": "Insérer un tableau",
+        "rows": "Lignes",
+        "cols": "Colonnes"
+      },
+      "link": {
+        "title": "Insérer un lien",
+        "url": "URL",
+        "text": "Texte affiché"
+      },
+      "img": {
+        "title": "Insérer une image",
+        "urlLabel": "URL de l'image ou fichier local",
+        "fileLabel": "Ou choisir un fichier :",
+        "alt": "Texte alternatif"
+      },
+      "find": {
+        "title": "Rechercher &amp; Remplacer",
+        "find": "Rechercher",
+        "replace": "Remplacer par"
+      },
+      "open": {
+        "title": "Ouvrir un document",
+        "label": "Documents enregistrés :"
+      }
+    },
+    "btn": {
+      "findNext": "Suivant",
+      "replace": "Remplacer",
+      "replaceAll": "Tout remplacer"
+    },
+    "info": {
+      "words": "Mots :",
+      "chars": "Caractères :"
+    },
+    "status": {
+      "ready": "Prêt",
+      "saved": "💾 Enregistré : ",
+      "newDoc": "Nouveau document créé",
+      "opened": "Ouvert : ",
+      "replaced": "Tous les remplacements effectués"
+    },
+    "confirm": {
+      "newDoc": "Nouveau document ? Les modifications non enregistrées seront perdues.",
+      "notFound": "Introuvable : "
+    },
+    "welcome": {
+      "title": "Bienvenue dans OfficeWeb Writer",
+      "p1": "Commencez à taper ici. Vous pouvez formater le texte en <b>gras</b>, <i>italique</i> ou <u>souligné</u>.",
+      "p2": "Utilisez la barre d'outils ci-dessus pour ajuster les polices, tailles, couleurs et plus.",
+      "p3": "Bonne rédaction ! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Classeur sans titre",
+    "newSheet": "Feuille",
+    "modal": {
+      "open": {
+        "title": "Ouvrir un classeur",
+        "label": "Classeurs enregistrés :"
+      }
+    },
+    "status": {
+      "ready": "Prêt",
+      "saved": "💾 Enregistré : ",
+      "opened": "Ouvert : "
+    },
+    "confirm": {
+      "newWorkbook": "Créer un nouveau classeur ? Les modifications non enregistrées seront perdues.",
+      "deleteSheet": "Supprimer la feuille \"%s\" ?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Présentation sans titre",
+    "modal": {
+      "img": {
+        "title": "Insérer une image",
+        "urlLabel": "URL de l'image",
+        "fileLabel": "Ou fichier :"
+      },
+      "open": {
+        "title": "Ouvrir une présentation",
+        "label": "Présentations enregistrées :"
+      }
+    },
+    "status": {
+      "ready": "Prêt",
+      "saved": "💾 Enregistré : ",
+      "opened": "Ouvert : "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "Aucune note sélectionnée",
+    "newNote": "+ Créer une nouvelle note",
+    "sectionTitle": "Notes",
+    "search": "Rechercher des notes...",
+    "noTitle": "Sans titre",
+    "words": "Mots :",
+    "modified": "Modifié : ",
+    "newSection": "Nouvelle section",
+    "tagPrompt": "Nom du tag :",
+    "sections": {
+      "personal": "Personnel",
+      "work": "Travail",
+      "tasks": "Tâches"
+    },
+    "status": {
+      "ready": "Prêt",
+      "noNote": "Aucune note sélectionnée"
+    },
+    "confirm": {
+      "deleteNote": "Supprimer la note ?"
+    }
+  }
 }

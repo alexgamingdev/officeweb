@@ -11,16 +11,19 @@
 
 <!-- Title bar -->
 <div class="titlebar">
-  <a href="index.html" class="titlebar-home"><span data-i18n="common.home">🏠 Startseite</span></a>
+  <a href="index.html" class="titlebar-home">
+    <img src="logo.svg" alt="OfficeWeb" class="titlebar-logo" />
+    <span data-i18n="common.home">Startseite</span>
+  </a>
   <div style="color:rgba(255,255,255,.4)">|</div>
-  <span class="titlebar-name" data-i18n="calc.appname">📊 Calc</span>
+  <span class="titlebar-name" data-i18n="calc.appname">Calc</span>
   <div class="titlebar-file">
     <input type="text" id="docTitle" value="Unbenannte Tabelle" />
   </div>
-  <button class="tb-btn" onclick="saveWorkbook()">💾 Speichern</button>
-  <button class="tb-btn" onclick="newWorkbook()">📄 Neu</button>
-  <button class="tb-btn" onclick="openWorkbook()">📂 Öffnen</button>
-  <button class="tb-btn" onclick="exportCSV()">⬇ CSV</button>
+  <button class="tb-btn" onclick="saveWorkbook()" data-i18n="common.save">Speichern</button>
+  <button class="tb-btn" onclick="newWorkbook()" data-i18n="common.new">Neu</button>
+  <button class="tb-btn" onclick="openWorkbook()">Öffnen</button>
+  <button class="tb-btn" onclick="exportCSV()">CSV</button>
 </div>
 
 <!-- Ribbon -->
@@ -84,7 +87,7 @@
 
 <!-- Status bar -->
 <div class="statusbar">
-  <span>📊 Calc</span>
+  <span data-i18n="calc.appname">Calc</span>
   <span id="statusMsg" data-i18n="common.ready">Bereit</span>
   <span id="selStats" style="margin-left:auto;"></span>
 </div>

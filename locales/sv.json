@@ -1,14 +1,253 @@
 {
-  "nav": { "home": "Startsida", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
-  "hero": { "badge": "⭐ Öppen källkod &amp; Gratis", "title": "Ditt <em>gratis</em> Office<br>i webbläsaren", "subtitle": "Professionell kontorsprogramvara – helt i webbläsaren, ingen installation, inga kostnader, inga integritetsproblem.", "start": "✍️ Kom igång", "discover": "Utforska appar" },
-  "stats": { "apps": "Appar", "noInstall": "Installation", "privacy": "Integritet", "license": "Licens" },
-  "apps": { "title": "Alla appar", "subtitle": "Välj en app och starta direkt i webbläsaren", "writer": { "desc": "Skapa och redigera textdokument – som Microsoft Word", "tag1": "Ordbehandling", "tag2": "WYSIWYG" }, "calc": { "desc": "Kalkylblad och beräkningar – som Microsoft Excel", "tag1": "Kalkylblad", "tag2": "Formler" }, "impress": { "desc": "Designa presentationer – som Microsoft PowerPoint", "tag1": "Presentation", "tag2": "Bilder" }, "notes": { "desc": "Snabba anteckningar och uppgiftslistor – som Microsoft OneNote", "tag1": "Anteckningar", "tag2": "Uppgifter" } },
-  "features": { "title": "Varför OfficeWeb?", "subtitle": "Professionella funktioner – gratis, i webbläsaren, utan registrering", "browser": { "title": "100 % i webbläsaren", "text": "Ingen installation behövs. Fungerar i alla moderna webbläsare." }, "storage": { "title": "Lokal lagring", "text": "Dokument sparas lokalt i din webbläsare – ingen molntjänst krävs." }, "privacy": { "title": "Integritet", "text": "All data stannar på din enhet. Inget skickas till servrar." }, "design": { "title": "Professionell design", "text": "Modernt, rent gränssnitt inspirerat av Microsoft Office." }, "export": { "title": "Exportera &amp; Skriv ut", "text": "Skriv ut dokument eller exportera som HTML/text." }, "responsive": { "title": "Responsiv", "text": "Fungerar på dator, surfplatta och smartphone." } },
-  "oss": { "title": "Öppen källkod &amp; fri för alla", "text": "OfficeWeb är ett öppen källkod-projekt under MIT-licensen. Vem som helst kan bidra, anpassa koden och vidareutveckla projektet.", "btn": "Visa på GitHub" },
-  "footer": { "license": "MIT-licens", "contributing": "Bidra", "security": "Säkerhet" },
-  "common": { "cancel": "Avbryt", "insert": "Infoga", "delete": "Ta bort", "open": "Öppna", "close": "Stäng", "save": "💾 Spara", "new": "📄 Ny", "ready": "Klar", "home": "🏠 Startsida" },
-  "writer": { "appname": "📝 Writer", "newDoc": "Namnlöst dokument", "menu": { "file": "Arkiv", "edit": "Redigera", "insert": "Infoga", "format": "Format" }, "file": { "new": "📄 Nytt dokument", "open": "📂 Öppna...", "save": "💾 Spara", "exportHtml": "📥 Exportera som HTML", "exportTxt": "📄 Exportera som text", "print": "🖨️ Skriv ut" }, "edit": { "undo": "↩️ Ångra", "redo": "↪️ Gör om", "cut": "✂️ Klipp ut", "copy": "📋 Kopiera", "paste": "📌 Klistra in", "selectAll": "🔲 Markera allt", "findReplace": "🔍 Sök &amp; Ersätt" }, "insert": { "table": "📊 Tabell", "image": "🖼️ Bild", "link": "🔗 Länk", "hr": "➖ Horisontell linje", "pageBreak": "📃 Sidbrytning" }, "format": { "bold": "<b>F</b> Fet", "italic": "<i>K</i> Kursiv", "underline": "<u>U</u> Understruken", "clearFmt": "🧹 Rensa formatering" }, "modal": { "table": { "title": "Infoga tabell", "rows": "Rader", "cols": "Kolumner" }, "link": { "title": "Infoga länk", "url": "URL", "text": "Visningstext" }, "img": { "title": "Infoga bild", "urlLabel": "Bild-URL eller ladda upp lokal fil", "fileLabel": "Eller välj fil:", "alt": "Alternativ text" }, "find": { "title": "Sök &amp; Ersätt", "find": "Sök", "replace": "Ersätt med" }, "open": { "title": "Öppna dokument", "label": "Sparade dokument:" } }, "btn": { "findNext": "Hitta nästa", "replace": "Ersätt", "replaceAll": "Ersätt alla" }, "info": { "words": "Ord:", "chars": "Tecken:" }, "status": { "ready": "Klar", "saved": "💾 Sparat: ", "newDoc": "Nytt dokument skapat", "opened": "Öppnat: ", "replaced": "Alla ersättningar utförda" }, "confirm": { "newDoc": "Nytt dokument? Osparade ändringar försvinner.", "notFound": "Hittades inte: " }, "welcome": { "title": "Välkommen till OfficeWeb Writer", "p1": "Börja skriva här. Du kan formatera text som <b>fet</b>, <i>kursiv</i> eller <u>understruken</u>.", "p2": "Använd verktygsfältet ovan för att justera teckensnitt, storlekar, färger med mera.", "p3": "Skriv glatt! 📝" } },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Namnlös arbetsbok", "newSheet": "Blad", "modal": { "open": { "title": "Öppna arbetsbok", "label": "Sparade arbetsböcker:" } }, "status": { "ready": "Klar", "saved": "💾 Sparat: ", "opened": "Öppnat: " }, "confirm": { "newWorkbook": "Skapa ny arbetsbok? Osparade ändringar försvinner.", "deleteSheet": "Ta bort blad \"%s\"?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Namnlös presentation", "modal": { "img": { "title": "Infoga bild", "urlLabel": "Bild-URL", "fileLabel": "Eller fil:" }, "open": { "title": "Öppna presentation", "label": "Sparade presentationer:" } }, "status": { "ready": "Klar", "saved": "💾 Sparat: ", "opened": "Öppnat: " } },
-  "notes": { "appname": "📋 Notes", "noNote": "Ingen anteckning vald", "newNote": "+ Skapa ny anteckning", "sectionTitle": "Anteckningar", "search": "🔍 Sök anteckningar...", "noTitle": "Utan titel", "words": "Ord:", "modified": "Ändrad: ", "newSection": "Nytt avsnitt", "tagPrompt": "Taggnamn:", "sections": { "personal": "Personligt", "work": "Arbete", "tasks": "Uppgifter" }, "status": { "ready": "Klar", "noNote": "Ingen anteckning vald" }, "confirm": { "deleteNote": "Ta bort anteckning?" } }
+  "nav": {
+    "home": "Startsida",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Öppen källkod &amp; Gratis",
+    "title": "Ditt <em>gratis</em> Office<br>i webbläsaren",
+    "subtitle": "Professionell kontorsprogramvara – helt i webbläsaren, ingen installation, inga kostnader, inga integritetsproblem.",
+    "start": "✍️ Kom igång",
+    "discover": "Utforska appar"
+  },
+  "stats": {
+    "apps": "Appar",
+    "noInstall": "Installation",
+    "privacy": "Integritet",
+    "license": "Licens"
+  },
+  "apps": {
+    "title": "Alla appar",
+    "subtitle": "Välj en app och starta direkt i webbläsaren",
+    "writer": {
+      "desc": "Skapa och redigera textdokument – som Microsoft Word",
+      "tag1": "Ordbehandling",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Kalkylblad och beräkningar – som Microsoft Excel",
+      "tag1": "Kalkylblad",
+      "tag2": "Formler"
+    },
+    "impress": {
+      "desc": "Designa presentationer – som Microsoft PowerPoint",
+      "tag1": "Presentation",
+      "tag2": "Bilder"
+    },
+    "notes": {
+      "desc": "Snabba anteckningar och uppgiftslistor – som Microsoft OneNote",
+      "tag1": "Anteckningar",
+      "tag2": "Uppgifter"
+    }
+  },
+  "features": {
+    "title": "Varför OfficeWeb?",
+    "subtitle": "Professionella funktioner – gratis, i webbläsaren, utan registrering",
+    "browser": {
+      "title": "100 % i webbläsaren",
+      "text": "Ingen installation behövs. Fungerar i alla moderna webbläsare."
+    },
+    "storage": {
+      "title": "Lokal lagring",
+      "text": "Dokument sparas lokalt i din webbläsare – ingen molntjänst krävs."
+    },
+    "privacy": {
+      "title": "Integritet",
+      "text": "All data stannar på din enhet. Inget skickas till servrar."
+    },
+    "design": {
+      "title": "Professionell design",
+      "text": "Modernt, rent gränssnitt inspirerat av Microsoft Office."
+    },
+    "export": {
+      "title": "Exportera &amp; Skriv ut",
+      "text": "Skriv ut dokument eller exportera som HTML/text."
+    },
+    "responsive": {
+      "title": "Responsiv",
+      "text": "Fungerar på dator, surfplatta och smartphone."
+    }
+  },
+  "oss": {
+    "title": "Öppen källkod &amp; fri för alla",
+    "text": "OfficeWeb är ett öppen källkod-projekt under MIT-licensen. Vem som helst kan bidra, anpassa koden och vidareutveckla projektet.",
+    "btn": "Visa på GitHub"
+  },
+  "footer": {
+    "license": "MIT-licens",
+    "contributing": "Bidra",
+    "security": "Säkerhet"
+  },
+  "common": {
+    "cancel": "Avbryt",
+    "insert": "Infoga",
+    "delete": "Ta bort",
+    "open": "Öppna",
+    "close": "Stäng",
+    "save": "Spara",
+    "new": "Ny",
+    "ready": "Klar",
+    "home": "Startsida"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Namnlöst dokument",
+    "menu": {
+      "file": "Arkiv",
+      "edit": "Redigera",
+      "insert": "Infoga",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 Nytt dokument",
+      "open": "📂 Öppna...",
+      "save": "💾 Spara",
+      "exportHtml": "📥 Exportera som HTML",
+      "exportTxt": "📄 Exportera som text",
+      "print": "🖨️ Skriv ut"
+    },
+    "edit": {
+      "undo": "↩️ Ångra",
+      "redo": "↪️ Gör om",
+      "cut": "✂️ Klipp ut",
+      "copy": "📋 Kopiera",
+      "paste": "📌 Klistra in",
+      "selectAll": "🔲 Markera allt",
+      "findReplace": "🔍 Sök &amp; Ersätt"
+    },
+    "insert": {
+      "table": "📊 Tabell",
+      "image": "🖼️ Bild",
+      "link": "🔗 Länk",
+      "hr": "➖ Horisontell linje",
+      "pageBreak": "📃 Sidbrytning"
+    },
+    "format": {
+      "bold": "<b>F</b> Fet",
+      "italic": "<i>K</i> Kursiv",
+      "underline": "<u>U</u> Understruken",
+      "clearFmt": "🧹 Rensa formatering"
+    },
+    "modal": {
+      "table": {
+        "title": "Infoga tabell",
+        "rows": "Rader",
+        "cols": "Kolumner"
+      },
+      "link": {
+        "title": "Infoga länk",
+        "url": "URL",
+        "text": "Visningstext"
+      },
+      "img": {
+        "title": "Infoga bild",
+        "urlLabel": "Bild-URL eller ladda upp lokal fil",
+        "fileLabel": "Eller välj fil:",
+        "alt": "Alternativ text"
+      },
+      "find": {
+        "title": "Sök &amp; Ersätt",
+        "find": "Sök",
+        "replace": "Ersätt med"
+      },
+      "open": {
+        "title": "Öppna dokument",
+        "label": "Sparade dokument:"
+      }
+    },
+    "btn": {
+      "findNext": "Hitta nästa",
+      "replace": "Ersätt",
+      "replaceAll": "Ersätt alla"
+    },
+    "info": {
+      "words": "Ord:",
+      "chars": "Tecken:"
+    },
+    "status": {
+      "ready": "Klar",
+      "saved": "💾 Sparat: ",
+      "newDoc": "Nytt dokument skapat",
+      "opened": "Öppnat: ",
+      "replaced": "Alla ersättningar utförda"
+    },
+    "confirm": {
+      "newDoc": "Nytt dokument? Osparade ändringar försvinner.",
+      "notFound": "Hittades inte: "
+    },
+    "welcome": {
+      "title": "Välkommen till OfficeWeb Writer",
+      "p1": "Börja skriva här. Du kan formatera text som <b>fet</b>, <i>kursiv</i> eller <u>understruken</u>.",
+      "p2": "Använd verktygsfältet ovan för att justera teckensnitt, storlekar, färger med mera.",
+      "p3": "Skriv glatt! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Namnlös arbetsbok",
+    "newSheet": "Blad",
+    "modal": {
+      "open": {
+        "title": "Öppna arbetsbok",
+        "label": "Sparade arbetsböcker:"
+      }
+    },
+    "status": {
+      "ready": "Klar",
+      "saved": "💾 Sparat: ",
+      "opened": "Öppnat: "
+    },
+    "confirm": {
+      "newWorkbook": "Skapa ny arbetsbok? Osparade ändringar försvinner.",
+      "deleteSheet": "Ta bort blad \"%s\"?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Namnlös presentation",
+    "modal": {
+      "img": {
+        "title": "Infoga bild",
+        "urlLabel": "Bild-URL",
+        "fileLabel": "Eller fil:"
+      },
+      "open": {
+        "title": "Öppna presentation",
+        "label": "Sparade presentationer:"
+      }
+    },
+    "status": {
+      "ready": "Klar",
+      "saved": "💾 Sparat: ",
+      "opened": "Öppnat: "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "Ingen anteckning vald",
+    "newNote": "+ Skapa ny anteckning",
+    "sectionTitle": "Anteckningar",
+    "search": "Sök anteckningar...",
+    "noTitle": "Utan titel",
+    "words": "Ord:",
+    "modified": "Ändrad: ",
+    "newSection": "Nytt avsnitt",
+    "tagPrompt": "Taggnamn:",
+    "sections": {
+      "personal": "Personligt",
+      "work": "Arbete",
+      "tasks": "Uppgifter"
+    },
+    "status": {
+      "ready": "Klar",
+      "noNote": "Ingen anteckning vald"
+    },
+    "confirm": {
+      "deleteNote": "Ta bort anteckning?"
+    }
+  }
 }

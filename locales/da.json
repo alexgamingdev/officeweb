@@ -1,14 +1,253 @@
 {
-  "nav": { "home": "Startside", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
-  "hero": { "badge": "⭐ Open Source &amp; Gratis", "title": "Dit <em>gratis</em> Office<br>i browseren", "subtitle": "Professionel kontorsoftware – helt i browseren, ingen installation, ingen pris, ingen privatlivsproblemer.", "start": "✍️ Kom i gang", "discover": "Udforsk apps" },
-  "stats": { "apps": "Apps", "noInstall": "Installation", "privacy": "Privatliv", "license": "Licens" },
-  "apps": { "title": "Alle apps", "subtitle": "Vælg en app og start direkte i browseren", "writer": { "desc": "Opret og rediger tekstdokumenter – som Microsoft Word", "tag1": "Tekstbehandling", "tag2": "WYSIWYG" }, "calc": { "desc": "Regneark og beregninger – som Microsoft Excel", "tag1": "Regneark", "tag2": "Formler" }, "impress": { "desc": "Design præsentationer – som Microsoft PowerPoint", "tag1": "Præsentation", "tag2": "Dias" }, "notes": { "desc": "Hurtige noter og opgavelister – som Microsoft OneNote", "tag1": "Noter", "tag2": "Opgaver" } },
-  "features": { "title": "Hvorfor OfficeWeb?", "subtitle": "Professionelle funktioner – gratis, i browseren, uden tilmelding", "browser": { "title": "100 % i browseren", "text": "Ingen installation nødvendig. Fungerer i enhver moderne browser." }, "storage": { "title": "Lokal lagring", "text": "Dokumenter gemmes lokalt i din browser – ingen cloud nødvendig." }, "privacy": { "title": "Privatliv", "text": "Alle data forbliver på din enhed. Intet sendes til servere." }, "design": { "title": "Professionelt design", "text": "Moderne, rent interface inspireret af Microsoft Office." }, "export": { "title": "Eksporter &amp; Udskriv", "text": "Udskriv dokumenter eller eksporter som HTML/tekst." }, "responsive": { "title": "Responsivt", "text": "Fungerer på desktop, tablet og smartphone." } },
-  "oss": { "title": "Open Source &amp; gratis for alle", "text": "OfficeWeb er et open source-projekt under MIT-licensen. Enhver kan bidrage, tilpasse koden og videreudvikle projektet.", "btn": "Se på GitHub" },
-  "footer": { "license": "MIT-licens", "contributing": "Bidrag", "security": "Sikkerhed" },
-  "common": { "cancel": "Annuller", "insert": "Indsæt", "delete": "Slet", "open": "Åbn", "close": "Luk", "save": "💾 Gem", "new": "📄 Ny", "ready": "Klar", "home": "🏠 Startside" },
-  "writer": { "appname": "📝 Writer", "newDoc": "Unavngivet dokument", "menu": { "file": "Filer", "edit": "Rediger", "insert": "Indsæt", "format": "Format" }, "file": { "new": "📄 Nyt dokument", "open": "📂 Åbn...", "save": "💾 Gem", "exportHtml": "📥 Eksporter som HTML", "exportTxt": "📄 Eksporter som tekst", "print": "🖨️ Udskriv" }, "edit": { "undo": "↩️ Fortryd", "redo": "↪️ Gentag", "cut": "✂️ Klip", "copy": "📋 Kopiér", "paste": "📌 Sæt ind", "selectAll": "🔲 Vælg alt", "findReplace": "🔍 Find &amp; Erstat" }, "insert": { "table": "📊 Tabel", "image": "🖼️ Billede", "link": "🔗 Link", "hr": "➖ Vandret linje", "pageBreak": "📃 Sideskift" }, "format": { "bold": "<b>F</b> Fed", "italic": "<i>K</i> Kursiv", "underline": "<u>U</u> Understreget", "clearFmt": "🧹 Fjern formatering" }, "modal": { "table": { "title": "Indsæt tabel", "rows": "Rækker", "cols": "Kolonner" }, "link": { "title": "Indsæt link", "url": "URL", "text": "Visningstekst" }, "img": { "title": "Indsæt billede", "urlLabel": "Billed-URL eller upload lokal fil", "fileLabel": "Eller vælg fil:", "alt": "Alt-tekst" }, "find": { "title": "Find &amp; Erstat", "find": "Find", "replace": "Erstat med" }, "open": { "title": "Åbn dokument", "label": "Gemte dokumenter:" } }, "btn": { "findNext": "Find næste", "replace": "Erstat", "replaceAll": "Erstat alle" }, "info": { "words": "Ord:", "chars": "Tegn:" }, "status": { "ready": "Klar", "saved": "💾 Gemt: ", "newDoc": "Nyt dokument oprettet", "opened": "Åbnet: ", "replaced": "Alle erstatninger udført" }, "confirm": { "newDoc": "Nyt dokument? Ikke-gemte ændringer mistes.", "notFound": "Ikke fundet: " }, "welcome": { "title": "Velkommen til OfficeWeb Writer", "p1": "Begynd at skrive her. Du kan formatere tekst som <b>fed</b>, <i>kursiv</i> eller <u>understreget</u>.", "p2": "Brug værktøjslinjen ovenfor til at justere skrifttyper, størrelser, farver og mere.", "p3": "God skrivning! 📝" } },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Unavngivet projektmappe", "newSheet": "Ark", "modal": { "open": { "title": "Åbn projektmappe", "label": "Gemte projektmapper:" } }, "status": { "ready": "Klar", "saved": "💾 Gemt: ", "opened": "Åbnet: " }, "confirm": { "newWorkbook": "Opret ny projektmappe? Ikke-gemte ændringer mistes.", "deleteSheet": "Slet ark \"%s\"?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Unavngivet præsentation", "modal": { "img": { "title": "Indsæt billede", "urlLabel": "Billed-URL", "fileLabel": "Eller fil:" }, "open": { "title": "Åbn præsentation", "label": "Gemte præsentationer:" } }, "status": { "ready": "Klar", "saved": "💾 Gemt: ", "opened": "Åbnet: " } },
-  "notes": { "appname": "📋 Notes", "noNote": "Ingen note valgt", "newNote": "+ Opret ny note", "sectionTitle": "Noter", "search": "🔍 Søg noter...", "noTitle": "Uden titel", "words": "Ord:", "modified": "Ændret: ", "newSection": "Ny sektion", "tagPrompt": "Tagnavn:", "sections": { "personal": "Personlig", "work": "Arbejde", "tasks": "Opgaver" }, "status": { "ready": "Klar", "noNote": "Ingen note valgt" }, "confirm": { "deleteNote": "Slet note?" } }
+  "nav": {
+    "home": "Startside",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Open Source &amp; Gratis",
+    "title": "Dit <em>gratis</em> Office<br>i browseren",
+    "subtitle": "Professionel kontorsoftware – helt i browseren, ingen installation, ingen pris, ingen privatlivsproblemer.",
+    "start": "✍️ Kom i gang",
+    "discover": "Udforsk apps"
+  },
+  "stats": {
+    "apps": "Apps",
+    "noInstall": "Installation",
+    "privacy": "Privatliv",
+    "license": "Licens"
+  },
+  "apps": {
+    "title": "Alle apps",
+    "subtitle": "Vælg en app og start direkte i browseren",
+    "writer": {
+      "desc": "Opret og rediger tekstdokumenter – som Microsoft Word",
+      "tag1": "Tekstbehandling",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Regneark og beregninger – som Microsoft Excel",
+      "tag1": "Regneark",
+      "tag2": "Formler"
+    },
+    "impress": {
+      "desc": "Design præsentationer – som Microsoft PowerPoint",
+      "tag1": "Præsentation",
+      "tag2": "Dias"
+    },
+    "notes": {
+      "desc": "Hurtige noter og opgavelister – som Microsoft OneNote",
+      "tag1": "Noter",
+      "tag2": "Opgaver"
+    }
+  },
+  "features": {
+    "title": "Hvorfor OfficeWeb?",
+    "subtitle": "Professionelle funktioner – gratis, i browseren, uden tilmelding",
+    "browser": {
+      "title": "100 % i browseren",
+      "text": "Ingen installation nødvendig. Fungerer i enhver moderne browser."
+    },
+    "storage": {
+      "title": "Lokal lagring",
+      "text": "Dokumenter gemmes lokalt i din browser – ingen cloud nødvendig."
+    },
+    "privacy": {
+      "title": "Privatliv",
+      "text": "Alle data forbliver på din enhed. Intet sendes til servere."
+    },
+    "design": {
+      "title": "Professionelt design",
+      "text": "Moderne, rent interface inspireret af Microsoft Office."
+    },
+    "export": {
+      "title": "Eksporter &amp; Udskriv",
+      "text": "Udskriv dokumenter eller eksporter som HTML/tekst."
+    },
+    "responsive": {
+      "title": "Responsivt",
+      "text": "Fungerer på desktop, tablet og smartphone."
+    }
+  },
+  "oss": {
+    "title": "Open Source &amp; gratis for alle",
+    "text": "OfficeWeb er et open source-projekt under MIT-licensen. Enhver kan bidrage, tilpasse koden og videreudvikle projektet.",
+    "btn": "Se på GitHub"
+  },
+  "footer": {
+    "license": "MIT-licens",
+    "contributing": "Bidrag",
+    "security": "Sikkerhed"
+  },
+  "common": {
+    "cancel": "Annuller",
+    "insert": "Indsæt",
+    "delete": "Slet",
+    "open": "Åbn",
+    "close": "Luk",
+    "save": "Gem",
+    "new": "Ny",
+    "ready": "Klar",
+    "home": "Startside"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Unavngivet dokument",
+    "menu": {
+      "file": "Filer",
+      "edit": "Rediger",
+      "insert": "Indsæt",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 Nyt dokument",
+      "open": "📂 Åbn...",
+      "save": "💾 Gem",
+      "exportHtml": "📥 Eksporter som HTML",
+      "exportTxt": "📄 Eksporter som tekst",
+      "print": "🖨️ Udskriv"
+    },
+    "edit": {
+      "undo": "↩️ Fortryd",
+      "redo": "↪️ Gentag",
+      "cut": "✂️ Klip",
+      "copy": "📋 Kopiér",
+      "paste": "📌 Sæt ind",
+      "selectAll": "🔲 Vælg alt",
+      "findReplace": "🔍 Find &amp; Erstat"
+    },
+    "insert": {
+      "table": "📊 Tabel",
+      "image": "🖼️ Billede",
+      "link": "🔗 Link",
+      "hr": "➖ Vandret linje",
+      "pageBreak": "📃 Sideskift"
+    },
+    "format": {
+      "bold": "<b>F</b> Fed",
+      "italic": "<i>K</i> Kursiv",
+      "underline": "<u>U</u> Understreget",
+      "clearFmt": "🧹 Fjern formatering"
+    },
+    "modal": {
+      "table": {
+        "title": "Indsæt tabel",
+        "rows": "Rækker",
+        "cols": "Kolonner"
+      },
+      "link": {
+        "title": "Indsæt link",
+        "url": "URL",
+        "text": "Visningstekst"
+      },
+      "img": {
+        "title": "Indsæt billede",
+        "urlLabel": "Billed-URL eller upload lokal fil",
+        "fileLabel": "Eller vælg fil:",
+        "alt": "Alt-tekst"
+      },
+      "find": {
+        "title": "Find &amp; Erstat",
+        "find": "Find",
+        "replace": "Erstat med"
+      },
+      "open": {
+        "title": "Åbn dokument",
+        "label": "Gemte dokumenter:"
+      }
+    },
+    "btn": {
+      "findNext": "Find næste",
+      "replace": "Erstat",
+      "replaceAll": "Erstat alle"
+    },
+    "info": {
+      "words": "Ord:",
+      "chars": "Tegn:"
+    },
+    "status": {
+      "ready": "Klar",
+      "saved": "💾 Gemt: ",
+      "newDoc": "Nyt dokument oprettet",
+      "opened": "Åbnet: ",
+      "replaced": "Alle erstatninger udført"
+    },
+    "confirm": {
+      "newDoc": "Nyt dokument? Ikke-gemte ændringer mistes.",
+      "notFound": "Ikke fundet: "
+    },
+    "welcome": {
+      "title": "Velkommen til OfficeWeb Writer",
+      "p1": "Begynd at skrive her. Du kan formatere tekst som <b>fed</b>, <i>kursiv</i> eller <u>understreget</u>.",
+      "p2": "Brug værktøjslinjen ovenfor til at justere skrifttyper, størrelser, farver og mere.",
+      "p3": "God skrivning! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Unavngivet projektmappe",
+    "newSheet": "Ark",
+    "modal": {
+      "open": {
+        "title": "Åbn projektmappe",
+        "label": "Gemte projektmapper:"
+      }
+    },
+    "status": {
+      "ready": "Klar",
+      "saved": "💾 Gemt: ",
+      "opened": "Åbnet: "
+    },
+    "confirm": {
+      "newWorkbook": "Opret ny projektmappe? Ikke-gemte ændringer mistes.",
+      "deleteSheet": "Slet ark \"%s\"?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Unavngivet præsentation",
+    "modal": {
+      "img": {
+        "title": "Indsæt billede",
+        "urlLabel": "Billed-URL",
+        "fileLabel": "Eller fil:"
+      },
+      "open": {
+        "title": "Åbn præsentation",
+        "label": "Gemte præsentationer:"
+      }
+    },
+    "status": {
+      "ready": "Klar",
+      "saved": "💾 Gemt: ",
+      "opened": "Åbnet: "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "Ingen note valgt",
+    "newNote": "+ Opret ny note",
+    "sectionTitle": "Noter",
+    "search": "Søg noter...",
+    "noTitle": "Uden titel",
+    "words": "Ord:",
+    "modified": "Ændret: ",
+    "newSection": "Ny sektion",
+    "tagPrompt": "Tagnavn:",
+    "sections": {
+      "personal": "Personlig",
+      "work": "Arbejde",
+      "tasks": "Opgaver"
+    },
+    "status": {
+      "ready": "Klar",
+      "noNote": "Ingen note valgt"
+    },
+    "confirm": {
+      "deleteNote": "Slet note?"
+    }
+  }
 }

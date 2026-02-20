@@ -35,8 +35,12 @@
   font-size: 13px;
   padding: 4px 10px;
   border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 .titlebar-home:hover { background: rgba(255,255,255,.15); }
+.titlebar-logo { height: 20px; width: auto; }
 .titlebar-name { font-size: 14px; font-weight: 600; margin-left: 4px; }
 .titlebar-file { flex: 1; }
 .titlebar-file input {

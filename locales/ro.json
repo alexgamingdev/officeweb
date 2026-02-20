@@ -1,14 +1,253 @@
 {
-  "nav": { "home": "Acasă", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
-  "hero": { "badge": "⭐ Sursă deschisă &amp; Gratuit", "title": "Office-ul tău <em>gratuit</em><br>în browser", "subtitle": "Software de birou profesional – complet în browser, fără instalare, fără costuri, fără probleme de confidențialitate.", "start": "✍️ Începe acum", "discover": "Explorează aplicațiile" },
-  "stats": { "apps": "Aplicații", "noInstall": "Instalare", "privacy": "Confidențialitate", "license": "Licență" },
-  "apps": { "title": "Toate aplicațiile", "subtitle": "Alege o aplicație și pornește direct în browser", "writer": { "desc": "Creează și editează documente text – ca Microsoft Word", "tag1": "Procesare text", "tag2": "WYSIWYG" }, "calc": { "desc": "Foi de calcul – ca Microsoft Excel", "tag1": "Foaie de calcul", "tag2": "Formule" }, "impress": { "desc": "Creează prezentări – ca Microsoft PowerPoint", "tag1": "Prezentare", "tag2": "Diapozitive" }, "notes": { "desc": "Notițe rapide și liste de sarcini – ca Microsoft OneNote", "tag1": "Notițe", "tag2": "Sarcini" } },
-  "features": { "title": "De ce OfficeWeb?", "subtitle": "Funcții profesionale – gratuit, în browser, fără înregistrare", "browser": { "title": "100% în browser", "text": "Nu necesită instalare. Funcționează în orice browser modern." }, "storage": { "title": "Stocare locală", "text": "Documentele sunt salvate local în browser – nu este necesară cloud." }, "privacy": { "title": "Confidențialitate", "text": "Toate datele rămân pe dispozitivul tău. Nimic nu este trimis la servere." }, "design": { "title": "Design profesional", "text": "Interfață modernă și curată, inspirată din Microsoft Office." }, "export": { "title": "Export &amp; Tipărire", "text": "Tipărește documente sau exportă ca HTML/text." }, "responsive": { "title": "Responsiv", "text": "Funcționează pe desktop, tabletă și smartphone." } },
-  "oss": { "title": "Sursă deschisă &amp; gratuit pentru toți", "text": "OfficeWeb este un proiect open source sub licența MIT. Oricine poate contribui, adapta codul și dezvolta proiectul.", "btn": "Vezi pe GitHub" },
-  "footer": { "license": "Licență MIT", "contributing": "Contribuie", "security": "Securitate" },
-  "common": { "cancel": "Anulează", "insert": "Inserează", "delete": "Șterge", "open": "Deschide", "close": "Închide", "save": "💾 Salvează", "new": "📄 Nou", "ready": "Gata", "home": "🏠 Acasă" },
-  "writer": { "appname": "📝 Writer", "newDoc": "Document fără titlu", "menu": { "file": "Fișier", "edit": "Editare", "insert": "Inserare", "format": "Format" }, "file": { "new": "📄 Document nou", "open": "📂 Deschide...", "save": "💾 Salvează", "exportHtml": "📥 Exportă ca HTML", "exportTxt": "📄 Exportă ca text", "print": "🖨️ Tipărire" }, "edit": { "undo": "↩️ Anulează", "redo": "↪️ Refă", "cut": "✂️ Taie", "copy": "📋 Copiază", "paste": "📌 Lipește", "selectAll": "🔲 Selectează tot", "findReplace": "🔍 Găsire &amp; Înlocuire" }, "insert": { "table": "📊 Tabel", "image": "🖼️ Imagine", "link": "🔗 Legătură", "hr": "➖ Linie orizontală", "pageBreak": "📃 Salt de pagină" }, "format": { "bold": "<b>Î</b> Îngroșat", "italic": "<i>I</i> Italic", "underline": "<u>S</u> Subliniat", "clearFmt": "🧹 Șterge formatarea" }, "modal": { "table": { "title": "Inserează tabel", "rows": "Rânduri", "cols": "Coloane" }, "link": { "title": "Inserează legătură", "url": "URL", "text": "Text afișat" }, "img": { "title": "Inserează imagine", "urlLabel": "URL imagine sau încarcă fișier local", "fileLabel": "Sau alege fișier:", "alt": "Text alternativ" }, "find": { "title": "Găsire &amp; Înlocuire", "find": "Găsire", "replace": "Înlocuire cu" }, "open": { "title": "Deschide document", "label": "Documente salvate:" } }, "btn": { "findNext": "Găsește următorul", "replace": "Înlocuiește", "replaceAll": "Înlocuiește tot" }, "info": { "words": "Cuvinte:", "chars": "Caractere:" }, "status": { "ready": "Gata", "saved": "💾 Salvat: ", "newDoc": "Document nou creat", "opened": "Deschis: ", "replaced": "Toate înlocuirile efectuate" }, "confirm": { "newDoc": "Document nou? Modificările nesalvate vor fi pierdute.", "notFound": "Nu s-a găsit: " }, "welcome": { "title": "Bun venit în OfficeWeb Writer", "p1": "Începe să scrii aici. Poți formata textul ca <b>îngroșat</b>, <i>italic</i> sau <u>subliniat</u>.", "p2": "Folosește bara de instrumente de mai sus pentru a ajusta fonturi, dimensiuni, culori și altele.", "p3": "Scriere plăcută! 📝" } },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Registru fără titlu", "newSheet": "Foaie", "modal": { "open": { "title": "Deschide registru", "label": "Registre salvate:" } }, "status": { "ready": "Gata", "saved": "💾 Salvat: ", "opened": "Deschis: " }, "confirm": { "newWorkbook": "Creezi registru nou? Modificările nesalvate vor fi pierdute.", "deleteSheet": "Șterge foaia \"%s\"?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Prezentare fără titlu", "modal": { "img": { "title": "Inserează imagine", "urlLabel": "URL imagine", "fileLabel": "Sau fișier:" }, "open": { "title": "Deschide prezentare", "label": "Prezentări salvate:" } }, "status": { "ready": "Gata", "saved": "💾 Salvat: ", "opened": "Deschis: " } },
-  "notes": { "appname": "📋 Notes", "noNote": "Nicio notiță selectată", "newNote": "+ Crează notiță nouă", "sectionTitle": "Notițe", "search": "🔍 Caută notițe...", "noTitle": "Fără titlu", "words": "Cuvinte:", "modified": "Modificat: ", "newSection": "Secțiune nouă", "tagPrompt": "Nume etichetă:", "sections": { "personal": "Personal", "work": "Muncă", "tasks": "Sarcini" }, "status": { "ready": "Gata", "noNote": "Nicio notiță selectată" }, "confirm": { "deleteNote": "Șterge notița?" } }
+  "nav": {
+    "home": "Acasă",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Sursă deschisă &amp; Gratuit",
+    "title": "Office-ul tău <em>gratuit</em><br>în browser",
+    "subtitle": "Software de birou profesional – complet în browser, fără instalare, fără costuri, fără probleme de confidențialitate.",
+    "start": "✍️ Începe acum",
+    "discover": "Explorează aplicațiile"
+  },
+  "stats": {
+    "apps": "Aplicații",
+    "noInstall": "Instalare",
+    "privacy": "Confidențialitate",
+    "license": "Licență"
+  },
+  "apps": {
+    "title": "Toate aplicațiile",
+    "subtitle": "Alege o aplicație și pornește direct în browser",
+    "writer": {
+      "desc": "Creează și editează documente text – ca Microsoft Word",
+      "tag1": "Procesare text",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Foi de calcul – ca Microsoft Excel",
+      "tag1": "Foaie de calcul",
+      "tag2": "Formule"
+    },
+    "impress": {
+      "desc": "Creează prezentări – ca Microsoft PowerPoint",
+      "tag1": "Prezentare",
+      "tag2": "Diapozitive"
+    },
+    "notes": {
+      "desc": "Notițe rapide și liste de sarcini – ca Microsoft OneNote",
+      "tag1": "Notițe",
+      "tag2": "Sarcini"
+    }
+  },
+  "features": {
+    "title": "De ce OfficeWeb?",
+    "subtitle": "Funcții profesionale – gratuit, în browser, fără înregistrare",
+    "browser": {
+      "title": "100% în browser",
+      "text": "Nu necesită instalare. Funcționează în orice browser modern."
+    },
+    "storage": {
+      "title": "Stocare locală",
+      "text": "Documentele sunt salvate local în browser – nu este necesară cloud."
+    },
+    "privacy": {
+      "title": "Confidențialitate",
+      "text": "Toate datele rămân pe dispozitivul tău. Nimic nu este trimis la servere."
+    },
+    "design": {
+      "title": "Design profesional",
+      "text": "Interfață modernă și curată, inspirată din Microsoft Office."
+    },
+    "export": {
+      "title": "Export &amp; Tipărire",
+      "text": "Tipărește documente sau exportă ca HTML/text."
+    },
+    "responsive": {
+      "title": "Responsiv",
+      "text": "Funcționează pe desktop, tabletă și smartphone."
+    }
+  },
+  "oss": {
+    "title": "Sursă deschisă &amp; gratuit pentru toți",
+    "text": "OfficeWeb este un proiect open source sub licența MIT. Oricine poate contribui, adapta codul și dezvolta proiectul.",
+    "btn": "Vezi pe GitHub"
+  },
+  "footer": {
+    "license": "Licență MIT",
+    "contributing": "Contribuie",
+    "security": "Securitate"
+  },
+  "common": {
+    "cancel": "Anulează",
+    "insert": "Inserează",
+    "delete": "Șterge",
+    "open": "Deschide",
+    "close": "Închide",
+    "save": "Salvează",
+    "new": "Nou",
+    "ready": "Gata",
+    "home": "Acasă"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Document fără titlu",
+    "menu": {
+      "file": "Fișier",
+      "edit": "Editare",
+      "insert": "Inserare",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 Document nou",
+      "open": "📂 Deschide...",
+      "save": "💾 Salvează",
+      "exportHtml": "📥 Exportă ca HTML",
+      "exportTxt": "📄 Exportă ca text",
+      "print": "🖨️ Tipărire"
+    },
+    "edit": {
+      "undo": "↩️ Anulează",
+      "redo": "↪️ Refă",
+      "cut": "✂️ Taie",
+      "copy": "📋 Copiază",
+      "paste": "📌 Lipește",
+      "selectAll": "🔲 Selectează tot",
+      "findReplace": "🔍 Găsire &amp; Înlocuire"
+    },
+    "insert": {
+      "table": "📊 Tabel",
+      "image": "🖼️ Imagine",
+      "link": "🔗 Legătură",
+      "hr": "➖ Linie orizontală",
+      "pageBreak": "📃 Salt de pagină"
+    },
+    "format": {
+      "bold": "<b>Î</b> Îngroșat",
+      "italic": "<i>I</i> Italic",
+      "underline": "<u>S</u> Subliniat",
+      "clearFmt": "🧹 Șterge formatarea"
+    },
+    "modal": {
+      "table": {
+        "title": "Inserează tabel",
+        "rows": "Rânduri",
+        "cols": "Coloane"
+      },
+      "link": {
+        "title": "Inserează legătură",
+        "url": "URL",
+        "text": "Text afișat"
+      },
+      "img": {
+        "title": "Inserează imagine",
+        "urlLabel": "URL imagine sau încarcă fișier local",
+        "fileLabel": "Sau alege fișier:",
+        "alt": "Text alternativ"
+      },
+      "find": {
+        "title": "Găsire &amp; Înlocuire",
+        "find": "Găsire",
+        "replace": "Înlocuire cu"
+      },
+      "open": {
+        "title": "Deschide document",
+        "label": "Documente salvate:"
+      }
+    },
+    "btn": {
+      "findNext": "Găsește următorul",
+      "replace": "Înlocuiește",
+      "replaceAll": "Înlocuiește tot"
+    },
+    "info": {
+      "words": "Cuvinte:",
+      "chars": "Caractere:"
+    },
+    "status": {
+      "ready": "Gata",
+      "saved": "💾 Salvat: ",
+      "newDoc": "Document nou creat",
+      "opened": "Deschis: ",
+      "replaced": "Toate înlocuirile efectuate"
+    },
+    "confirm": {
+      "newDoc": "Document nou? Modificările nesalvate vor fi pierdute.",
+      "notFound": "Nu s-a găsit: "
+    },
+    "welcome": {
+      "title": "Bun venit în OfficeWeb Writer",
+      "p1": "Începe să scrii aici. Poți formata textul ca <b>îngroșat</b>, <i>italic</i> sau <u>subliniat</u>.",
+      "p2": "Folosește bara de instrumente de mai sus pentru a ajusta fonturi, dimensiuni, culori și altele.",
+      "p3": "Scriere plăcută! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Registru fără titlu",
+    "newSheet": "Foaie",
+    "modal": {
+      "open": {
+        "title": "Deschide registru",
+        "label": "Registre salvate:"
+      }
+    },
+    "status": {
+      "ready": "Gata",
+      "saved": "💾 Salvat: ",
+      "opened": "Deschis: "
+    },
+    "confirm": {
+      "newWorkbook": "Creezi registru nou? Modificările nesalvate vor fi pierdute.",
+      "deleteSheet": "Șterge foaia \"%s\"?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Prezentare fără titlu",
+    "modal": {
+      "img": {
+        "title": "Inserează imagine",
+        "urlLabel": "URL imagine",
+        "fileLabel": "Sau fișier:"
+      },
+      "open": {
+        "title": "Deschide prezentare",
+        "label": "Prezentări salvate:"
+      }
+    },
+    "status": {
+      "ready": "Gata",
+      "saved": "💾 Salvat: ",
+      "opened": "Deschis: "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "Nicio notiță selectată",
+    "newNote": "+ Crează notiță nouă",
+    "sectionTitle": "Notițe",
+    "search": "Caută notițe...",
+    "noTitle": "Fără titlu",
+    "words": "Cuvinte:",
+    "modified": "Modificat: ",
+    "newSection": "Secțiune nouă",
+    "tagPrompt": "Nume etichetă:",
+    "sections": {
+      "personal": "Personal",
+      "work": "Muncă",
+      "tasks": "Sarcini"
+    },
+    "status": {
+      "ready": "Gata",
+      "noNote": "Nicio notiță selectată"
+    },
+    "confirm": {
+      "deleteNote": "Șterge notița?"
+    }
+  }
 }

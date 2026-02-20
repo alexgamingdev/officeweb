@@ -11,14 +11,17 @@
 
 <!-- Title bar -->
 <div class="titlebar">
-  <a href="index.html" class="titlebar-home"><span data-i18n="common.home">🏠 Startseite</span></a>
+  <a href="index.html" class="titlebar-home">
+    <img src="logo.svg" alt="OfficeWeb" class="titlebar-logo" />
+    <span data-i18n="common.home">Startseite</span>
+  </a>
   <div style="color:rgba(255,255,255,.4)">|</div>
-  <span class="titlebar-name" data-i18n="writer.appname">📝 Writer</span>
+  <span class="titlebar-name" data-i18n="writer.appname">Writer</span>
   <div class="titlebar-file">
     <input type="text" id="docTitle" value="Unbenanntes Dokument" placeholder="Dateiname..." />
   </div>
-  <button class="rb rb-wide" onclick="saveDoc()" title="Speichern" style="color:#fff; background:rgba(255,255,255,.15);">💾 Speichern</button>
-  <button class="rb rb-wide" onclick="newDoc()" title="Neu" style="color:#fff; background:rgba(255,255,255,.1);">📄 Neu</button>
+  <button class="rb rb-wide" onclick="saveDoc()" title="Speichern" style="color:#fff; background:rgba(255,255,255,.15);" data-i18n="common.save">Speichern</button>
+  <button class="rb rb-wide" onclick="newDoc()" title="Neu" style="color:#fff; background:rgba(255,255,255,.1);" data-i18n="common.new">Neu</button>
 </div>
 
 <!-- Menu bar -->
@@ -164,7 +167,7 @@
 
 <!-- Status bar -->
 <div class="statusbar">
-  <span>📝 Writer</span>
+  <span data-i18n="writer.appname">Writer</span>
   <span id="statusMsg" data-i18n="common.ready">Bereit</span>
   <span style="margin-left:auto;" id="zoomInfo">Zoom: 100%</span>
 </div>
