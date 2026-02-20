@@ -2,7 +2,7 @@
   <img src="logo.svg" alt="OfficeWeb Logo" width="120" height="120" />
 
   <h1>OfficeWeb</h1>
-  <p><strong>Professionelle Büro-Software – vollständig im Browser</strong></p>
+  <p><strong>Free, open-source office suite with Writer, Calc, Impress &amp; Notes – runs entirely in the browser, no installation, no cloud.</strong></p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
   [![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)](https://github.com/alexgamingdev/officeweb)
@@ -10,146 +10,146 @@
   [![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
   [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-  [**🚀 Demo starten**](https://alexgamingdev.github.io/officeweb/) · [Fehler melden](https://github.com/alexgamingdev/officeweb/issues) · [Feature anfragen](https://github.com/alexgamingdev/officeweb/issues)
+  [**🚀 Launch Demo**](https://alexgamingdev.github.io/officeweb/) · [Report a Bug](https://github.com/alexgamingdev/officeweb/issues) · [Request a Feature](https://github.com/alexgamingdev/officeweb/issues)
 </div>
 
 ---
 
-## 📖 Über das Projekt
+## 📖 About the Project
 
-**OfficeWeb** ist eine kostenlose, quelloffene Office-Plattform, die vollständig im Browser läuft – ohne Installation, ohne Anmeldung, ohne Cloud-Zwang. Inspiriert von Microsoft Office bietet OfficeWeb alle wichtigen Bürowerkzeuge direkt im Browser, mit modernem Design und vollem Datenschutz.
+**OfficeWeb** is a free, open-source office platform that runs entirely in the browser – no installation, no sign-up, no cloud required. Inspired by Microsoft Office, OfficeWeb provides all essential productivity tools directly in the browser, with a modern design and full privacy.
 
-> Alle Daten bleiben lokal auf deinem Gerät. Nichts wird an Server übertragen.
+> All data stays locally on your device. Nothing is sent to any server.
 
 ---
 
 ## ✨ Apps
 
-| App | Beschreibung | Ähnlich wie |
-|-----|-------------|-------------|
-| 📝 **Writer** | Textverarbeitung mit WYSIWYG-Editor, Formatierung, Tabellen, Bilder | Microsoft Word |
-| 📊 **Calc** | Tabellenkalkulation mit Formeln, Zellformatierung, Diagrammen | Microsoft Excel |
-| 🎨 **Impress** | Präsentationen mit Folien, Themen, Animationen | Microsoft PowerPoint |
-| 📋 **Notes** | Notizen und Aufgabenlisten mit Notizbuch-Struktur | Microsoft OneNote |
+| App | Description | Similar to |
+|-----|-------------|------------|
+| 📝 **Writer** | Word processor with WYSIWYG editor, formatting, tables, images | Microsoft Word |
+| 📊 **Calc** | Spreadsheet with formulas, cell formatting, charts | Microsoft Excel |
+| 🎨 **Impress** | Presentations with slides, themes, animations | Microsoft PowerPoint |
+| 📋 **Notes** | Notes and task lists with notebook structure | Microsoft OneNote |
 
 ---
 
 ## 🚀 Features
 
-- **🌐 100 % im Browser** – Keine Installation nötig. Funktioniert in jedem modernen Browser.
-- **🌍 Mehrsprachig** – Unterstützt alle 24 offiziellen EU-Sprachen über das integrierte Sprachauswahlmenü.
-- **💾 Lokaler Speicher** – Dokumente werden per `localStorage` im Browser gespeichert.
-- **🔒 Datenschutz** – Alle Daten bleiben auf deinem Gerät. Kein Server, keine Cloud.
-- **🎨 Professionelles Design** – Modernes, sauberes Interface inspiriert von Microsoft Office.
-- **📤 Export & Druck** – Dokumente drucken oder als HTML/Text exportieren.
-- **📱 Responsive** – Funktioniert auf Desktop, Tablet und Smartphone.
-- **⌨️ Tastenkürzel** – Strg+S, Strg+N, Strg+O, Strg+B, Strg+I, Strg+U und mehr.
-- **🔍 Suchen & Ersetzen** – Volltext-Suche mit Ersetzen-Funktion im Writer.
+- **🌐 100 % in the browser** – No installation needed. Works in any modern browser.
+- **🌍 Multilingual** – Supports all 24 official EU languages via the built-in language selector.
+- **💾 Local storage** – Documents are saved via `localStorage` in the browser.
+- **🔒 Privacy** – All data stays on your device. No server, no cloud.
+- **🎨 Professional design** – Modern, clean interface inspired by Microsoft Office.
+- **📤 Export & Print** – Print documents or export as HTML/text.
+- **📱 Responsive** – Works on desktop, tablet and smartphone.
+- **⌨️ Keyboard shortcuts** – Ctrl+S, Ctrl+N, Ctrl+O, Ctrl+B, Ctrl+I, Ctrl+U and more.
+- **🔍 Find & Replace** – Full-text search with replace functionality in Writer.
 
 ---
 
-## 🏁 Schnellstart
+## 🏁 Quick Start
 
-Da OfficeWeb vollständig aus statischen HTML-Dateien besteht, ist kein Build-Schritt notwendig:
+Since OfficeWeb consists entirely of static HTML files, no build step is required:
 
 ```bash
-# Repository klonen
+# Clone the repository
 git clone https://github.com/alexgamingdev/officeweb.git
 cd officeweb
 
-# index.html im Browser öffnen
-# Einfach die Datei doppelklicken, oder einen lokalen Server starten:
+# Open index.html in your browser
+# Simply double-click the file, or start a local server:
 npx serve .
-# oder
+# or
 python3 -m http.server 8080
 ```
 
-Danach im Browser öffnen: `http://localhost:8080`
+Then open in your browser: `http://localhost:8080`
 
 ---
 
-## 🗂️ Projektstruktur
+## 🗂️ Project Structure
 
 ```
 officeweb/
-├── index.html              # Startseite / App-Übersicht
-├── writer.html             # Textverarbeitungs-App
-├── calc.html               # Tabellenkalkulations-App
-├── impress.html            # Präsentations-App
-├── notes.html              # Notizen-App
-├── logo.svg                # Projekt-Logo
+├── index.html              # Home page / app overview
+├── writer.html             # Word processor app
+├── calc.html               # Spreadsheet app
+├── impress.html            # Presentation app
+├── notes.html              # Notes app
+├── logo.svg                # Project logo
 ├── css/
-│   ├── common.css          # Gemeinsame Stile (Titelleiste, Modals, Sprachauswahl)
-│   ├── index.css           # Stile der Startseite
-│   ├── writer.css          # Stile des Writers
-│   ├── calc.css            # Stile von Calc
-│   ├── impress.css         # Stile von Impress
-│   └── notes.css           # Stile von Notes
+│   ├── common.css          # Shared styles (title bar, modals, language selector)
+│   ├── index.css           # Home page styles
+│   ├── writer.css          # Writer styles
+│   ├── calc.css            # Calc styles
+│   ├── impress.css         # Impress styles
+│   └── notes.css           # Notes styles
 ├── js/
-│   ├── i18n.js             # Internationalisierungssystem (alle 24 EU-Sprachen)
-│   ├── writer.js           # JavaScript des Writers
-│   ├── calc.js             # JavaScript von Calc
-│   ├── impress.js          # JavaScript von Impress
-│   └── notes.js            # JavaScript von Notes
+│   ├── i18n.js             # Internationalization system (all 24 EU languages)
+│   ├── writer.js           # Writer JavaScript
+│   ├── calc.js             # Calc JavaScript
+│   ├── impress.js          # Impress JavaScript
+│   └── notes.js            # Notes JavaScript
 ├── locales/
-│   ├── de.json             # Deutsch (Standard)
-│   ├── en.json             # Englisch
-│   ├── fr.json             # Französisch
-│   ├── es.json             # Spanisch
-│   ├── it.json             # Italienisch
-│   ├── nl.json             # Niederländisch
-│   ├── pl.json             # Polnisch
-│   ├── pt.json             # Portugiesisch
-│   ├── sv.json             # Schwedisch
-│   ├── da.json             # Dänisch
-│   ├── fi.json             # Finnisch
-│   ├── cs.json             # Tschechisch
-│   ├── sk.json             # Slowakisch
-│   ├── hu.json             # Ungarisch
-│   ├── ro.json             # Rumänisch
-│   ├── bg.json             # Bulgarisch
-│   ├── hr.json             # Kroatisch
-│   ├── sl.json             # Slowenisch
-│   ├── el.json             # Griechisch
-│   ├── lt.json             # Litauisch
-│   ├── lv.json             # Lettisch
-│   ├── et.json             # Estnisch
-│   ├── ga.json             # Irisch
-│   └── mt.json             # Maltesisch
-├── LICENSE                 # MIT-Lizenz
-├── CONTRIBUTING.md         # Beitragen zum Projekt
-├── CODE_OF_CONDUCT.md      # Verhaltenskodex
-├── SECURITY.md             # Sicherheitsrichtlinien
-└── CHANGELOG.md            # Versionshistorie
+│   ├── de.json             # German (default)
+│   ├── en.json             # English
+│   ├── fr.json             # French
+│   ├── es.json             # Spanish
+│   ├── it.json             # Italian
+│   ├── nl.json             # Dutch
+│   ├── pl.json             # Polish
+│   ├── pt.json             # Portuguese
+│   ├── sv.json             # Swedish
+│   ├── da.json             # Danish
+│   ├── fi.json             # Finnish
+│   ├── cs.json             # Czech
+│   ├── sk.json             # Slovak
+│   ├── hu.json             # Hungarian
+│   ├── ro.json             # Romanian
+│   ├── bg.json             # Bulgarian
+│   ├── hr.json             # Croatian
+│   ├── sl.json             # Slovenian
+│   ├── el.json             # Greek
+│   ├── lt.json             # Lithuanian
+│   ├── lv.json             # Latvian
+│   ├── et.json             # Estonian
+│   ├── ga.json             # Irish
+│   └── mt.json             # Maltese
+├── LICENSE                 # MIT License
+├── CONTRIBUTING.md         # Contributing guide
+├── CODE_OF_CONDUCT.md      # Code of Conduct
+├── SECURITY.md             # Security policy
+└── CHANGELOG.md            # Version history
 ```
 
 ---
 
-## 🤝 Mitwirken
+## 🤝 Contributing
 
-Beiträge sind herzlich willkommen! Bitte lies zuerst den [Contributing Guide](CONTRIBUTING.md).
+Contributions are welcome! Please read the [Contributing Guide](CONTRIBUTING.md) first.
 
-1. Fork das Repository
-2. Erstelle einen Feature-Branch (`git checkout -b feature/mein-feature`)
-3. Committe deine Änderungen (`git commit -m 'feat: füge mein Feature hinzu'`)
-4. Pushe den Branch (`git push origin feature/mein-feature`)
-5. Öffne einen Pull Request
-
----
-
-## 🛡️ Sicherheit
-
-Gefundene Sicherheitslücken bitte **nicht** öffentlich als Issue melden, sondern privat gemäß der [Sicherheitsrichtlinie](SECURITY.md) melden.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Commit your changes (`git commit -m 'feat: add my feature'`)
+4. Push the branch (`git push origin feature/my-feature`)
+5. Open a Pull Request
 
 ---
 
-## 📄 Lizenz
+## 🛡️ Security
 
-Dieses Projekt steht unter der [MIT-Lizenz](LICENSE).  
+Please do **not** report security vulnerabilities publicly as a GitHub Issue. Instead, report them privately according to the [Security Policy](SECURITY.md).
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).  
 Copyright © 2026 [alexgamingdev](https://github.com/alexgamingdev)
 
 ---
 
 <div align="center">
-  Erstellt mit ❤️ von <a href="https://github.com/alexgamingdev">alexgamingdev</a>
+  Made with ❤️ by <a href="https://github.com/alexgamingdev">alexgamingdev</a>
 </div>
