@@ -1,14 +1,253 @@
 {
-  "nav": { "home": "Baile", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
-  "hero": { "badge": "⭐ Foinse Oscailte &amp; Saor in Aisce", "title": "Do Oifig <em>saor in aisce</em><br>sa bhrabhsálaí", "subtitle": "Bogearraí oifige gairmiúla – go hiomlán sa bhrabhsálaí, gan suiteáil, gan costas, gan fadhbanna príobháideachais.", "start": "✍️ Tosaigh anois", "discover": "Iniúch na haipeanna" },
-  "stats": { "apps": "Aipeanna", "noInstall": "Suiteáil", "privacy": "Príobháideachas", "license": "Ceadúnas" },
-  "apps": { "title": "Gach aip", "subtitle": "Roghnaigh aip agus tosaigh díreach sa bhrabhsálaí", "writer": { "desc": "Doiciméid téacs a chruthú agus a chur in eagar – cosúil le Microsoft Word", "tag1": "Próiseáil focal", "tag2": "WYSIWYG" }, "calc": { "desc": "Scarbhileoga agus ríomhanna – cosúil le Microsoft Excel", "tag1": "Scarbhileog", "tag2": "Foirmlí" }, "impress": { "desc": "Cur i láthair a dhearadh – cosúil le Microsoft PowerPoint", "tag1": "Cur i láthair", "tag2": "Sleamhnáin" }, "notes": { "desc": "Nótaí tapa agus liostaí cúraimí – cosúil le Microsoft OneNote", "tag1": "Nótaí", "tag2": "Cúraimí" } },
-  "features": { "title": "Cén fáth OfficeWeb?", "subtitle": "Gnéithe gairmiúla – saor in aisce, sa bhrabhsálaí, gan clárú", "browser": { "title": "100% sa bhrabhsálaí", "text": "Níl suiteáil ag teastáil. Oibríonn sé in aon bhrabhsálaí nua-aimseartha." }, "storage": { "title": "Stóráil áitiúil", "text": "Sábháiltear doiciméid go háitiúil sa bhrabhsálaí – ní theastaíonn scamall." }, "privacy": { "title": "Príobháideachas", "text": "Fanann gach sonraí ar do ghléas. Ní seoltar aon rud chuig freastalaithe." }, "design": { "title": "Dearadh gairmiúil", "text": "Comhéadan nua-aimseartha, glan, inspioráilte ag Microsoft Office." }, "export": { "title": "Easpórtáil &amp; Priontáil", "text": "Priontáil doiciméid nó easpórtáil mar HTML/téacs." }, "responsive": { "title": "Freagrúil", "text": "Oibríonn sé ar ríomhaire deisce, táibléad agus fón cliste." } },
-  "oss": { "title": "Foinse Oscailte &amp; saor in aisce do chách", "text": "Is tionscadal foinse oscailte é OfficeWeb faoi cheadúnas MIT. Is féidir le duine ar bith rannchuidiú, an cód a oiriúnú agus an tionscadal a fhorbairt.", "btn": "Féach ar GitHub" },
-  "footer": { "license": "Ceadúnas MIT", "contributing": "Rannchuidiú", "security": "Slándáil" },
-  "common": { "cancel": "Cealaigh", "insert": "Ionsáigh", "delete": "Scrios", "open": "Oscail", "close": "Dún", "save": "💾 Sábháil", "new": "📄 Nua", "ready": "Réidh", "home": "🏠 Baile" },
-  "writer": { "appname": "📝 Writer", "newDoc": "Doiciméad gan teideal", "menu": { "file": "Comhad", "edit": "Cuir in eagar", "insert": "Ionsáigh", "format": "Formáid" }, "file": { "new": "📄 Doiciméad nua", "open": "📂 Oscail...", "save": "💾 Sábháil", "exportHtml": "📥 Easpórtáil mar HTML", "exportTxt": "📄 Easpórtáil mar théacs", "print": "🖨️ Priontáil" }, "edit": { "undo": "↩️ Cealaigh", "redo": "↪️ Déan arís", "cut": "✂️ Gearr", "copy": "📋 Cóipeáil", "paste": "📌 Greamaigh", "selectAll": "🔲 Roghnaigh gach rud", "findReplace": "🔍 Aimsigh &amp; Ionadaigh" }, "insert": { "table": "📊 Tábla", "image": "🖼️ Íomhá", "link": "🔗 Nasc", "hr": "➖ Líne chothromán", "pageBreak": "📃 Briseadh leathanaigh" }, "format": { "bold": "<b>T</b> Trom", "italic": "<i>I</i> Iodálach", "underline": "<u>F</u> Foluíneach", "clearFmt": "🧹 Glan formáidiú" }, "modal": { "table": { "title": "Ionsáigh tábla", "rows": "Sraitheanna", "cols": "Colúin" }, "link": { "title": "Ionsáigh nasc", "url": "URL", "text": "Téacs taispeána" }, "img": { "title": "Ionsáigh íomhá", "urlLabel": "URL íomhá nó uaslódáil comhad áitiúil", "fileLabel": "Nó roghnaigh comhad:", "alt": "Téacs malartach" }, "find": { "title": "Aimsigh &amp; Ionadaigh", "find": "Aimsigh", "replace": "Ionadaigh le" }, "open": { "title": "Oscail doiciméad", "label": "Doiciméid sábháilte:" } }, "btn": { "findNext": "Aimsigh an chéad cheann eile", "replace": "Ionadaigh", "replaceAll": "Ionadaigh gach ceann" }, "info": { "words": "Focail:", "chars": "Carachtair:" }, "status": { "ready": "Réidh", "saved": "💾 Sábháilte: ", "newDoc": "Doiciméad nua cruthaithe", "opened": "Oscailte: ", "replaced": "Gach ionadú déanta" }, "confirm": { "newDoc": "Doiciméad nua? Caillfear athruithe nach bhfuil sábháilte.", "notFound": "Gan a fháil: " }, "welcome": { "title": "Fáilte chuig OfficeWeb Writer", "p1": "Tosaigh ag clóscríobh anseo. Is féidir leat téacs a fhormáidiú mar <b>throm</b>, <i>iodálach</i> nó <u>foluíneach</u>.", "p2": "Úsáid an barra uirlisí thuas chun clónna, méideanna, dathanna agus tuilleadh a choigeartú.", "p3": "Bain taitneamh as scríobh! 📝" } },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Leabhar oibre gan teideal", "newSheet": "Bileog", "modal": { "open": { "title": "Oscail leabhar oibre", "label": "Leabhair oibre sábháilte:" } }, "status": { "ready": "Réidh", "saved": "💾 Sábháilte: ", "opened": "Oscailte: " }, "confirm": { "newWorkbook": "Cruthaigh leabhar oibre nua? Caillfear athruithe nach bhfuil sábháilte.", "deleteSheet": "Scrios bileog \"%s\"?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Cur i láthair gan teideal", "modal": { "img": { "title": "Ionsáigh íomhá", "urlLabel": "URL íomhá", "fileLabel": "Nó comhad:" }, "open": { "title": "Oscail cur i láthair", "label": "Cuir i láthair sábháilte:" } }, "status": { "ready": "Réidh", "saved": "💾 Sábháilte: ", "opened": "Oscailte: " } },
-  "notes": { "appname": "📋 Notes", "noNote": "Gan nóta roghnaithe", "newNote": "+ Cruthaigh nóta nua", "sectionTitle": "Nótaí", "search": "🔍 Cuardaigh nótaí...", "noTitle": "Gan teideal", "words": "Focail:", "modified": "Modhnaithe: ", "newSection": "Rannóg nua", "tagPrompt": "Ainm clibeáil:", "sections": { "personal": "Pearsanta", "work": "Obair", "tasks": "Cúraimí" }, "status": { "ready": "Réidh", "noNote": "Gan nóta roghnaithe" }, "confirm": { "deleteNote": "Scrios nóta?" } }
+  "nav": {
+    "home": "Baile",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Foinse Oscailte &amp; Saor in Aisce",
+    "title": "Do Oifig <em>saor in aisce</em><br>sa bhrabhsálaí",
+    "subtitle": "Bogearraí oifige gairmiúla – go hiomlán sa bhrabhsálaí, gan suiteáil, gan costas, gan fadhbanna príobháideachais.",
+    "start": "✍️ Tosaigh anois",
+    "discover": "Iniúch na haipeanna"
+  },
+  "stats": {
+    "apps": "Aipeanna",
+    "noInstall": "Suiteáil",
+    "privacy": "Príobháideachas",
+    "license": "Ceadúnas"
+  },
+  "apps": {
+    "title": "Gach aip",
+    "subtitle": "Roghnaigh aip agus tosaigh díreach sa bhrabhsálaí",
+    "writer": {
+      "desc": "Doiciméid téacs a chruthú agus a chur in eagar – cosúil le Microsoft Word",
+      "tag1": "Próiseáil focal",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Scarbhileoga agus ríomhanna – cosúil le Microsoft Excel",
+      "tag1": "Scarbhileog",
+      "tag2": "Foirmlí"
+    },
+    "impress": {
+      "desc": "Cur i láthair a dhearadh – cosúil le Microsoft PowerPoint",
+      "tag1": "Cur i láthair",
+      "tag2": "Sleamhnáin"
+    },
+    "notes": {
+      "desc": "Nótaí tapa agus liostaí cúraimí – cosúil le Microsoft OneNote",
+      "tag1": "Nótaí",
+      "tag2": "Cúraimí"
+    }
+  },
+  "features": {
+    "title": "Cén fáth OfficeWeb?",
+    "subtitle": "Gnéithe gairmiúla – saor in aisce, sa bhrabhsálaí, gan clárú",
+    "browser": {
+      "title": "100% sa bhrabhsálaí",
+      "text": "Níl suiteáil ag teastáil. Oibríonn sé in aon bhrabhsálaí nua-aimseartha."
+    },
+    "storage": {
+      "title": "Stóráil áitiúil",
+      "text": "Sábháiltear doiciméid go háitiúil sa bhrabhsálaí – ní theastaíonn scamall."
+    },
+    "privacy": {
+      "title": "Príobháideachas",
+      "text": "Fanann gach sonraí ar do ghléas. Ní seoltar aon rud chuig freastalaithe."
+    },
+    "design": {
+      "title": "Dearadh gairmiúil",
+      "text": "Comhéadan nua-aimseartha, glan, inspioráilte ag Microsoft Office."
+    },
+    "export": {
+      "title": "Easpórtáil &amp; Priontáil",
+      "text": "Priontáil doiciméid nó easpórtáil mar HTML/téacs."
+    },
+    "responsive": {
+      "title": "Freagrúil",
+      "text": "Oibríonn sé ar ríomhaire deisce, táibléad agus fón cliste."
+    }
+  },
+  "oss": {
+    "title": "Foinse Oscailte &amp; saor in aisce do chách",
+    "text": "Is tionscadal foinse oscailte é OfficeWeb faoi cheadúnas MIT. Is féidir le duine ar bith rannchuidiú, an cód a oiriúnú agus an tionscadal a fhorbairt.",
+    "btn": "Féach ar GitHub"
+  },
+  "footer": {
+    "license": "Ceadúnas MIT",
+    "contributing": "Rannchuidiú",
+    "security": "Slándáil"
+  },
+  "common": {
+    "cancel": "Cealaigh",
+    "insert": "Ionsáigh",
+    "delete": "Scrios",
+    "open": "Oscail",
+    "close": "Dún",
+    "save": "Sábháil",
+    "new": "Nua",
+    "ready": "Réidh",
+    "home": "Baile"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Doiciméad gan teideal",
+    "menu": {
+      "file": "Comhad",
+      "edit": "Cuir in eagar",
+      "insert": "Ionsáigh",
+      "format": "Formáid"
+    },
+    "file": {
+      "new": "📄 Doiciméad nua",
+      "open": "📂 Oscail...",
+      "save": "💾 Sábháil",
+      "exportHtml": "📥 Easpórtáil mar HTML",
+      "exportTxt": "📄 Easpórtáil mar théacs",
+      "print": "🖨️ Priontáil"
+    },
+    "edit": {
+      "undo": "↩️ Cealaigh",
+      "redo": "↪️ Déan arís",
+      "cut": "✂️ Gearr",
+      "copy": "📋 Cóipeáil",
+      "paste": "📌 Greamaigh",
+      "selectAll": "🔲 Roghnaigh gach rud",
+      "findReplace": "🔍 Aimsigh &amp; Ionadaigh"
+    },
+    "insert": {
+      "table": "📊 Tábla",
+      "image": "🖼️ Íomhá",
+      "link": "🔗 Nasc",
+      "hr": "➖ Líne chothromán",
+      "pageBreak": "📃 Briseadh leathanaigh"
+    },
+    "format": {
+      "bold": "<b>T</b> Trom",
+      "italic": "<i>I</i> Iodálach",
+      "underline": "<u>F</u> Foluíneach",
+      "clearFmt": "🧹 Glan formáidiú"
+    },
+    "modal": {
+      "table": {
+        "title": "Ionsáigh tábla",
+        "rows": "Sraitheanna",
+        "cols": "Colúin"
+      },
+      "link": {
+        "title": "Ionsáigh nasc",
+        "url": "URL",
+        "text": "Téacs taispeána"
+      },
+      "img": {
+        "title": "Ionsáigh íomhá",
+        "urlLabel": "URL íomhá nó uaslódáil comhad áitiúil",
+        "fileLabel": "Nó roghnaigh comhad:",
+        "alt": "Téacs malartach"
+      },
+      "find": {
+        "title": "Aimsigh &amp; Ionadaigh",
+        "find": "Aimsigh",
+        "replace": "Ionadaigh le"
+      },
+      "open": {
+        "title": "Oscail doiciméad",
+        "label": "Doiciméid sábháilte:"
+      }
+    },
+    "btn": {
+      "findNext": "Aimsigh an chéad cheann eile",
+      "replace": "Ionadaigh",
+      "replaceAll": "Ionadaigh gach ceann"
+    },
+    "info": {
+      "words": "Focail:",
+      "chars": "Carachtair:"
+    },
+    "status": {
+      "ready": "Réidh",
+      "saved": "💾 Sábháilte: ",
+      "newDoc": "Doiciméad nua cruthaithe",
+      "opened": "Oscailte: ",
+      "replaced": "Gach ionadú déanta"
+    },
+    "confirm": {
+      "newDoc": "Doiciméad nua? Caillfear athruithe nach bhfuil sábháilte.",
+      "notFound": "Gan a fháil: "
+    },
+    "welcome": {
+      "title": "Fáilte chuig OfficeWeb Writer",
+      "p1": "Tosaigh ag clóscríobh anseo. Is féidir leat téacs a fhormáidiú mar <b>throm</b>, <i>iodálach</i> nó <u>foluíneach</u>.",
+      "p2": "Úsáid an barra uirlisí thuas chun clónna, méideanna, dathanna agus tuilleadh a choigeartú.",
+      "p3": "Bain taitneamh as scríobh! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Leabhar oibre gan teideal",
+    "newSheet": "Bileog",
+    "modal": {
+      "open": {
+        "title": "Oscail leabhar oibre",
+        "label": "Leabhair oibre sábháilte:"
+      }
+    },
+    "status": {
+      "ready": "Réidh",
+      "saved": "💾 Sábháilte: ",
+      "opened": "Oscailte: "
+    },
+    "confirm": {
+      "newWorkbook": "Cruthaigh leabhar oibre nua? Caillfear athruithe nach bhfuil sábháilte.",
+      "deleteSheet": "Scrios bileog \"%s\"?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Cur i láthair gan teideal",
+    "modal": {
+      "img": {
+        "title": "Ionsáigh íomhá",
+        "urlLabel": "URL íomhá",
+        "fileLabel": "Nó comhad:"
+      },
+      "open": {
+        "title": "Oscail cur i láthair",
+        "label": "Cuir i láthair sábháilte:"
+      }
+    },
+    "status": {
+      "ready": "Réidh",
+      "saved": "💾 Sábháilte: ",
+      "opened": "Oscailte: "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "Gan nóta roghnaithe",
+    "newNote": "+ Cruthaigh nóta nua",
+    "sectionTitle": "Nótaí",
+    "search": "Cuardaigh nótaí...",
+    "noTitle": "Gan teideal",
+    "words": "Focail:",
+    "modified": "Modhnaithe: ",
+    "newSection": "Rannóg nua",
+    "tagPrompt": "Ainm clibeáil:",
+    "sections": {
+      "personal": "Pearsanta",
+      "work": "Obair",
+      "tasks": "Cúraimí"
+    },
+    "status": {
+      "ready": "Réidh",
+      "noNote": "Gan nóta roghnaithe"
+    },
+    "confirm": {
+      "deleteNote": "Scrios nóta?"
+    }
+  }
 }

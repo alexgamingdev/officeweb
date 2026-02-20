@@ -88,13 +88,13 @@
     "delete": "Delete",
     "open": "Open",
     "close": "Close",
-    "save": "💾 Save",
-    "new": "📄 New",
+    "save": "Save",
+    "new": "New",
     "ready": "Ready",
-    "home": "🏠 Home"
+    "home": "Home"
   },
   "writer": {
-    "appname": "📝 Writer",
+    "appname": "Writer",
     "newDoc": "Untitled Document",
     "menu": {
       "file": "File",
@@ -133,16 +133,31 @@
       "clearFmt": "🧹 Clear formatting"
     },
     "modal": {
-      "table": { "title": "Insert table", "rows": "Rows", "cols": "Columns" },
-      "link": { "title": "Insert link", "url": "URL", "text": "Display text" },
+      "table": {
+        "title": "Insert table",
+        "rows": "Rows",
+        "cols": "Columns"
+      },
+      "link": {
+        "title": "Insert link",
+        "url": "URL",
+        "text": "Display text"
+      },
       "img": {
         "title": "Insert image",
         "urlLabel": "Image URL or upload local file",
         "fileLabel": "Or choose file:",
         "alt": "Alt text"
       },
-      "find": { "title": "Find &amp; Replace", "find": "Find", "replace": "Replace with" },
-      "open": { "title": "Open document", "label": "Saved documents:" }
+      "find": {
+        "title": "Find &amp; Replace",
+        "find": "Find",
+        "replace": "Replace with"
+      },
+      "open": {
+        "title": "Open document",
+        "label": "Saved documents:"
+      }
     },
     "btn": {
       "findNext": "Find next",
@@ -172,11 +187,14 @@
     }
   },
   "calc": {
-    "appname": "📊 Calc",
+    "appname": "Calc",
     "newWorkbook": "Untitled Spreadsheet",
     "newSheet": "Sheet",
     "modal": {
-      "open": { "title": "Open workbook", "label": "Saved workbooks:" }
+      "open": {
+        "title": "Open workbook",
+        "label": "Saved workbooks:"
+      }
     },
     "status": {
       "ready": "Ready",
@@ -189,11 +207,18 @@
     }
   },
   "impress": {
-    "appname": "🎨 Impress",
+    "appname": "Impress",
     "newPresentation": "Untitled Presentation",
     "modal": {
-      "img": { "title": "Insert image", "urlLabel": "Image URL", "fileLabel": "Or file:" },
-      "open": { "title": "Open presentation", "label": "Saved presentations:" }
+      "img": {
+        "title": "Insert image",
+        "urlLabel": "Image URL",
+        "fileLabel": "Or file:"
+      },
+      "open": {
+        "title": "Open presentation",
+        "label": "Saved presentations:"
+      }
     },
     "status": {
       "ready": "Ready",
@@ -202,11 +227,11 @@
     }
   },
   "notes": {
-    "appname": "📋 Notes",
+    "appname": "Notes",
     "noNote": "No note selected",
     "newNote": "+ Create new note",
     "sectionTitle": "Notes",
-    "search": "🔍 Search notes...",
+    "search": "Search notes...",
     "noTitle": "Untitled",
     "words": "Words:",
     "modified": "Modified: ",

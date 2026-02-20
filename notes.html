@@ -11,11 +11,14 @@
 
 <!-- Title bar -->
 <div class="titlebar">
-  <a href="index.html" class="titlebar-home"><span data-i18n="common.home">🏠 Startseite</span></a>
+  <a href="index.html" class="titlebar-home">
+    <img src="logo.svg" alt="OfficeWeb" class="titlebar-logo" />
+    <span data-i18n="common.home">Startseite</span>
+  </a>
   <div style="color:rgba(255,255,255,.4)">|</div>
-  <span class="titlebar-name" data-i18n="notes.appname">📋 Notes</span>
-  <button class="tb-btn" onclick="exportNote()">📤 Exportieren</button>
-  <input type="text" class="search-input" id="searchInput" placeholder="🔍 Notizen suchen..." data-i18n-placeholder="notes.search" oninput="filterNotes()" />
+  <span class="titlebar-name" data-i18n="notes.appname">Notes</span>
+  <button class="tb-btn" onclick="exportNote()">Exportieren</button>
+  <input type="text" class="search-input" id="searchInput" placeholder="Notizen suchen..." data-i18n-placeholder="notes.search" oninput="filterNotes()" />
 </div>
 
 <!-- Main layout -->
@@ -89,7 +92,7 @@
 
 <!-- Status bar -->
 <div class="statusbar">
-  <span>📋 Notes</span>
+  <span data-i18n="notes.appname">Notes</span>
   <span id="statusMsg" data-i18n="common.ready">Bereit</span>
   <span id="noteCount" style="margin-left:auto;"></span>
 </div>

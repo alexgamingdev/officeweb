@@ -1,14 +1,253 @@
 {
-  "nav": { "home": "Kezdőlap", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
-  "hero": { "badge": "⭐ Nyílt forráskód &amp; Ingyenes", "title": "Az <em>ingyenes</em> irodai csomagod<br>a böngészőben", "subtitle": "Professzionális irodai szoftver – teljesen a böngészőben, telepítés nélkül, ingyenesen, adatvédelmi problémák nélkül.", "start": "✍️ Kezdj el most", "discover": "Fedezd fel az alkalmazásokat" },
-  "stats": { "apps": "Alkalmazások", "noInstall": "Telepítés", "privacy": "Adatvédelem", "license": "Licenc" },
-  "apps": { "title": "Összes alkalmazás", "subtitle": "Válassz egy alkalmazást és kezdj el közvetlenül a böngészőben", "writer": { "desc": "Szöveges dokumentumok létrehozása és szerkesztése – mint a Microsoft Word", "tag1": "Szövegszerkesztés", "tag2": "WYSIWYG" }, "calc": { "desc": "Táblázatok és számítások – mint a Microsoft Excel", "tag1": "Táblázatkezelő", "tag2": "Képletek" }, "impress": { "desc": "Prezentációk tervezése – mint a Microsoft PowerPoint", "tag1": "Bemutató", "tag2": "Diavetítés" }, "notes": { "desc": "Gyors jegyzetek és feladatlisták – mint a Microsoft OneNote", "tag1": "Jegyzetek", "tag2": "Feladatok" } },
-  "features": { "title": "Miért az OfficeWeb?", "subtitle": "Professzionális funkciók – ingyenesen, a böngészőben, regisztráció nélkül", "browser": { "title": "100% a böngészőben", "text": "Nem szükséges telepítés. Működik minden modern böngészőben." }, "storage": { "title": "Helyi tárolás", "text": "A dokumentumok helyben tárolódnak a böngészőben – felhő nem szükséges." }, "privacy": { "title": "Adatvédelem", "text": "Minden adat az eszközödön marad. Semmi sem kerül a szerverekre." }, "design": { "title": "Professzionális dizájn", "text": "Modern, letisztult felület, amelyet a Microsoft Office inspirált." }, "export": { "title": "Exportálás &amp; Nyomtatás", "text": "Nyomtasd ki a dokumentumokat, vagy exportáld HTML/szöveg formátumban." }, "responsive": { "title": "Reszponzív", "text": "Működik asztali számítógépen, táblagépen és okostelefonon." } },
-  "oss": { "title": "Nyílt forráskód &amp; ingyenes mindenki számára", "text": "Az OfficeWeb egy MIT licenc alatt álló nyílt forráskódú projekt. Bárki hozzájárulhat, adaptálhatja a kódot és fejlesztheti a projektet.", "btn": "Megnézés GitHubon" },
-  "footer": { "license": "MIT licenc", "contributing": "Közreműködés", "security": "Biztonság" },
-  "common": { "cancel": "Mégse", "insert": "Beszúrás", "delete": "Törlés", "open": "Megnyitás", "close": "Bezárás", "save": "💾 Mentés", "new": "📄 Új", "ready": "Kész", "home": "🏠 Kezdőlap" },
-  "writer": { "appname": "📝 Writer", "newDoc": "Névtelen dokumentum", "menu": { "file": "Fájl", "edit": "Szerkesztés", "insert": "Beszúrás", "format": "Formátum" }, "file": { "new": "📄 Új dokumentum", "open": "📂 Megnyitás...", "save": "💾 Mentés", "exportHtml": "📥 Exportálás HTML-ként", "exportTxt": "📄 Exportálás szövegként", "print": "🖨️ Nyomtatás" }, "edit": { "undo": "↩️ Visszavonás", "redo": "↪️ Újra", "cut": "✂️ Kivágás", "copy": "📋 Másolás", "paste": "📌 Beillesztés", "selectAll": "🔲 Összes kijelölése", "findReplace": "🔍 Keresés &amp; Csere" }, "insert": { "table": "📊 Táblázat", "image": "🖼️ Kép", "link": "🔗 Hivatkozás", "hr": "➖ Vízszintes vonal", "pageBreak": "📃 Oldaltörés" }, "format": { "bold": "<b>F</b> Félkövér", "italic": "<i>D</i> Dőlt", "underline": "<u>A</u> Aláhúzott", "clearFmt": "🧹 Formázás törlése" }, "modal": { "table": { "title": "Táblázat beszúrása", "rows": "Sorok", "cols": "Oszlopok" }, "link": { "title": "Hivatkozás beszúrása", "url": "URL", "text": "Megjelenített szöveg" }, "img": { "title": "Kép beszúrása", "urlLabel": "Kép URL-je vagy helyi fájl feltöltése", "fileLabel": "Vagy fájl kiválasztása:", "alt": "Alt szöveg" }, "find": { "title": "Keresés &amp; Csere", "find": "Keresés", "replace": "Csere erre" }, "open": { "title": "Dokumentum megnyitása", "label": "Mentett dokumentumok:" } }, "btn": { "findNext": "Következő keresése", "replace": "Csere", "replaceAll": "Az összes cseréje" }, "info": { "words": "Szavak:", "chars": "Karakterek:" }, "status": { "ready": "Kész", "saved": "💾 Mentve: ", "newDoc": "Új dokumentum létrehozva", "opened": "Megnyitva: ", "replaced": "Minden csere elvégezve" }, "confirm": { "newDoc": "Új dokumentum? A nem mentett változtatások elvesznek.", "notFound": "Nem található: " }, "welcome": { "title": "Üdvözöljük az OfficeWeb Writerben", "p1": "Kezdj el gépelni ide. A szöveget formázhatod <b>félkövérre</b>, <i>dőltre</i> vagy <u>aláhúzottra</u>.", "p2": "Használd a felső eszköztárat betűtípusok, méretek, színek és egyebek beállításához.", "p3": "Jó írást! 📝" } },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Névtelen munkafüzet", "newSheet": "Lap", "modal": { "open": { "title": "Munkafüzet megnyitása", "label": "Mentett munkafüzetek:" } }, "status": { "ready": "Kész", "saved": "💾 Mentve: ", "opened": "Megnyitva: " }, "confirm": { "newWorkbook": "Új munkafüzet létrehozása? A nem mentett változtatások elvesznek.", "deleteSheet": "Töröljük a(z) \"%s\" lapot?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Névtelen bemutató", "modal": { "img": { "title": "Kép beszúrása", "urlLabel": "Kép URL-je", "fileLabel": "Vagy fájl:" }, "open": { "title": "Bemutató megnyitása", "label": "Mentett bemutatók:" } }, "status": { "ready": "Kész", "saved": "💾 Mentve: ", "opened": "Megnyitva: " } },
-  "notes": { "appname": "📋 Notes", "noNote": "Nincs kijelölt jegyzet", "newNote": "+ Új jegyzet létrehozása", "sectionTitle": "Jegyzetek", "search": "🔍 Jegyzetek keresése...", "noTitle": "Cím nélkül", "words": "Szavak:", "modified": "Módosítva: ", "newSection": "Új szakasz", "tagPrompt": "Címke neve:", "sections": { "personal": "Személyes", "work": "Munka", "tasks": "Feladatok" }, "status": { "ready": "Kész", "noNote": "Nincs kijelölt jegyzet" }, "confirm": { "deleteNote": "Töröljük a jegyzetet?" } }
+  "nav": {
+    "home": "Kezdőlap",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Nyílt forráskód &amp; Ingyenes",
+    "title": "Az <em>ingyenes</em> irodai csomagod<br>a böngészőben",
+    "subtitle": "Professzionális irodai szoftver – teljesen a böngészőben, telepítés nélkül, ingyenesen, adatvédelmi problémák nélkül.",
+    "start": "✍️ Kezdj el most",
+    "discover": "Fedezd fel az alkalmazásokat"
+  },
+  "stats": {
+    "apps": "Alkalmazások",
+    "noInstall": "Telepítés",
+    "privacy": "Adatvédelem",
+    "license": "Licenc"
+  },
+  "apps": {
+    "title": "Összes alkalmazás",
+    "subtitle": "Válassz egy alkalmazást és kezdj el közvetlenül a böngészőben",
+    "writer": {
+      "desc": "Szöveges dokumentumok létrehozása és szerkesztése – mint a Microsoft Word",
+      "tag1": "Szövegszerkesztés",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Táblázatok és számítások – mint a Microsoft Excel",
+      "tag1": "Táblázatkezelő",
+      "tag2": "Képletek"
+    },
+    "impress": {
+      "desc": "Prezentációk tervezése – mint a Microsoft PowerPoint",
+      "tag1": "Bemutató",
+      "tag2": "Diavetítés"
+    },
+    "notes": {
+      "desc": "Gyors jegyzetek és feladatlisták – mint a Microsoft OneNote",
+      "tag1": "Jegyzetek",
+      "tag2": "Feladatok"
+    }
+  },
+  "features": {
+    "title": "Miért az OfficeWeb?",
+    "subtitle": "Professzionális funkciók – ingyenesen, a böngészőben, regisztráció nélkül",
+    "browser": {
+      "title": "100% a böngészőben",
+      "text": "Nem szükséges telepítés. Működik minden modern böngészőben."
+    },
+    "storage": {
+      "title": "Helyi tárolás",
+      "text": "A dokumentumok helyben tárolódnak a böngészőben – felhő nem szükséges."
+    },
+    "privacy": {
+      "title": "Adatvédelem",
+      "text": "Minden adat az eszközödön marad. Semmi sem kerül a szerverekre."
+    },
+    "design": {
+      "title": "Professzionális dizájn",
+      "text": "Modern, letisztult felület, amelyet a Microsoft Office inspirált."
+    },
+    "export": {
+      "title": "Exportálás &amp; Nyomtatás",
+      "text": "Nyomtasd ki a dokumentumokat, vagy exportáld HTML/szöveg formátumban."
+    },
+    "responsive": {
+      "title": "Reszponzív",
+      "text": "Működik asztali számítógépen, táblagépen és okostelefonon."
+    }
+  },
+  "oss": {
+    "title": "Nyílt forráskód &amp; ingyenes mindenki számára",
+    "text": "Az OfficeWeb egy MIT licenc alatt álló nyílt forráskódú projekt. Bárki hozzájárulhat, adaptálhatja a kódot és fejlesztheti a projektet.",
+    "btn": "Megnézés GitHubon"
+  },
+  "footer": {
+    "license": "MIT licenc",
+    "contributing": "Közreműködés",
+    "security": "Biztonság"
+  },
+  "common": {
+    "cancel": "Mégse",
+    "insert": "Beszúrás",
+    "delete": "Törlés",
+    "open": "Megnyitás",
+    "close": "Bezárás",
+    "save": "Mentés",
+    "new": "Új",
+    "ready": "Kész",
+    "home": "Kezdőlap"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Névtelen dokumentum",
+    "menu": {
+      "file": "Fájl",
+      "edit": "Szerkesztés",
+      "insert": "Beszúrás",
+      "format": "Formátum"
+    },
+    "file": {
+      "new": "📄 Új dokumentum",
+      "open": "📂 Megnyitás...",
+      "save": "💾 Mentés",
+      "exportHtml": "📥 Exportálás HTML-ként",
+      "exportTxt": "📄 Exportálás szövegként",
+      "print": "🖨️ Nyomtatás"
+    },
+    "edit": {
+      "undo": "↩️ Visszavonás",
+      "redo": "↪️ Újra",
+      "cut": "✂️ Kivágás",
+      "copy": "📋 Másolás",
+      "paste": "📌 Beillesztés",
+      "selectAll": "🔲 Összes kijelölése",
+      "findReplace": "🔍 Keresés &amp; Csere"
+    },
+    "insert": {
+      "table": "📊 Táblázat",
+      "image": "🖼️ Kép",
+      "link": "🔗 Hivatkozás",
+      "hr": "➖ Vízszintes vonal",
+      "pageBreak": "📃 Oldaltörés"
+    },
+    "format": {
+      "bold": "<b>F</b> Félkövér",
+      "italic": "<i>D</i> Dőlt",
+      "underline": "<u>A</u> Aláhúzott",
+      "clearFmt": "🧹 Formázás törlése"
+    },
+    "modal": {
+      "table": {
+        "title": "Táblázat beszúrása",
+        "rows": "Sorok",
+        "cols": "Oszlopok"
+      },
+      "link": {
+        "title": "Hivatkozás beszúrása",
+        "url": "URL",
+        "text": "Megjelenített szöveg"
+      },
+      "img": {
+        "title": "Kép beszúrása",
+        "urlLabel": "Kép URL-je vagy helyi fájl feltöltése",
+        "fileLabel": "Vagy fájl kiválasztása:",
+        "alt": "Alt szöveg"
+      },
+      "find": {
+        "title": "Keresés &amp; Csere",
+        "find": "Keresés",
+        "replace": "Csere erre"
+      },
+      "open": {
+        "title": "Dokumentum megnyitása",
+        "label": "Mentett dokumentumok:"
+      }
+    },
+    "btn": {
+      "findNext": "Következő keresése",
+      "replace": "Csere",
+      "replaceAll": "Az összes cseréje"
+    },
+    "info": {
+      "words": "Szavak:",
+      "chars": "Karakterek:"
+    },
+    "status": {
+      "ready": "Kész",
+      "saved": "💾 Mentve: ",
+      "newDoc": "Új dokumentum létrehozva",
+      "opened": "Megnyitva: ",
+      "replaced": "Minden csere elvégezve"
+    },
+    "confirm": {
+      "newDoc": "Új dokumentum? A nem mentett változtatások elvesznek.",
+      "notFound": "Nem található: "
+    },
+    "welcome": {
+      "title": "Üdvözöljük az OfficeWeb Writerben",
+      "p1": "Kezdj el gépelni ide. A szöveget formázhatod <b>félkövérre</b>, <i>dőltre</i> vagy <u>aláhúzottra</u>.",
+      "p2": "Használd a felső eszköztárat betűtípusok, méretek, színek és egyebek beállításához.",
+      "p3": "Jó írást! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Névtelen munkafüzet",
+    "newSheet": "Lap",
+    "modal": {
+      "open": {
+        "title": "Munkafüzet megnyitása",
+        "label": "Mentett munkafüzetek:"
+      }
+    },
+    "status": {
+      "ready": "Kész",
+      "saved": "💾 Mentve: ",
+      "opened": "Megnyitva: "
+    },
+    "confirm": {
+      "newWorkbook": "Új munkafüzet létrehozása? A nem mentett változtatások elvesznek.",
+      "deleteSheet": "Töröljük a(z) \"%s\" lapot?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Névtelen bemutató",
+    "modal": {
+      "img": {
+        "title": "Kép beszúrása",
+        "urlLabel": "Kép URL-je",
+        "fileLabel": "Vagy fájl:"
+      },
+      "open": {
+        "title": "Bemutató megnyitása",
+        "label": "Mentett bemutatók:"
+      }
+    },
+    "status": {
+      "ready": "Kész",
+      "saved": "💾 Mentve: ",
+      "opened": "Megnyitva: "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "Nincs kijelölt jegyzet",
+    "newNote": "+ Új jegyzet létrehozása",
+    "sectionTitle": "Jegyzetek",
+    "search": "Jegyzetek keresése...",
+    "noTitle": "Cím nélkül",
+    "words": "Szavak:",
+    "modified": "Módosítva: ",
+    "newSection": "Új szakasz",
+    "tagPrompt": "Címke neve:",
+    "sections": {
+      "personal": "Személyes",
+      "work": "Munka",
+      "tasks": "Feladatok"
+    },
+    "status": {
+      "ready": "Kész",
+      "noNote": "Nincs kijelölt jegyzet"
+    },
+    "confirm": {
+      "deleteNote": "Töröljük a jegyzetet?"
+    }
+  }
 }

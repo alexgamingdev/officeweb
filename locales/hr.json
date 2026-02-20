@@ -1,14 +1,253 @@
 {
-  "nav": { "home": "Početna", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
-  "hero": { "badge": "⭐ Otvoreni kod &amp; Besplatno", "title": "Vaš <em>besplatni</em> Office<br>u pregledniku", "subtitle": "Profesionalni uredski softver – potpuno u pregledniku, bez instalacije, bez troškova, bez problema s privatnošću.", "start": "✍️ Počni odmah", "discover": "Istraži aplikacije" },
-  "stats": { "apps": "Aplikacije", "noInstall": "Instalacija", "privacy": "Privatnost", "license": "Licenca" },
-  "apps": { "title": "Sve aplikacije", "subtitle": "Odaberi aplikaciju i pokreni je izravno u pregledniku", "writer": { "desc": "Stvaranje i uređivanje tekstualnih dokumenata – poput Microsoft Worda", "tag1": "Obrada teksta", "tag2": "WYSIWYG" }, "calc": { "desc": "Proračunske tablice i izračuni – poput Microsoft Excela", "tag1": "Proračunska tablica", "tag2": "Formule" }, "impress": { "desc": "Dizajn prezentacija – poput Microsoft PowerPointa", "tag1": "Prezentacija", "tag2": "Dijapozitivi" }, "notes": { "desc": "Brze bilješke i popisi zadataka – poput Microsoft OneNote", "tag1": "Bilješke", "tag2": "Zadaci" } },
-  "features": { "title": "Zašto OfficeWeb?", "subtitle": "Profesionalne funkcije – besplatno, u pregledniku, bez registracije", "browser": { "title": "100% u pregledniku", "text": "Nije potrebna instalacija. Radi u svakom modernom pregledniku." }, "storage": { "title": "Lokalna pohrana", "text": "Dokumenti se pohranjuju lokalno u pregledniku – oblak nije potreban." }, "privacy": { "title": "Privatnost", "text": "Svi podaci ostaju na vašem uređaju. Ništa se ne šalje na poslužitelje." }, "design": { "title": "Profesionalni dizajn", "text": "Moderno, čisto sučelje inspirirano Microsoft Officeom." }, "export": { "title": "Izvoz &amp; Ispis", "text": "Ispišite dokumente ili ih izvezite kao HTML/tekst." }, "responsive": { "title": "Responzivno", "text": "Radi na stolnom računalu, tabletu i pametnom telefonu." } },
-  "oss": { "title": "Otvoreni kod &amp; besplatan za sve", "text": "OfficeWeb je projekt otvorenog koda pod MIT licencom. Svako može doprinijeti, prilagoditi kod i razvijati projekt.", "btn": "Pogledaj na GitHubu" },
-  "footer": { "license": "MIT licenca", "contributing": "Doprinos", "security": "Sigurnost" },
-  "common": { "cancel": "Odustani", "insert": "Umetni", "delete": "Briši", "open": "Otvori", "close": "Zatvori", "save": "💾 Spremi", "new": "📄 Novo", "ready": "Spremno", "home": "🏠 Početna" },
-  "writer": { "appname": "📝 Writer", "newDoc": "Dokument bez naslova", "menu": { "file": "Datoteka", "edit": "Uredi", "insert": "Umetni", "format": "Format" }, "file": { "new": "📄 Novi dokument", "open": "📂 Otvori...", "save": "💾 Spremi", "exportHtml": "📥 Izvezi kao HTML", "exportTxt": "📄 Izvezi kao tekst", "print": "🖨️ Ispis" }, "edit": { "undo": "↩️ Poništi", "redo": "↪️ Ponovi", "cut": "✂️ Izreži", "copy": "📋 Kopiraj", "paste": "📌 Zalijepi", "selectAll": "🔲 Odaberi sve", "findReplace": "🔍 Pronađi &amp; Zamijeni" }, "insert": { "table": "📊 Tablica", "image": "🖼️ Slika", "link": "🔗 Veza", "hr": "➖ Horizontalna linija", "pageBreak": "📃 Prijelom stranice" }, "format": { "bold": "<b>M</b> Masno", "italic": "<i>K</i> Kurziv", "underline": "<u>P</u> Podcrtano", "clearFmt": "🧹 Obriši oblikovanje" }, "modal": { "table": { "title": "Umetni tablicu", "rows": "Redovi", "cols": "Stupci" }, "link": { "title": "Umetni vezu", "url": "URL", "text": "Prikazani tekst" }, "img": { "title": "Umetni sliku", "urlLabel": "URL slike ili učitaj lokalnu datoteku", "fileLabel": "Ili odaberi datoteku:", "alt": "Alt tekst" }, "find": { "title": "Pronađi &amp; Zamijeni", "find": "Pronađi", "replace": "Zamijeni s" }, "open": { "title": "Otvori dokument", "label": "Spremljeni dokumenti:" } }, "btn": { "findNext": "Pronađi sljedeće", "replace": "Zamijeni", "replaceAll": "Zamijeni sve" }, "info": { "words": "Riječi:", "chars": "Znakovi:" }, "status": { "ready": "Spremno", "saved": "💾 Spremljeno: ", "newDoc": "Novi dokument stvoren", "opened": "Otvoreno: ", "replaced": "Sve zamjene dovršene" }, "confirm": { "newDoc": "Novi dokument? Nespremnljene promjene bit će izgubljene.", "notFound": "Nije pronađeno: " }, "welcome": { "title": "Dobrodošli u OfficeWeb Writer", "p1": "Počnite tipkati ovdje. Tekst možete formatirati kao <b>masno</b>, <i>kurziv</i> ili <u>podcrtano</u>.", "p2": "Koristite alatnu traku iznad za prilagodbu fontova, veličina, boja i više.", "p3": "Sretan pisanje! 📝" } },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Radna knjiga bez naslova", "newSheet": "List", "modal": { "open": { "title": "Otvori radnu knjigu", "label": "Spremljene radne knjige:" } }, "status": { "ready": "Spremno", "saved": "💾 Spremljeno: ", "opened": "Otvoreno: " }, "confirm": { "newWorkbook": "Stvori novu radnu knjigu? Nespremnljene promjene bit će izgubljene.", "deleteSheet": "Briši list \"%s\"?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Prezentacija bez naslova", "modal": { "img": { "title": "Umetni sliku", "urlLabel": "URL slike", "fileLabel": "Ili datoteka:" }, "open": { "title": "Otvori prezentaciju", "label": "Spremljene prezentacije:" } }, "status": { "ready": "Spremno", "saved": "💾 Spremljeno: ", "opened": "Otvoreno: " } },
-  "notes": { "appname": "📋 Notes", "noNote": "Nije odabrana bilješka", "newNote": "+ Stvori novu bilješku", "sectionTitle": "Bilješke", "search": "🔍 Pretraži bilješke...", "noTitle": "Bez naslova", "words": "Riječi:", "modified": "Izmijenjeno: ", "newSection": "Novi odjeljak", "tagPrompt": "Naziv oznake:", "sections": { "personal": "Osobno", "work": "Posao", "tasks": "Zadaci" }, "status": { "ready": "Spremno", "noNote": "Nije odabrana bilješka" }, "confirm": { "deleteNote": "Briši bilješku?" } }
+  "nav": {
+    "home": "Početna",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Otvoreni kod &amp; Besplatno",
+    "title": "Vaš <em>besplatni</em> Office<br>u pregledniku",
+    "subtitle": "Profesionalni uredski softver – potpuno u pregledniku, bez instalacije, bez troškova, bez problema s privatnošću.",
+    "start": "✍️ Počni odmah",
+    "discover": "Istraži aplikacije"
+  },
+  "stats": {
+    "apps": "Aplikacije",
+    "noInstall": "Instalacija",
+    "privacy": "Privatnost",
+    "license": "Licenca"
+  },
+  "apps": {
+    "title": "Sve aplikacije",
+    "subtitle": "Odaberi aplikaciju i pokreni je izravno u pregledniku",
+    "writer": {
+      "desc": "Stvaranje i uređivanje tekstualnih dokumenata – poput Microsoft Worda",
+      "tag1": "Obrada teksta",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Proračunske tablice i izračuni – poput Microsoft Excela",
+      "tag1": "Proračunska tablica",
+      "tag2": "Formule"
+    },
+    "impress": {
+      "desc": "Dizajn prezentacija – poput Microsoft PowerPointa",
+      "tag1": "Prezentacija",
+      "tag2": "Dijapozitivi"
+    },
+    "notes": {
+      "desc": "Brze bilješke i popisi zadataka – poput Microsoft OneNote",
+      "tag1": "Bilješke",
+      "tag2": "Zadaci"
+    }
+  },
+  "features": {
+    "title": "Zašto OfficeWeb?",
+    "subtitle": "Profesionalne funkcije – besplatno, u pregledniku, bez registracije",
+    "browser": {
+      "title": "100% u pregledniku",
+      "text": "Nije potrebna instalacija. Radi u svakom modernom pregledniku."
+    },
+    "storage": {
+      "title": "Lokalna pohrana",
+      "text": "Dokumenti se pohranjuju lokalno u pregledniku – oblak nije potreban."
+    },
+    "privacy": {
+      "title": "Privatnost",
+      "text": "Svi podaci ostaju na vašem uređaju. Ništa se ne šalje na poslužitelje."
+    },
+    "design": {
+      "title": "Profesionalni dizajn",
+      "text": "Moderno, čisto sučelje inspirirano Microsoft Officeom."
+    },
+    "export": {
+      "title": "Izvoz &amp; Ispis",
+      "text": "Ispišite dokumente ili ih izvezite kao HTML/tekst."
+    },
+    "responsive": {
+      "title": "Responzivno",
+      "text": "Radi na stolnom računalu, tabletu i pametnom telefonu."
+    }
+  },
+  "oss": {
+    "title": "Otvoreni kod &amp; besplatan za sve",
+    "text": "OfficeWeb je projekt otvorenog koda pod MIT licencom. Svako može doprinijeti, prilagoditi kod i razvijati projekt.",
+    "btn": "Pogledaj na GitHubu"
+  },
+  "footer": {
+    "license": "MIT licenca",
+    "contributing": "Doprinos",
+    "security": "Sigurnost"
+  },
+  "common": {
+    "cancel": "Odustani",
+    "insert": "Umetni",
+    "delete": "Briši",
+    "open": "Otvori",
+    "close": "Zatvori",
+    "save": "Spremi",
+    "new": "Novo",
+    "ready": "Spremno",
+    "home": "Početna"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Dokument bez naslova",
+    "menu": {
+      "file": "Datoteka",
+      "edit": "Uredi",
+      "insert": "Umetni",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 Novi dokument",
+      "open": "📂 Otvori...",
+      "save": "💾 Spremi",
+      "exportHtml": "📥 Izvezi kao HTML",
+      "exportTxt": "📄 Izvezi kao tekst",
+      "print": "🖨️ Ispis"
+    },
+    "edit": {
+      "undo": "↩️ Poništi",
+      "redo": "↪️ Ponovi",
+      "cut": "✂️ Izreži",
+      "copy": "📋 Kopiraj",
+      "paste": "📌 Zalijepi",
+      "selectAll": "🔲 Odaberi sve",
+      "findReplace": "🔍 Pronađi &amp; Zamijeni"
+    },
+    "insert": {
+      "table": "📊 Tablica",
+      "image": "🖼️ Slika",
+      "link": "🔗 Veza",
+      "hr": "➖ Horizontalna linija",
+      "pageBreak": "📃 Prijelom stranice"
+    },
+    "format": {
+      "bold": "<b>M</b> Masno",
+      "italic": "<i>K</i> Kurziv",
+      "underline": "<u>P</u> Podcrtano",
+      "clearFmt": "🧹 Obriši oblikovanje"
+    },
+    "modal": {
+      "table": {
+        "title": "Umetni tablicu",
+        "rows": "Redovi",
+        "cols": "Stupci"
+      },
+      "link": {
+        "title": "Umetni vezu",
+        "url": "URL",
+        "text": "Prikazani tekst"
+      },
+      "img": {
+        "title": "Umetni sliku",
+        "urlLabel": "URL slike ili učitaj lokalnu datoteku",
+        "fileLabel": "Ili odaberi datoteku:",
+        "alt": "Alt tekst"
+      },
+      "find": {
+        "title": "Pronađi &amp; Zamijeni",
+        "find": "Pronađi",
+        "replace": "Zamijeni s"
+      },
+      "open": {
+        "title": "Otvori dokument",
+        "label": "Spremljeni dokumenti:"
+      }
+    },
+    "btn": {
+      "findNext": "Pronađi sljedeće",
+      "replace": "Zamijeni",
+      "replaceAll": "Zamijeni sve"
+    },
+    "info": {
+      "words": "Riječi:",
+      "chars": "Znakovi:"
+    },
+    "status": {
+      "ready": "Spremno",
+      "saved": "💾 Spremljeno: ",
+      "newDoc": "Novi dokument stvoren",
+      "opened": "Otvoreno: ",
+      "replaced": "Sve zamjene dovršene"
+    },
+    "confirm": {
+      "newDoc": "Novi dokument? Nespremnljene promjene bit će izgubljene.",
+      "notFound": "Nije pronađeno: "
+    },
+    "welcome": {
+      "title": "Dobrodošli u OfficeWeb Writer",
+      "p1": "Počnite tipkati ovdje. Tekst možete formatirati kao <b>masno</b>, <i>kurziv</i> ili <u>podcrtano</u>.",
+      "p2": "Koristite alatnu traku iznad za prilagodbu fontova, veličina, boja i više.",
+      "p3": "Sretan pisanje! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Radna knjiga bez naslova",
+    "newSheet": "List",
+    "modal": {
+      "open": {
+        "title": "Otvori radnu knjigu",
+        "label": "Spremljene radne knjige:"
+      }
+    },
+    "status": {
+      "ready": "Spremno",
+      "saved": "💾 Spremljeno: ",
+      "opened": "Otvoreno: "
+    },
+    "confirm": {
+      "newWorkbook": "Stvori novu radnu knjigu? Nespremnljene promjene bit će izgubljene.",
+      "deleteSheet": "Briši list \"%s\"?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Prezentacija bez naslova",
+    "modal": {
+      "img": {
+        "title": "Umetni sliku",
+        "urlLabel": "URL slike",
+        "fileLabel": "Ili datoteka:"
+      },
+      "open": {
+        "title": "Otvori prezentaciju",
+        "label": "Spremljene prezentacije:"
+      }
+    },
+    "status": {
+      "ready": "Spremno",
+      "saved": "💾 Spremljeno: ",
+      "opened": "Otvoreno: "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "Nije odabrana bilješka",
+    "newNote": "+ Stvori novu bilješku",
+    "sectionTitle": "Bilješke",
+    "search": "Pretraži bilješke...",
+    "noTitle": "Bez naslova",
+    "words": "Riječi:",
+    "modified": "Izmijenjeno: ",
+    "newSection": "Novi odjeljak",
+    "tagPrompt": "Naziv oznake:",
+    "sections": {
+      "personal": "Osobno",
+      "work": "Posao",
+      "tasks": "Zadaci"
+    },
+    "status": {
+      "ready": "Spremno",
+      "noNote": "Nije odabrana bilješka"
+    },
+    "confirm": {
+      "deleteNote": "Briši bilješku?"
+    }
+  }
 }

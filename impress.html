@@ -11,15 +11,18 @@
 
 <!-- Title bar -->
 <div class="titlebar">
-  <a href="index.html" class="titlebar-home"><span data-i18n="common.home">🏠 Startseite</span></a>
+  <a href="index.html" class="titlebar-home">
+    <img src="logo.svg" alt="OfficeWeb" class="titlebar-logo" />
+    <span data-i18n="common.home">Startseite</span>
+  </a>
   <div style="color:rgba(255,255,255,.4)">|</div>
-  <span class="titlebar-name" data-i18n="impress.appname">🎨 Impress</span>
+  <span class="titlebar-name" data-i18n="impress.appname">Impress</span>
   <div class="titlebar-file">
     <input type="text" id="docTitle" value="Unbenannte Präsentation" />
   </div>
-  <button class="tb-btn" onclick="savePresentation()">💾 Speichern</button>
-  <button class="tb-btn" onclick="newPresentation()">📄 Neu</button>
-  <button class="tb-btn" onclick="openPresentation()">📂 Öffnen</button>
+  <button class="tb-btn" onclick="savePresentation()" data-i18n="common.save">Speichern</button>
+  <button class="tb-btn" onclick="newPresentation()" data-i18n="common.new">Neu</button>
+  <button class="tb-btn" onclick="openPresentation()">Öffnen</button>
   <button class="tb-btn tb-btn-present" onclick="startPresent()">▶ Präsentieren</button>
 </div>
 
@@ -88,7 +91,7 @@
 
 <!-- Status bar -->
 <div class="statusbar">
-  <span>🎨 Impress</span>
+  <span data-i18n="impress.appname">Impress</span>
   <span id="statusMsg" data-i18n="common.ready">Bereit</span>
   <span id="slideCounter" style="margin-left:auto;"></span>
 </div>

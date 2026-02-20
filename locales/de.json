@@ -88,13 +88,13 @@
     "delete": "Löschen",
     "open": "Öffnen",
     "close": "Schließen",
-    "save": "💾 Speichern",
-    "new": "📄 Neu",
+    "save": "Speichern",
+    "new": "Neu",
     "ready": "Bereit",
-    "home": "🏠 Startseite"
+    "home": "Startseite"
   },
   "writer": {
-    "appname": "📝 Writer",
+    "appname": "Writer",
     "newDoc": "Unbenanntes Dokument",
     "menu": {
       "file": "Datei",
@@ -133,16 +133,31 @@
       "clearFmt": "🧹 Formatierung löschen"
     },
     "modal": {
-      "table": { "title": "Tabelle einfügen", "rows": "Zeilen", "cols": "Spalten" },
-      "link": { "title": "Link einfügen", "url": "URL", "text": "Anzeigetext" },
+      "table": {
+        "title": "Tabelle einfügen",
+        "rows": "Zeilen",
+        "cols": "Spalten"
+      },
+      "link": {
+        "title": "Link einfügen",
+        "url": "URL",
+        "text": "Anzeigetext"
+      },
       "img": {
         "title": "Bild einfügen",
         "urlLabel": "Bild-URL oder lokale Datei hochladen",
         "fileLabel": "Oder Datei wählen:",
         "alt": "Alt-Text"
       },
-      "find": { "title": "Suchen &amp; Ersetzen", "find": "Suchen", "replace": "Ersetzen durch" },
-      "open": { "title": "Dokument öffnen", "label": "Gespeicherte Dokumente:" }
+      "find": {
+        "title": "Suchen &amp; Ersetzen",
+        "find": "Suchen",
+        "replace": "Ersetzen durch"
+      },
+      "open": {
+        "title": "Dokument öffnen",
+        "label": "Gespeicherte Dokumente:"
+      }
     },
     "btn": {
       "findNext": "Weitersuchen",
@@ -172,11 +187,14 @@
     }
   },
   "calc": {
-    "appname": "📊 Calc",
+    "appname": "Calc",
     "newWorkbook": "Unbenannte Tabelle",
     "newSheet": "Tabelle",
     "modal": {
-      "open": { "title": "Arbeitsmappe öffnen", "label": "Gespeicherte Arbeitsmappen:" }
+      "open": {
+        "title": "Arbeitsmappe öffnen",
+        "label": "Gespeicherte Arbeitsmappen:"
+      }
     },
     "status": {
       "ready": "Bereit",
@@ -189,11 +207,18 @@
     }
   },
   "impress": {
-    "appname": "🎨 Impress",
+    "appname": "Impress",
     "newPresentation": "Unbenannte Präsentation",
     "modal": {
-      "img": { "title": "Bild einfügen", "urlLabel": "Bild-URL", "fileLabel": "Oder Datei:" },
-      "open": { "title": "Präsentation öffnen", "label": "Gespeicherte Präsentationen:" }
+      "img": {
+        "title": "Bild einfügen",
+        "urlLabel": "Bild-URL",
+        "fileLabel": "Oder Datei:"
+      },
+      "open": {
+        "title": "Präsentation öffnen",
+        "label": "Gespeicherte Präsentationen:"
+      }
     },
     "status": {
       "ready": "Bereit",
@@ -202,11 +227,11 @@
     }
   },
   "notes": {
-    "appname": "📋 Notes",
+    "appname": "Notes",
     "noNote": "Keine Notiz ausgewählt",
     "newNote": "+ Neue Notiz erstellen",
     "sectionTitle": "Notizen",
-    "search": "🔍 Notizen suchen...",
+    "search": "Notizen suchen...",
     "noTitle": "Ohne Titel",
     "words": "Wörter:",
     "modified": "Geändert: ",

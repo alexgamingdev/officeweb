@@ -1,14 +1,253 @@
 {
-  "nav": { "home": "Paġna ewlenija", "writer": "Writer", "calc": "Calc", "impress": "Impress", "notes": "Notes", "github": "GitHub" },
-  "hero": { "badge": "⭐ Sors Miftuħ &amp; B'xejn", "title": "L-Uffiċċju tiegħek <em>bla ħlas</em><br>fil-browser", "subtitle": "Softwer professjonali tal-uffiċċju – kompletament fil-browser, mingħajr installazzjoni, mingħajr spejjeż, mingħajr problemi ta' privatezza.", "start": "✍️ Ibda issa", "discover": "Esplora l-apps" },
-  "stats": { "apps": "Apps", "noInstall": "Installazzjoni", "privacy": "Privatezza", "license": "Liċenza" },
-  "apps": { "title": "Il-apps kollha", "subtitle": "Agħżel app u ibda direttament fil-browser", "writer": { "desc": "Oħloq u editja dokumenti tat-test – bħal Microsoft Word", "tag1": "Ipproċessar tal-kelma", "tag2": "WYSIWYG" }, "calc": { "desc": "Folja ta' kalkolu – bħal Microsoft Excel", "tag1": "Folja ta' kalkolu", "tag2": "Formuli" }, "impress": { "desc": "Ibni preżentazzjonijiet – bħal Microsoft PowerPoint", "tag1": "Preżentazzjoni", "tag2": "Slides" }, "notes": { "desc": "Noti veloċi u listi ta' kompiti – bħal Microsoft OneNote", "tag1": "Noti", "tag2": "Kompiti" } },
-  "features": { "title": "Għaliex OfficeWeb?", "subtitle": "Karatteristiċi professjonali – b'xejn, fil-browser, mingħajr reġistrazzjoni", "browser": { "title": "100% fil-browser", "text": "Ma teħtieġx installazzjoni. Jaħdem f'kull browser modern." }, "storage": { "title": "Ħażna lokali", "text": "Id-dokumenti jiġu salvati lokalment fil-browser – l-ebda cloud meħtieġ." }, "privacy": { "title": "Privatezza", "text": "Id-data kollha tibqa' fuq l-apparat tiegħek. Xejn ma jintbagħat lis-servers." }, "design": { "title": "Disinn professjonali", "text": "Interface modern, nadif, ispirat minn Microsoft Office." }, "export": { "title": "Esportazzjon &amp; Stampar", "text": "Istampa dokumenti jew esportahom bħala HTML/test." }, "responsive": { "title": "Responsiv", "text": "Jaħdem fuq desktop, tablet u smartphone." } },
-  "oss": { "title": "Sors Miftuħ &amp; ħieles għal kulħadd", "text": "OfficeWeb huwa proġett open source taħt il-liċenza MIT. Kulħadd jista' jikkontribwixxi, jadatta l-kodiċi u jiżviluppa l-proġett.", "btn": "Ara fuq GitHub" },
-  "footer": { "license": "Liċenza MIT", "contributing": "Kontribuzzjoni", "security": "Sigurtà" },
-  "common": { "cancel": "Ikkanċella", "insert": "Daħħal", "delete": "Ħassar", "open": "Iftaħ", "close": "Agħlaq", "save": "💾 Issejvja", "new": "📄 Ġdid", "ready": "Lest", "home": "🏠 Paġna ewlenija" },
-  "writer": { "appname": "📝 Writer", "newDoc": "Dokument bla titolu", "menu": { "file": "Fajl", "edit": "Editja", "insert": "Daħħal", "format": "Format" }, "file": { "new": "📄 Dokument ġdid", "open": "📂 Iftaħ...", "save": "💾 Issejvja", "exportHtml": "📥 Esporta bħala HTML", "exportTxt": "📄 Esporta bħala test", "print": "🖨️ Istampa" }, "edit": { "undo": "↩️ Agħmel lura", "redo": "↪️ Erġa", "cut": "✂️ Aqta'", "copy": "📋 Ikkopja", "paste": "📌 Waħħal", "selectAll": "🔲 Agħżel kollox", "findReplace": "🔍 Sib &amp; Ibdel" }, "insert": { "table": "📊 Tabella", "image": "🖼️ Immaġni", "link": "🔗 Link", "hr": "➖ Linja orizzontali", "pageBreak": "📃 Break tal-paġna" }, "format": { "bold": "<b>G</b> Grassett", "italic": "<i>I</i> Italiku", "underline": "<u>S</u> Sottolinjat", "clearFmt": "🧹 Neħħi l-formattazzjoni" }, "modal": { "table": { "title": "Daħħal tabella", "rows": "Ringieli", "cols": "Kolonni" }, "link": { "title": "Daħħal link", "url": "URL", "text": "Test li jidher" }, "img": { "title": "Daħħal immaġni", "urlLabel": "URL tal-immaġni jew uplodja fajl lokali", "fileLabel": "Jew agħżel fajl:", "alt": "Test alternattiv" }, "find": { "title": "Sib &amp; Ibdel", "find": "Sib", "replace": "Ibdel bi" }, "open": { "title": "Iftaħ dokument", "label": "Dokumenti salvati:" } }, "btn": { "findNext": "Sib li jmiss", "replace": "Ibdel", "replaceAll": "Ibdel kollox" }, "info": { "words": "Kliem:", "chars": "Karattri:" }, "status": { "ready": "Lest", "saved": "💾 Issejvjat: ", "newDoc": "Dokument ġdid maħluq", "opened": "Miftuħ: ", "replaced": "Tibdiliet kollha saru" }, "confirm": { "newDoc": "Dokument ġdid? Il-bidliet mhux issejvjati se jintilfu.", "notFound": "Mhux misjub: " }, "welcome": { "title": "Merħba f'OfficeWeb Writer", "p1": "Ibda tikteb hawn. Tista' tifformattja t-test bħala <b>grassett</b>, <i>italiku</i> jew <u>sottolinjat</u>.", "p2": "Uża l-barra tal-għodod ta' fuq biex taġġusta l-fonti, id-daqsijiet, l-kuluri u aktar.", "p3": "Igawdi l-kitba! 📝" } },
-  "calc": { "appname": "📊 Calc", "newWorkbook": "Workbook bla titolu", "newSheet": "Folla", "modal": { "open": { "title": "Iftaħ workbook", "label": "Workbooks salvati:" } }, "status": { "ready": "Lest", "saved": "💾 Issejvjat: ", "opened": "Miftuħ: " }, "confirm": { "newWorkbook": "Oħloq workbook ġdid? Il-bidliet mhux issejvjati se jintilfu.", "deleteSheet": "Ħassar il-folla \"%s\"?" } },
-  "impress": { "appname": "🎨 Impress", "newPresentation": "Preżentazzjoni bla titolu", "modal": { "img": { "title": "Daħħal immaġni", "urlLabel": "URL tal-immaġni", "fileLabel": "Jew fajl:" }, "open": { "title": "Iftaħ preżentazzjoni", "label": "Preżentazzjonijiet salvati:" } }, "status": { "ready": "Lest", "saved": "💾 Issejvjat: ", "opened": "Miftuħ: " } },
-  "notes": { "appname": "📋 Notes", "noNote": "L-ebda nota magħżula", "newNote": "+ Oħloq nota ġdida", "sectionTitle": "Noti", "search": "🔍 Fittex noti...", "noTitle": "Bla titolu", "words": "Kliem:", "modified": "Mibdul: ", "newSection": "Sezzjoni ġdida", "tagPrompt": "Isem it-tag:", "sections": { "personal": "Personali", "work": "Xogħol", "tasks": "Kompiti" }, "status": { "ready": "Lest", "noNote": "L-ebda nota magħżula" }, "confirm": { "deleteNote": "Ħassar in-nota?" } }
+  "nav": {
+    "home": "Paġna ewlenija",
+    "writer": "Writer",
+    "calc": "Calc",
+    "impress": "Impress",
+    "notes": "Notes",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "⭐ Sors Miftuħ &amp; B'xejn",
+    "title": "L-Uffiċċju tiegħek <em>bla ħlas</em><br>fil-browser",
+    "subtitle": "Softwer professjonali tal-uffiċċju – kompletament fil-browser, mingħajr installazzjoni, mingħajr spejjeż, mingħajr problemi ta' privatezza.",
+    "start": "✍️ Ibda issa",
+    "discover": "Esplora l-apps"
+  },
+  "stats": {
+    "apps": "Apps",
+    "noInstall": "Installazzjoni",
+    "privacy": "Privatezza",
+    "license": "Liċenza"
+  },
+  "apps": {
+    "title": "Il-apps kollha",
+    "subtitle": "Agħżel app u ibda direttament fil-browser",
+    "writer": {
+      "desc": "Oħloq u editja dokumenti tat-test – bħal Microsoft Word",
+      "tag1": "Ipproċessar tal-kelma",
+      "tag2": "WYSIWYG"
+    },
+    "calc": {
+      "desc": "Folja ta' kalkolu – bħal Microsoft Excel",
+      "tag1": "Folja ta' kalkolu",
+      "tag2": "Formuli"
+    },
+    "impress": {
+      "desc": "Ibni preżentazzjonijiet – bħal Microsoft PowerPoint",
+      "tag1": "Preżentazzjoni",
+      "tag2": "Slides"
+    },
+    "notes": {
+      "desc": "Noti veloċi u listi ta' kompiti – bħal Microsoft OneNote",
+      "tag1": "Noti",
+      "tag2": "Kompiti"
+    }
+  },
+  "features": {
+    "title": "Għaliex OfficeWeb?",
+    "subtitle": "Karatteristiċi professjonali – b'xejn, fil-browser, mingħajr reġistrazzjoni",
+    "browser": {
+      "title": "100% fil-browser",
+      "text": "Ma teħtieġx installazzjoni. Jaħdem f'kull browser modern."
+    },
+    "storage": {
+      "title": "Ħażna lokali",
+      "text": "Id-dokumenti jiġu salvati lokalment fil-browser – l-ebda cloud meħtieġ."
+    },
+    "privacy": {
+      "title": "Privatezza",
+      "text": "Id-data kollha tibqa' fuq l-apparat tiegħek. Xejn ma jintbagħat lis-servers."
+    },
+    "design": {
+      "title": "Disinn professjonali",
+      "text": "Interface modern, nadif, ispirat minn Microsoft Office."
+    },
+    "export": {
+      "title": "Esportazzjon &amp; Stampar",
+      "text": "Istampa dokumenti jew esportahom bħala HTML/test."
+    },
+    "responsive": {
+      "title": "Responsiv",
+      "text": "Jaħdem fuq desktop, tablet u smartphone."
+    }
+  },
+  "oss": {
+    "title": "Sors Miftuħ &amp; ħieles għal kulħadd",
+    "text": "OfficeWeb huwa proġett open source taħt il-liċenza MIT. Kulħadd jista' jikkontribwixxi, jadatta l-kodiċi u jiżviluppa l-proġett.",
+    "btn": "Ara fuq GitHub"
+  },
+  "footer": {
+    "license": "Liċenza MIT",
+    "contributing": "Kontribuzzjoni",
+    "security": "Sigurtà"
+  },
+  "common": {
+    "cancel": "Ikkanċella",
+    "insert": "Daħħal",
+    "delete": "Ħassar",
+    "open": "Iftaħ",
+    "close": "Agħlaq",
+    "save": "Issejvja",
+    "new": "Ġdid",
+    "ready": "Lest",
+    "home": "Paġna ewlenija"
+  },
+  "writer": {
+    "appname": "Writer",
+    "newDoc": "Dokument bla titolu",
+    "menu": {
+      "file": "Fajl",
+      "edit": "Editja",
+      "insert": "Daħħal",
+      "format": "Format"
+    },
+    "file": {
+      "new": "📄 Dokument ġdid",
+      "open": "📂 Iftaħ...",
+      "save": "💾 Issejvja",
+      "exportHtml": "📥 Esporta bħala HTML",
+      "exportTxt": "📄 Esporta bħala test",
+      "print": "🖨️ Istampa"
+    },
+    "edit": {
+      "undo": "↩️ Agħmel lura",
+      "redo": "↪️ Erġa",
+      "cut": "✂️ Aqta'",
+      "copy": "📋 Ikkopja",
+      "paste": "📌 Waħħal",
+      "selectAll": "🔲 Agħżel kollox",
+      "findReplace": "🔍 Sib &amp; Ibdel"
+    },
+    "insert": {
+      "table": "📊 Tabella",
+      "image": "🖼️ Immaġni",
+      "link": "🔗 Link",
+      "hr": "➖ Linja orizzontali",
+      "pageBreak": "📃 Break tal-paġna"
+    },
+    "format": {
+      "bold": "<b>G</b> Grassett",
+      "italic": "<i>I</i> Italiku",
+      "underline": "<u>S</u> Sottolinjat",
+      "clearFmt": "🧹 Neħħi l-formattazzjoni"
+    },
+    "modal": {
+      "table": {
+        "title": "Daħħal tabella",
+        "rows": "Ringieli",
+        "cols": "Kolonni"
+      },
+      "link": {
+        "title": "Daħħal link",
+        "url": "URL",
+        "text": "Test li jidher"
+      },
+      "img": {
+        "title": "Daħħal immaġni",
+        "urlLabel": "URL tal-immaġni jew uplodja fajl lokali",
+        "fileLabel": "Jew agħżel fajl:",
+        "alt": "Test alternattiv"
+      },
+      "find": {
+        "title": "Sib &amp; Ibdel",
+        "find": "Sib",
+        "replace": "Ibdel bi"
+      },
+      "open": {
+        "title": "Iftaħ dokument",
+        "label": "Dokumenti salvati:"
+      }
+    },
+    "btn": {
+      "findNext": "Sib li jmiss",
+      "replace": "Ibdel",
+      "replaceAll": "Ibdel kollox"
+    },
+    "info": {
+      "words": "Kliem:",
+      "chars": "Karattri:"
+    },
+    "status": {
+      "ready": "Lest",
+      "saved": "💾 Issejvjat: ",
+      "newDoc": "Dokument ġdid maħluq",
+      "opened": "Miftuħ: ",
+      "replaced": "Tibdiliet kollha saru"
+    },
+    "confirm": {
+      "newDoc": "Dokument ġdid? Il-bidliet mhux issejvjati se jintilfu.",
+      "notFound": "Mhux misjub: "
+    },
+    "welcome": {
+      "title": "Merħba f'OfficeWeb Writer",
+      "p1": "Ibda tikteb hawn. Tista' tifformattja t-test bħala <b>grassett</b>, <i>italiku</i> jew <u>sottolinjat</u>.",
+      "p2": "Uża l-barra tal-għodod ta' fuq biex taġġusta l-fonti, id-daqsijiet, l-kuluri u aktar.",
+      "p3": "Igawdi l-kitba! 📝"
+    }
+  },
+  "calc": {
+    "appname": "Calc",
+    "newWorkbook": "Workbook bla titolu",
+    "newSheet": "Folla",
+    "modal": {
+      "open": {
+        "title": "Iftaħ workbook",
+        "label": "Workbooks salvati:"
+      }
+    },
+    "status": {
+      "ready": "Lest",
+      "saved": "💾 Issejvjat: ",
+      "opened": "Miftuħ: "
+    },
+    "confirm": {
+      "newWorkbook": "Oħloq workbook ġdid? Il-bidliet mhux issejvjati se jintilfu.",
+      "deleteSheet": "Ħassar il-folla \"%s\"?"
+    }
+  },
+  "impress": {
+    "appname": "Impress",
+    "newPresentation": "Preżentazzjoni bla titolu",
+    "modal": {
+      "img": {
+        "title": "Daħħal immaġni",
+        "urlLabel": "URL tal-immaġni",
+        "fileLabel": "Jew fajl:"
+      },
+      "open": {
+        "title": "Iftaħ preżentazzjoni",
+        "label": "Preżentazzjonijiet salvati:"
+      }
+    },
+    "status": {
+      "ready": "Lest",
+      "saved": "💾 Issejvjat: ",
+      "opened": "Miftuħ: "
+    }
+  },
+  "notes": {
+    "appname": "Notes",
+    "noNote": "L-ebda nota magħżula",
+    "newNote": "+ Oħloq nota ġdida",
+    "sectionTitle": "Noti",
+    "search": "Fittex noti...",
+    "noTitle": "Bla titolu",
+    "words": "Kliem:",
+    "modified": "Mibdul: ",
+    "newSection": "Sezzjoni ġdida",
+    "tagPrompt": "Isem it-tag:",
+    "sections": {
+      "personal": "Personali",
+      "work": "Xogħol",
+      "tasks": "Kompiti"
+    },
+    "status": {
+      "ready": "Lest",
+      "noNote": "L-ebda nota magħżula"
+    },
+    "confirm": {
+      "deleteNote": "Ħassar in-nota?"
+    }
+  }
 }
