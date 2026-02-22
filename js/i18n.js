@@ -40,8 +40,7 @@
   let _lang = (function () {
     const stored = localStorage.getItem('owlang');
     if (stored && EU_LANGS[stored]) return stored;
-    const nav = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
-    return EU_LANGS[nav] ? nav : 'en';
+    return 'en';
   }());
 
   /** Look up a dot-separated key in the loaded translations. */
