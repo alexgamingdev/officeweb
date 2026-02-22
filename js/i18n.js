@@ -40,8 +40,8 @@
   let _lang = (function () {
     const stored = localStorage.getItem('owlang');
     if (stored && EU_LANGS[stored]) return stored;
-    const nav = (navigator.language || navigator.userLanguage || 'de').split('-')[0];
-    return EU_LANGS[nav] ? nav : 'de';
+    const nav = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
+    return EU_LANGS[nav] ? nav : 'en';
   }());
 
   /** Look up a dot-separated key in the loaded translations. */
@@ -129,11 +129,11 @@
     basePath = src.replace(/js\/i18n\.js.*$/, '');
   }
 
-  // Fetch locale JSON; fall back to German on error or missing locale.
+  // Fetch locale JSON; fall back to English on error or missing locale.
   var localeUrl = basePath + 'locales/' + _lang + '.json';
   fetch(localeUrl)
     .then(function (r) {
-      return r.ok ? r.json() : fetch(basePath + 'locales/de.json').then(function (r2) { return r2.json(); });
+      return r.ok ? r.json() : fetch(basePath + 'locales/en.json').then(function (r2) { return r2.json(); });
     })
     .then(init)
     .catch(function () { init({}); });
