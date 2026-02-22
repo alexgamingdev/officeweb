@@ -166,3 +166,22 @@ select.rb-select {
   flex-shrink: 0;
 }
 .statusbar span { display: flex; align-items: center; gap: 4px; }
+
+/* ── Error pages ─────────────────────────────────────────────────────────── */
+.error-header { background: #0078d4; height: 48px; display: flex; align-items: center; padding: 0 24px; }
+.error-header a { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.error-header img { width: 28px; height: 28px; border-radius: 5px; }
+.error-header-title { color: #fff; font-size: 18px; font-weight: 700; letter-spacing: -.5px; }
+.error-header-title span { opacity: .7; font-weight: 400; }
+.error-body { background: #f3f2f1; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 48px 24px; text-align: center; min-height: calc(100vh - 88px); }
+.error-code { font-size: 96px; font-weight: 700; color: #c0392b; line-height: 1; }
+.error-title { font-size: 28px; font-weight: 600; color: #201f1e; margin: 16px 0 8px; }
+.error-text { font-size: 15px; color: #605e5c; max-width: 480px; }
+.error-actions { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; justify-content: center; }
+.error-btn { display: inline-block; padding: 10px 24px; border-radius: 6px; font-size: 14px; font-weight: 500; text-decoration: none; transition: opacity .15s; }
+.error-btn:hover { opacity: .85; }
+.error-btn-primary { background: #0078d4; color: #fff; }
+.error-btn-outline { border: 1.5px solid #0078d4; color: #0078d4; }
+.error-footer { background: #1b1a19; color: rgba(255,255,255,.5); padding: 20px 24px; font-size: 13px; text-align: center; }
+.error-footer a { color: rgba(255,255,255,.6); text-decoration: none; }
+.error-footer a:hover { color: #fff; }

@@ -36,12 +36,24 @@
     sv: 'Svenska'
   };
 
+  // Extract the app slug from a path like '/writer/', '/en/writer/', '/'
+  function _appFromPath(path) {
+    var segs = path.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+    if (segs.length > 0 && EU_LANGS[segs[0]]) return segs[1] || '';
+    return segs[0] || '';
+  }
+
+  // Build the canonical lang-prefixed path for the current app
+  function _buildPath(lang) {
+    var app = _appFromPath(window.location.pathname);
+    return app ? '/' + lang + '/' + app + '/' : '/';
+  }
+
   let _translations = {};
   let _lang = (function () {
     const stored = localStorage.getItem('owlang');
     if (stored && EU_LANGS[stored]) return stored;
-    const nav = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
-    return EU_LANGS[nav] ? nav : 'en';
+    return 'en';
   }());
 
   /** Look up a dot-separated key in the loaded translations. */
@@ -75,11 +87,13 @@
     document.documentElement.lang = _lang;
   }
 
-  /** Persist language choice and reload. */
+  /** Persist language choice and navigate to the physical app page (which will
+   *  then replaceState to show the lang prefix in the URL on load). */
   function setLang(lang) {
     if (!EU_LANGS[lang]) return;
     localStorage.setItem('owlang', lang);
-    location.reload();
+    var app = _appFromPath(window.location.pathname);
+    location.href = app ? '/' + app + '/' : '/';
   }
 
   /** Create and return a <select> language picker element. */
@@ -116,13 +130,18 @@
   /** Called after translations are loaded. */
   function init(translations) {
     _translations = translations || {};
+    // Show selected language in the URL path (e.g. /en/writer/)
+    var target = _buildPath(_lang);
+    if (window.location.pathname !== target) {
+      history.replaceState(null, '', target);
+    }
     applyTranslations();
     injectPicker();
   }
 
   // Determine base path (handles being called from sub-directories or root)
   var scriptTag = document.currentScript;
-  var basePath = '';
+  var basePath = '/';
   if (scriptTag) {
     var src = scriptTag.src;
     // Walk up from js/ to the site root

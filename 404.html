@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 – Not Found · OfficeWeb</title>
+  <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/css/common.css" />
+</head>
+<body>
+<script>
+  // Redirect /{lang}/{app}/ URLs: save the language, then load the app page.
+  var EU_LANGS = ['bg','cs','da','de','el','en','es','et','fi','fr','ga','hr','hu','it','lt','lv','mt','nl','pl','pt','ro','sk','sl','sv'];
+  var segs = location.pathname.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
+  if (segs.length >= 1 && EU_LANGS.indexOf(segs[0]) !== -1) {
+    var lang = segs[0];
+    var app  = segs[1] || '';
+    localStorage.setItem('owlang', lang);
+    location.replace(app ? '/' + app + '/' : '/');
+  }
+</script>
+<header class="error-header">
+  <a href="/">
+    <img src="/logo.svg" alt="OfficeWeb" />
+    <span class="error-header-title">Office<span>Web</span></span>
+  </a>
+</header>
+<div class="error-body">
+  <div class="error-code">404</div>
+  <div class="error-title">Page Not Found</div>
+  <p class="error-text">The page you're looking for doesn't exist or has been moved. Double-check the URL or head back home.</p>
+  <div class="error-actions">
+    <a href="/" class="error-btn error-btn-primary">🏠 Back to Home</a>
+    <a href="javascript:history.back()" class="error-btn error-btn-outline">← Go Back</a>
+  </div>
+</div>
+<footer class="error-footer">
+  © 2026 <a href="https://github.com/alexgamingdev" target="_blank" rel="noopener">alexgamingdev</a> · OfficeWeb
+</footer>
+</body>
+</html>
