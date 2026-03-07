@@ -226,6 +226,17 @@
       "opened": "Geöffnet: "
     }
   },
+  "promo": {
+    "title": "Promo-Code",
+    "subtitle": "Gib deinen Promo-Code ein, um exklusive Pro-Funktionen freizuschalten.",
+    "hint": "Der Code ist dauerhaft gültig und kann unbegrenzt oft verwendet werden.",
+    "placeholder": "Code eingeben…",
+    "btn": "Aktivieren",
+    "error": "Ungültiger Code. Bitte versuche es erneut.",
+    "successTitle": "Pro-Funktionen aktiv!",
+    "successDesc": "Du hast die volle OfficeWeb Pro-Erfahrung freigeschaltet. Genieße alle Funktionen!",
+    "deactivate": "Deaktivieren"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Keine Notiz ausgewählt",

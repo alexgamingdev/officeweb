@@ -226,6 +226,17 @@
       "opened": "Åbnet: "
     }
   },
+  "promo": {
+    "title": "Kampagnekode",
+    "subtitle": "Indtast din kampagnekode for at låse op for eksklusive Pro-funktioner.",
+    "hint": "Koden er permanent og kan bruges et ubegrænset antal gange.",
+    "placeholder": "Indtast kode…",
+    "btn": "Aktivér",
+    "error": "Ugyldig kode. Prøv igen.",
+    "successTitle": "Pro-funktioner aktive!",
+    "successDesc": "Du har låst op for den fulde OfficeWeb Pro-oplevelse. Nyd alle funktioner!",
+    "deactivate": "Deaktivér"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Ingen note valgt",

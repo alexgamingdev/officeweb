@@ -226,6 +226,17 @@
       "opened": "Miftuħ: "
     }
   },
+  "promo": {
+    "title": "Kodiċi promozzjonali",
+    "subtitle": "Daħħal il-kodiċi promozzjonali tiegħek biex tiftaħ karatteristiċi Pro esklużivi.",
+    "hint": "Il-kodiċi huwa permanenti u jista' jintuża għal numru bla limitu ta' drabi.",
+    "placeholder": "Daħħal il-kodiċi…",
+    "btn": "Attiva",
+    "error": "Kodiċi mhux validu. Jekk jogħġbok erġa' pprova.",
+    "successTitle": "Karatteristiċi Pro attivi!",
+    "successDesc": "Ftaqart l-esperjenza sħiħa OfficeWeb Pro. Igawdi mill-karatteristiċi kollha!",
+    "deactivate": "Iddiżattiva"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "L-ebda nota magħżula",

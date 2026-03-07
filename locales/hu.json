@@ -226,6 +226,17 @@
       "opened": "Megnyitva: "
     }
   },
+  "promo": {
+    "title": "Promóciós kód",
+    "subtitle": "Adja meg promóciós kódját az exkluzív Pro funkciók feloldásához.",
+    "hint": "A kód állandó, és korlátlan számú alkalommal használható.",
+    "placeholder": "Kód megadása…",
+    "btn": "Aktiválás",
+    "error": "Érvénytelen kód. Kérjük, próbálja újra.",
+    "successTitle": "Pro funkciók aktívak!",
+    "successDesc": "Feloldotta a teljes OfficeWeb Pro élményt. Élvezze az összes funkciót!",
+    "deactivate": "Deaktiválás"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Nincs kijelölt jegyzet",

@@ -226,6 +226,17 @@
       "opened": "Abierto: "
     }
   },
+  "promo": {
+    "title": "Código promocional",
+    "subtitle": "Introduce tu código promocional para desbloquear las funciones Pro exclusivas.",
+    "hint": "El código es permanente y se puede usar un número ilimitado de veces.",
+    "placeholder": "Introducir código…",
+    "btn": "Activar",
+    "error": "Código inválido. Por favor, inténtalo de nuevo.",
+    "successTitle": "¡Funciones Pro activas!",
+    "successDesc": "Has desbloqueado la experiencia completa de OfficeWeb Pro. ¡Disfruta de todas las funciones!",
+    "deactivate": "Desactivar"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Ninguna nota seleccionada",

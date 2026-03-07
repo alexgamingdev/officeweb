@@ -226,6 +226,17 @@
       "opened": "Avatud: "
     }
   },
+  "promo": {
+    "title": "Sooduskood",
+    "subtitle": "Sisesta sooduskood eksklusiivsete Pro-funktsioonide avamiseks.",
+    "hint": "Kood on püsiv ja seda saab kasutada piiramatu arv kordi.",
+    "placeholder": "Sisesta kood…",
+    "btn": "Aktiveeri",
+    "error": "Vigane kood. Palun proovi uuesti.",
+    "successTitle": "Pro-funktsioonid aktiivsed!",
+    "successDesc": "Oled avanud täieliku OfficeWeb Pro kogemuse. Naudi kõiki funktsioone!",
+    "deactivate": "Desaktiveeri"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Ühtegi märkust pole valitud",

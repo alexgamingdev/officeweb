@@ -226,6 +226,17 @@
       "opened": "Opened: "
     }
   },
+  "promo": {
+    "title": "Promo Code",
+    "subtitle": "Enter your promo code to unlock exclusive Pro features.",
+    "hint": "The code is permanent and can be used an unlimited number of times.",
+    "placeholder": "Enter code…",
+    "btn": "Activate",
+    "error": "Invalid code. Please try again.",
+    "successTitle": "Pro features active!",
+    "successDesc": "You have unlocked the full OfficeWeb Pro experience. Enjoy all features!",
+    "deactivate": "Deactivate"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "No note selected",
