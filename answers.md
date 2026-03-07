@@ -41,6 +41,6 @@ OfficeWeb is a free, open-source office suite that runs 100% in your browser –
 ## First comment
 I built OfficeWeb because I wanted a lightweight, privacy-first alternative to cloud office suites. Every popular option either requires an account, stores your files on remote servers, or costs money. I wanted something you could open in any browser, start writing immediately, and never worry about your data leaving your device.
 
-The approach started simple – a plain `contenteditable` div with some formatting buttons – and grew organically into a four-app suite. The hardest part was keeping everything vanilla (no frameworks, no bundlers) while still delivering a polished, responsive UI. Adding full EU localisation (24 languages) was a fun challenge: it pushed me to design a clean i18n system from scratch in under 200 lines of JavaScript.
+The approach started simple – a plain `contenteditable` div with some formatting buttons – and grew organically into a four-app suite: Writer, Calc, Impress, and Notes. The hardest part was keeping everything vanilla (no frameworks, no bundlers) while still delivering a polished, responsive UI. Adding full EU localisation (24 languages) was a fun challenge that pushed me to design a clean i18n system from scratch.
 
-If privacy, simplicity, and open-source matter to you, give OfficeWeb a try – and contributions on GitHub are very welcome!
+If privacy and simplicity matter to you, give OfficeWeb a try – I'd love to hear what you think!
