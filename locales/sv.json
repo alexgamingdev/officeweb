@@ -226,6 +226,17 @@
       "opened": "Öppnat: "
     }
   },
+  "promo": {
+    "title": "Kampanjkod",
+    "subtitle": "Ange din kampanjkod för att låsa upp exklusiva Pro-funktioner.",
+    "hint": "Koden är permanent och kan användas ett obegränsat antal gånger.",
+    "placeholder": "Ange kod…",
+    "btn": "Aktivera",
+    "error": "Ogiltig kod. Försök igen.",
+    "successTitle": "Pro-funktioner aktiva!",
+    "successDesc": "Du har låst upp den fullständiga OfficeWeb Pro-upplevelsen. Njut av alla funktioner!",
+    "deactivate": "Inaktivera"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Ingen anteckning vald",

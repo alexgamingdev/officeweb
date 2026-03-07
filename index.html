@@ -108,6 +108,29 @@
     </div>
   </div>
 
+  <!-- Promo Code Section -->
+  <div class="promo-section">
+    <div class="promo-inner">
+      <div id="promo-form-wrap">
+        <div class="promo-icon">🎟️</div>
+        <div class="section-title" data-i18n="promo.title">Promo Code</div>
+        <p class="section-sub" data-i18n="promo.subtitle">Enter your promo code to unlock exclusive Pro features.</p>
+        <div class="promo-hint" data-i18n="promo.hint">The code is permanent and can be used an unlimited number of times.</div>
+        <form class="promo-form" onsubmit="return promoSubmit(event)">
+          <input id="promo-input" class="promo-input" type="text" data-i18n-placeholder="promo.placeholder" data-i18n-aria-label="promo.placeholder" placeholder="Enter code…" aria-label="Promo code" autocomplete="off" spellcheck="false" />
+          <button type="submit" class="btn btn-primary" data-i18n="promo.btn">Activate</button>
+        </form>
+        <p class="promo-msg promo-msg-error" id="promo-error" style="display:none" data-i18n="promo.error">Invalid code. Please try again.</p>
+      </div>
+      <div id="promo-success-wrap" style="display:none">
+        <div class="promo-icon">🎉</div>
+        <div class="section-title promo-success-title" data-i18n="promo.successTitle">Pro features active!</div>
+        <p class="section-sub" data-i18n="promo.successDesc">You have unlocked the full OfficeWeb Pro experience. Enjoy all features!</p>
+        <button class="btn promo-deactivate-btn" onclick="promoDeactivate()" data-i18n="promo.deactivate">Deactivate</button>
+      </div>
+    </div>
+  </div>
+
   <div class="section" style="background:var(--card-bg); max-width:100%; padding:48px 0;">
     <div style="max-width:1100px; margin:0 auto; padding:0 24px;">
       <div class="section-title" data-i18n="features.title">Why OfficeWeb?</div>
@@ -162,6 +185,7 @@
   </div>
 </footer>
 
+<script src="js/promo.js"></script>
 <script src="js/i18n.js"></script>
 </body>
 </html>

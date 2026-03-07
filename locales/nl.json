@@ -226,6 +226,17 @@
       "opened": "Geopend: "
     }
   },
+  "promo": {
+    "title": "Promotiecode",
+    "subtitle": "Voer je promotiecode in om exclusieve Pro-functies te ontgrendelen.",
+    "hint": "De code is permanent en kan onbeperkt worden gebruikt.",
+    "placeholder": "Code invoeren…",
+    "btn": "Activeren",
+    "error": "Ongeldige code. Probeer het opnieuw.",
+    "successTitle": "Pro-functies actief!",
+    "successDesc": "Je hebt de volledige OfficeWeb Pro-ervaring ontgrendeld. Geniet van alle functies!",
+    "deactivate": "Deactiveren"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Geen notitie geselecteerd",

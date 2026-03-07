@@ -226,6 +226,17 @@
       "opened": "Oscailte: "
     }
   },
+  "promo": {
+    "title": "Cód promóisin",
+    "subtitle": "Cuir isteach do chód promóisin chun gnéithe Pro eisiacha a dhíghlasáil.",
+    "hint": "Tá an cód buan agus is féidir é a úsáid líon neamhtheoranta uaireanta.",
+    "placeholder": "Cuir isteach cód…",
+    "btn": "Gníomhachtaigh",
+    "error": "Cód neamhbhailí. Déan iarracht arís.",
+    "successTitle": "Gnéithe Pro gníomhach!",
+    "successDesc": "D'oscail tú taithí iomlán OfficeWeb Pro. Bain sult as gach gné!",
+    "deactivate": "Díghníomhachtaigh"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Gan nóta roghnaithe",

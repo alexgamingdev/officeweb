@@ -226,6 +226,17 @@
       "opened": "Atidaryta: "
     }
   },
+  "promo": {
+    "title": "Akcinis kodas",
+    "subtitle": "Įveskite savo akcinį kodą, kad atrakintumėte išskirtines Pro funkcijas.",
+    "hint": "Kodas yra nuolatinis ir gali būti naudojamas neribotą skaičių kartų.",
+    "placeholder": "Įveskite kodą…",
+    "btn": "Aktyvuoti",
+    "error": "Neteisingas kodas. Bandykite dar kartą.",
+    "successTitle": "Pro funkcijos aktyvios!",
+    "successDesc": "Atrakinote visą OfficeWeb Pro patirtį. Mėgaukitės visomis funkcijomis!",
+    "deactivate": "Deaktyvuoti"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Nepasirinktas užrašas",

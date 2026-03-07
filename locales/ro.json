@@ -226,6 +226,17 @@
       "opened": "Deschis: "
     }
   },
+  "promo": {
+    "title": "Cod promoțional",
+    "subtitle": "Introduceți codul promoțional pentru a debloca funcțiile Pro exclusive.",
+    "hint": "Codul este permanent și poate fi utilizat de un număr nelimitat de ori.",
+    "placeholder": "Introduceți codul…",
+    "btn": "Activați",
+    "error": "Cod invalid. Vă rugăm să încercați din nou.",
+    "successTitle": "Funcții Pro active!",
+    "successDesc": "Ați deblocat experiența completă OfficeWeb Pro. Bucurați-vă de toate funcțiile!",
+    "deactivate": "Dezactivați"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Nicio notiță selectată",

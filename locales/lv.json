@@ -226,6 +226,17 @@
       "opened": "Atvērts: "
     }
   },
+  "promo": {
+    "title": "Akcijas kods",
+    "subtitle": "Ievadiet savu akcijas kodu, lai atbloķētu ekskluzīvās Pro funkcijas.",
+    "hint": "Kods ir pastāvīgs un to var izmantot neierobežotu skaitu reižu.",
+    "placeholder": "Ievadiet kodu…",
+    "btn": "Aktivizēt",
+    "error": "Nederīgs kods. Lūdzu, mēģiniet vēlreiz.",
+    "successTitle": "Pro funkcijas aktīvas!",
+    "successDesc": "Jūs esat atbloķējuši pilno OfficeWeb Pro pieredzi. Baudiet visas funkcijas!",
+    "deactivate": "Deaktivizēt"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Nav izvēlēta piezīme",

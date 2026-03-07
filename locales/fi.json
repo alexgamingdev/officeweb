@@ -226,6 +226,17 @@
       "opened": "Avattu: "
     }
   },
+  "promo": {
+    "title": "Kampanjakoodi",
+    "subtitle": "Syötä kampanjakoodisi avataksesi eksklusiiviset Pro-ominaisuudet.",
+    "hint": "Koodi on pysyvä ja sitä voidaan käyttää rajoittamaton määrä kertoja.",
+    "placeholder": "Syötä koodi…",
+    "btn": "Aktivoi",
+    "error": "Virheellinen koodi. Yritä uudelleen.",
+    "successTitle": "Pro-ominaisuudet aktiivisina!",
+    "successDesc": "Olet avannut täyden OfficeWeb Pro -kokemuksen. Nauti kaikista ominaisuuksista!",
+    "deactivate": "Poista käytöstä"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Ei muistiinpanoa valittu",

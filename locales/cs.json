@@ -226,6 +226,17 @@
       "opened": "Otevřeno: "
     }
   },
+  "promo": {
+    "title": "Promo kód",
+    "subtitle": "Zadejte svůj promo kód pro odemknutí exkluzivních Pro funkcí.",
+    "hint": "Kód je trvalý a lze ho použít neomezený počet krát.",
+    "placeholder": "Zadat kód…",
+    "btn": "Aktivovat",
+    "error": "Neplatný kód. Zkuste to prosím znovu.",
+    "successTitle": "Pro funkce aktivní!",
+    "successDesc": "Odemkli jste plný zážitek OfficeWeb Pro. Užívejte si všechny funkce!",
+    "deactivate": "Deaktivovat"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Žádná poznámka nevybrána",

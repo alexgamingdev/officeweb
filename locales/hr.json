@@ -226,6 +226,17 @@
       "opened": "Otvoreno: "
     }
   },
+  "promo": {
+    "title": "Promotivni kod",
+    "subtitle": "Unesite promotivni kod za otključavanje ekskluzivnih Pro značajki.",
+    "hint": "Kod je trajan i može se koristiti neograničen broj puta.",
+    "placeholder": "Unesite kod…",
+    "btn": "Aktiviraj",
+    "error": "Nevažeći kod. Pokušajte ponovo.",
+    "successTitle": "Pro značajke aktivne!",
+    "successDesc": "Otključali ste puno OfficeWeb Pro iskustvo. Uživajte u svim značajkama!",
+    "deactivate": "Deaktiviraj"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Nije odabrana bilješka",

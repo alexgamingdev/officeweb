@@ -226,6 +226,17 @@
       "opened": "Otwarty: "
     }
   },
+  "promo": {
+    "title": "Kod promocyjny",
+    "subtitle": "Wprowadź swój kod promocyjny, aby odblokować ekskluzywne funkcje Pro.",
+    "hint": "Kod jest trwały i może być używany nieograniczoną liczbę razy.",
+    "placeholder": "Wprowadź kod…",
+    "btn": "Aktywuj",
+    "error": "Nieprawidłowy kod. Spróbuj ponownie.",
+    "successTitle": "Funkcje Pro aktywne!",
+    "successDesc": "Odblokowałeś pełne doświadczenie OfficeWeb Pro. Ciesz się wszystkimi funkcjami!",
+    "deactivate": "Dezaktywuj"
+  },
   "notes": {
     "appname": "Notes",
     "noNote": "Nie wybrano notatki",
