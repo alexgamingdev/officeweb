@@ -4,7 +4,7 @@
 
 | Feld         | Wert            |
 |--------------|-----------------|
-| Angebot      | 3 months free   |
+| Angebot      | ∞ unlimited     |
 | Promo-Code   | `OFFICEWEB1000` |
 
 ## Implementierung (`js/promo.js`)
@@ -16,13 +16,27 @@
   var PROMO_CODE = 'OFFICEWEB1000';
   var STORAGE_KEY = 'ow_promo';
 
+  function _loadRecord() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY));
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /** Returns Infinity – the activation never expires. */
+  function expiresAt() {
+    return Infinity;
+  }
+
   function isActivated() {
-    return localStorage.getItem(STORAGE_KEY) === PROMO_CODE;
+    var record = _loadRecord();
+    return record !== null && record.code === PROMO_CODE && record.expires === null;
   }
 
   function activate(code) {
     if (code.trim().toUpperCase() === PROMO_CODE) {
-      localStorage.setItem(STORAGE_KEY, PROMO_CODE);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ code: PROMO_CODE, expires: null }));
       return true;
     }
     return false;
@@ -110,7 +124,8 @@
   window.PromoCode = {
     isActivated: isActivated,
     activate: activate,
-    deactivate: deactivate
+    deactivate: deactivate,
+    expiresAt: expiresAt
   };
 }());
 ```
