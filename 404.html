@@ -6,10 +6,29 @@
   <title>404 – Not Found · OfficeWeb</title>
   <link rel="icon" href="/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/css/common.css" />
-</head>
-<body>
-<script>
-  // Redirect /{lang}/{app}/ URLs: save the language, then load the app page.
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "404 – Not Found · OfficeWeb",
+    "url": "https://officeweb.alexgamingdev.tech/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "OfficeWeb",
+      "url": "https://officeweb.alexgamingdev.tech/",
+      "author": {
+        "@type": "Person",
+        "name": "alexgamingdev",
+        "url": "https://github.com/alexgamingdev",
+        "sameAs": [
+          "https://github.com/alexgamingdev",
+          "https://www.instagram.com/alexgamingdev/"
+        ]
+      }
+    }
+  }
+  </script>
+</head>: save the language, then load the app page.
   var EU_LANGS = ['bg','cs','da','de','el','en','es','et','fi','fr','ga','hr','hu','it','lt','lv','mt','nl','pl','pt','ro','sk','sl','sv'];
   var segs = location.pathname.replace(/^\/|\/$/g, '').split('/').filter(Boolean);
   if (segs.length >= 1 && EU_LANGS.indexOf(segs[0]) !== -1) {
